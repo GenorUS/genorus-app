@@ -1,10 +1,12 @@
 import React from "react";
+import './Nav.css';
 
-const Nav = () => (
-  <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a className="navbar-brand" href="/">
-      React Reading List
+const Nav = (props) => (
+  <nav className="navbar fixed-top navbar-expand-lg bg-dark" {...props}>
+    <a className="navbar-brand" style={{color: "white"}}href="/">
+      Genorus
     </a>
+    {props.children}
   </nav>
 );
 

@@ -21,12 +21,11 @@ import Home from "./pages/Home";
 
 const App = () => {
   return (
-    // <Router>
-    //   <div>
-    //     <Route exact path="/" component={Home} />
-    //   </div>
-    // </Router>
-    <div>Hello</div>
+    <Router>
+      <div>
+        <Route exact path="/" component={Home} />
+      </div>
+    </Router>
   );
 }
 export default App;
