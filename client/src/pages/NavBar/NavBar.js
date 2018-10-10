@@ -1,8 +1,39 @@
 import React, { Component } from "react";
-import Nav from '../../components/Nav';
-import Button from '../../components/Button';
 import { Link } from "react-router-dom";
 import { List, ListItem } from "../../components/List";
+
+const Nav = props => {
+
+  return (
+    <nav {...props}>{props.children}</nav>
+  )
+}
+
+const Div = props => {
+  return (
+    <div {...props}>{props.children}</div>
+  )
+}
+const A = props => {
+  return (
+    <a {...props}>{props.children}</a>
+  )
+}
+const Button = props => {
+  return (
+    <button {...props}>{props.children}</button>
+  )
+}
+const UL = props => {
+  return (
+    <ul {...props}>{props.children}</ul>
+  )
+}
+const LI = props => {
+  return (
+    <ul {...props}>{props.children}</ul>
+  )
+}
 
 
 class NavBar extends Component {
@@ -10,27 +41,30 @@ class NavBar extends Component {
   render() {
     
     return (
-      <Nav>
-        <Button className="navbar-toggler navbar-toggler-right" type="button" 
-                data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" 
-                aria-label="Toggle navigation">
-                  <span className="navbar-toggler-icon"></span>
-                </Button>
-        <List>
-          <ListItem>
-            <a className="nav-link" href="/" style={{color: "white"}}>About Genorus</a>
-          </ListItem>
-          <ListItem>
-            <a className="nav-link" href="#" style={{color: "white"}}>Contact Us</a>
-          </ListItem>
-          <ListItem>
-            <a className="nav-link" href="#" style={{color: "white"}}>Genorus Scholarships</a>
-          </ListItem>
-          <ListItem>
-            <a className="nav-link" href="#" style={{color: "white"}}>Login / Signup</a>
-          </ListItem>
-        </List>
+      <Nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top" >
+        <Div className="container">
+          <A className="navbar-brand" href="index.html">Genorus</A>
+          <Button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                  aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </Button>
+          <Div className="collapse navbar-collapse" id="navbarResponsive">
+              <UL className="navbar-nav ml-auto">
+                  <LI className="nav-item">
+                    <A className="navbar-brand" href="index.html">About Genorus</A>
+                  </LI>
+                  <LI className="nav-item">
+                    <A className="navbar-brand" href="index.html">Contact</A>
+                  </LI>
+                  <LI className="nav-item">
+                    <A className="navbar-brand" href="index.html">Genorus Scholarships</A>
+                  </LI>
+                  <LI className="nav-item">
+                    <A className="navbar-brand" href="index.html">Login / Signup</A>
+                  </LI>
+              </UL>
+          </Div>
+        </Div>
       </Nav>
     );
   }
