@@ -1,11 +1,11 @@
 import React from "react";
-import "./List.css";
 
-export const List = ({ children }) => {
+
+export const List = (props) => {
   return (
-    <div className="list-overflow-container">
-      <ul className="list-group">
-        {children}
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav ml-auto">
+        {props.children}
       </ul>
     </div>
   );
