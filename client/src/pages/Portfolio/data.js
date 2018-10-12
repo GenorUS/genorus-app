@@ -3,7 +3,7 @@ const sponsors = [
     id: 1,
     name: "Amazon Scholarship",
     alt: "Amazon",
-    image: "test",
+    image: "../../../assets/images/sponsors/bigsponsorpics/bigamazon.jpg",
     survey: "test",
     description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
   },
@@ -11,7 +11,7 @@ const sponsors = [
     id: 2,
     name: "AT&T Scholarship",
     alt: "AT&T",
-    image: "test",
+    image: "../../../assets/images/sponsors/bigsponsorpics/bigat&t.jpg",
     survey: "test",
     description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
   },
@@ -19,7 +19,7 @@ const sponsors = [
     id: 3,
     name: "BP Scholarship",
     alt: "BP",
-    image: "test",
+    image: "../../../assets/images/sponsors/bigsponsorpics/bigbp.jpg",
     survey: "test",
     description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
   },
@@ -27,7 +27,7 @@ const sponsors = [
     id: 4,
     name: "Comcast Scholarship",
     alt: "Comcast",
-    image: "test",
+    image: "../../../assets/images/sponsors/bigsponsorpics/bigcomcast.jpg",
     survey: "test",
     description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
   },
@@ -35,7 +35,7 @@ const sponsors = [
     id: 5,
     name: "Google Scholarship",
     alt: "Google",
-    image: "test",
+    image: "../../../assets/images/sponsors/bigsponsorpics/biggoogle.jpg",
     survey: "test",
     description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
   },
@@ -43,7 +43,7 @@ const sponsors = [
     id: 6,
     name: "PNC Bank Scholarship",
     alt: "PNC Bank",
-    image: "test",
+    image: "../../../assets/images/sponsors/bigsponsorpics/bigpnc.jpg",
     survey: "test",
     description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
   },
@@ -51,7 +51,7 @@ const sponsors = [
     id: 7,
     name: "Sunoco Scholarship",
     alt: "Sunoco",
-    image: "test",
+    image: "../../../assets/images/sponsors/bigsponsorpics/bigsunoco.jpg",
     survey: "test",
     description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
   },
@@ -59,7 +59,7 @@ const sponsors = [
     id: 8,
     name: "Target Scholarship",
     alt: "Target",
-    image: "test",
+    image: "../../../assets/images/sponsors/bigsponsorpics/bigtarget.jpg",
     survey: "test",
     description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
   },
@@ -67,7 +67,7 @@ const sponsors = [
     id: 9,
     name: "TD Bank Scholarship",
     alt: "TD Bank",
-    image: "test",
+    image: "../../../assets/images/sponsors/bigsponsorpics/bigtdbank.jpg",
     survey: "test",
     description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
   },
@@ -75,7 +75,7 @@ const sponsors = [
     id: 10,
     name: "University of Pennsylvania Scholarship",
     alt: "University of Pennsylvania",
-    image: "test",
+    image: "../../../assets/images/sponsors/bigsponsorpics/bigupenn.jpg",
     survey: "test",
     description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
   },
@@ -83,7 +83,7 @@ const sponsors = [
     id: 11,
     name: "Verizon Scholarship",
     alt: "Verizon",
-    image: "test",
+    image: "../../../assets/images/sponsors/bigsponsorpics/bigverizon.jpg",
     survey: "test",
     description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
   },
@@ -91,7 +91,7 @@ const sponsors = [
     id: 12,
     name: "Walmart Scholarship",
     alt: "Walmart",
-    image: "test",
+    image: "../../../assets/images/sponsors/bigsponsorpics/bigwalmart.jpg",
     survey: "test",
     description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
   }
