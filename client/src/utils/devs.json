@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Andrew Hojnowski",
+        "job": "Back End Development/React",
+        "gitUrl": "https://github.com/amh5366",
+        "img": "./assets/images/profiles/andrewprofile.jpg"
+    },
+    {
+        "name": "Britney Aronson",
+        "job": "Back End Development/React",
+        "gitUrl": "https://www.britneyaronson.com/",
+        "img":""
+    },
+    {
+        "name": "Fraser Torning",
+        "job": "Back End Development/MySQL",
+        "gitUrl": "http://www.frasertorning.com/",
+        "img":""
+    },
+    {
+        "name": "Zach Wiest",
+        "job": "UI | UX Design & Development",
+        "gitUrl": "https://zdubz7.github.io/New-Zach-Bootstrap-Portfolio/",
+        "img":""
+    }
+]
