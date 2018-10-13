@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import './ContactForm.css';
 
 const ContactForm = (props) => (
   <div className="row">

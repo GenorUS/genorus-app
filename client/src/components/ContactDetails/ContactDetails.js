@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import './ContactDetails.css';
 
 const ContactDetails = (props) => (
   <div className="row">

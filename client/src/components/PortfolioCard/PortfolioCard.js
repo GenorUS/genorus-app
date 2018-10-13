@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import './PortfolioCard.css';
 
 const PortfolioCard = ({ id, name, alt, image, description, survey }) => (
-  <div className="row customCard">
+  <div className="row" style={{padding: "20px"}}>
     <div className="col-md-7">
       <a href="#">
         <img className="img-fluid rounded mb-3 mb-md-0" src={ image } alt={ alt } />
