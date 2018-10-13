@@ -2,8 +2,31 @@ import React, { Component } from "react";
 
 const PageHeading = () => (
   <div>
-    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus
-    </h1>
+      <section id="nextgroup" style={{paddingTop: "70px", paddingBottom: "70px"}}>
+        <div id="ui">
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    <h1 className="mb-3" style={{color: "#fff"}}>Contact Genorus</h1>
+    </div>
+      </section>
 
     <ol className="breadcrumb">
       <li className="breadcrumb-item">

@@ -17,6 +17,13 @@ class Portfolio extends Component {
     return (
       <div style={{background: "linear-gradient(to right, #0e0f0e 0%, #13531e 100%)", backgroundColor: "#176734"}}>
         <NavBar />
+
+        <section id="nextgroup" style={{paddingTop: "70px", paddingBottom: "70px"}}>
+        <div id="ui">
+
+          </div>
+      </section>
+      
         <Container>
           {
             this.state.sponsors.map(sponsors => (
