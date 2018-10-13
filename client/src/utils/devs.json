@@ -9,18 +9,18 @@
         "name": "Britney Aronson",
         "job": "Back End Development/React",
         "gitUrl": "https://www.britneyaronson.com/",
-        "img":""
+        "img":"./assets/images/profiles/britneyprofile.jpg"
     },
     {
         "name": "Fraser Torning",
         "job": "Back End Development/MySQL",
         "gitUrl": "http://www.frasertorning.com/",
-        "img":""
+        "img":"./assets/images/profiles/fraserprofile.jpg"
     },
     {
         "name": "Zach Wiest",
         "job": "UI | UX Design & Development",
         "gitUrl": "https://zdubz7.github.io/New-Zach-Bootstrap-Portfolio/",
-        "img":""
+        "img":"./assets/images/profiles/zachprofile.jpg"
     }
 ]
