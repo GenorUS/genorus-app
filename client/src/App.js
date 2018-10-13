@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
+import {SignIn, SignUp} from "./pages/SignIn";
+
 // import Detail from "./pages/Detail";
 // import NoMatch from "./pages/NoMatch";
 // import Nav from "./components/Nav";
@@ -28,6 +30,8 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <Route exact path="/scholarships" component={Portfolio} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/signin" component={SignIn} />
+        <Route exact path="/signup" component={SignUp} />
       </div>
     </Router>
   );

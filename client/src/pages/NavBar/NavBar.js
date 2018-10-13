@@ -43,7 +43,7 @@ class NavBar extends Component {
     return (
       <Nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top" >
         <Div className="container">
-          <A className="navbar-brand" href="index.html">Genorus</A>
+          <A className="navbar-brand" href="/">Genorus</A>
           <Button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                   aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -60,7 +60,7 @@ class NavBar extends Component {
                     <A className="navbar-brand" href="index.html">Genorus Scholarships</A>
                   </LI>
                   <LI className="nav-item">
-                    <A className="navbar-brand" href="index.html">Login / Signup</A>
+                    <A className="navbar-brand" href="/signin">Login / Signup</A>
                   </LI>
               </UL>
           </Div>
