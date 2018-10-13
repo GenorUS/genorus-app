@@ -1,0 +1,51 @@
+[
+    {
+        "img":"assets/images/sponsors/smallsponsorpics/smallamazon.jpg",
+        "alt": "amazon"
+    },
+    {
+        "img":"assets/images/sponsors/smallsponsorpics/smallat&t.jpg",
+        "alt": "AT&T"
+    },
+    {
+        "img":"assets/images/sponsors/smallsponsorpics/smallbp.jpg",
+        "alt": "BP"
+    },
+    {
+        "img":"assets/images/sponsors/smallsponsorpics/smallcomcast.jpg",
+        "alt": "Comcast"
+    },
+    {
+        "img":"assets/images/sponsors/smallsponsorpics/smallgoogle.jpg",
+        "alt": "Google"
+    },
+    {
+        "img":"assets/images/sponsors/smallsponsorpics/smallpnc.jpg",
+        "alt": "PNC"
+    },
+    {
+        "img":"assets/images/sponsors/smallsponsorpics/smallsunoco.jpg",
+        "alt": "Sunoco"
+    },
+    {
+        "img":"assets/images/sponsors/smallsponsorpics/smalltarget.jpg",
+        "alt": "Target"
+    },
+    {
+        "img":"assets/images/sponsors/smallsponsorpics/smalltd.jpg",
+        "alt": "TD"
+    },
+    {
+        "img":"assets/images/sponsors/smallsponsorpics/smallupenn.jpg",
+        "alt": "UPenn"
+    },
+    {
+        "img":"assets/images/sponsors/smallsponsorpics/smallverizon.jpg",
+        "alt": "Verizon"
+    },
+    {
+        "img":"assets/images/sponsors/smallsponsorpics/smallwalmart.jpg",
+        "alt": "Walmart"
+    }
+    
+]

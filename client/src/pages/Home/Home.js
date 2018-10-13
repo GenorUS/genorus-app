@@ -8,6 +8,7 @@ import Img from '../../components/HomeComponents/Img';
 import {Cont} from '../../components/HomeComponents/Card';
 import Footer from '../Footer';
 import devs from '../../utils/devs.json';
+import Sponsors from '../../utils/sponsors.json';
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 
@@ -76,6 +77,16 @@ class Home extends Component {
             </Div>
           </Div>
           <Cont devs={devs} />
+          <h2 style={{color: "white"}}>Our Current Scholarship Donors</h2>
+          <Div className="row">
+            {Sponsors.map((a, i) => {
+              return(
+                <Div className="col-lg-2 col-sm-4 mb-4">
+                  <Img className="img-fluid" src={a.img} alt={a.alt} key={i} />
+                </Div>
+              );
+            })}
+          </Div>
         </HomeContainer>
         <Footer />
       </div>

@@ -51,13 +51,13 @@ class NavBar extends Component {
           <Div className="collapse navbar-collapse" id="navbarResponsive">
               <UL className="navbar-nav ml-auto">
                   <LI className="nav-item">
-                    <A className="navbar-brand" href="index.html">About Genorus</A>
+                    <A className="navbar-brand" href="/">About Genorus</A>
                   </LI>
                   <LI className="nav-item">
-                    <A className="navbar-brand" href="index.html">Contact</A>
+                    <A className="navbar-brand" href="/contact">Contact</A>
                   </LI>
                   <LI className="nav-item">
-                    <A className="navbar-brand" href="index.html">Genorus Scholarships</A>
+                    <A className="navbar-brand" href="/scholarships">Genorus Scholarships</A>
                   </LI>
                   <LI className="nav-item">
                     <A className="navbar-brand" href="/signin">Login / Signup</A>
