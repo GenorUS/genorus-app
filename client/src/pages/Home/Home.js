@@ -58,7 +58,7 @@ class Home extends Component {
           </OL>
           <Div className="row">
             <Div className="col-lg-6">
-              <Img className="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="Temp" />
+              <Img className="img-fluid rounded mb-4" src="../../../assets/images/logospins/biglogospin.gif" alt="biggenoruslogospin" />
             </Div>
             <Div  className="col-lg-6" style={{color: "#fff"}}>
               <h2>Who We Are & What We Do</h2>
