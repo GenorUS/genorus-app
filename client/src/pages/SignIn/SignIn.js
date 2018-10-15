@@ -21,7 +21,36 @@ export class SignIn extends Component {
       <div style={{background: "linear-gradient(to right, #0e0f0e 0%, #13531e 100%)", backgroundColor: "#176734"}}>
         <NavBar />
         <HomeContainer>
-          <H1 className="mb-3" style={{color:"white"}} about="About Genorus" />
+        <section id="nextgroup" style={{paddingTop: "70px", paddingBottom: "70px"}}>
+        <div id="ui">
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="Genorus Sign In" />
+          </div>
+      </section>
           <OL>
             <OrderedItem className="breadcrumb-item">About Genorus</OrderedItem>
             <OrderedItem className="breadcrumb-item active">Genorus Login / Signup</OrderedItem>
@@ -36,11 +65,11 @@ export class SignIn extends Component {
               </div>
 
               <Div className="rightSide">
-                <h2>Log In</h2>
+                <h2 style={{color: "#fff"}} >Sign In</h2>
                 <form className="loginForm" method="post">
-                  <Input label="Email Address" type="email" className="form-control" id="inputEmail" placeholder="ex: joe@gmail.com" />
+                  <Input label="Email Address" type="email" className="form-control" id="inputEmail" placeholder="ex: joe@gmail.com"/>
                   <Input label="Password" type="password" className="form-control" id="inputPassword" placeholder="Password" />
-                  <FormBtn type="submit" className="submit-btn">Log In</FormBtn>
+                  <FormBtn type="submit" className="submit-btn">Sign In</FormBtn>
                 </form>
               </Div>
             </Div>
