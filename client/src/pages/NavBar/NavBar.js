@@ -51,7 +51,7 @@ class NavBar extends Component {
           <Div className="collapse navbar-collapse" id="navbarResponsive">
               <UL className="navbar-nav ml-auto">
                   <LI className="nav-item">
-                    <A className="navbar-brand" href="/" src="../../../assets/images/logospins/tinylogospin.gif" alt="tinylogospin" width="50px" height="50px">About Genorus</A>
+                    <A className="navbar-brand" href="/">About Genorus</A>
                   </LI>
                   <LI className="nav-item">
                     <A className="navbar-brand" href="/contact">Contact</A>
