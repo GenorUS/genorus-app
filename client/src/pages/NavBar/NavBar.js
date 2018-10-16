@@ -1,5 +1,5 @@
-import React, { Component } from "react";
 import icons from '../../utils/icons.json';
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { List, ListItem } from "../../components/List";
 
@@ -51,18 +51,13 @@ class NavBar extends Component {
           </Button>
           <Div className="collapse navbar-collapse" id="navbarResponsive">
               <UL className="navbar-nav ml-auto">
-                  <LI className="nav-item">
-                    <A className="navbar-brand" href="/">About Genorus</A>
-                  </LI>
-                  <LI className="nav-item">
-                    <A className="navbar-brand" href="/contact">Contact</A>
-                  </LI>
-                  <LI className="nav-item">
-                    <A className="navbar-brand" href="/scholarships">Genorus Scholarships</A>
-                  </LI>
-                  <LI className="nav-item">
-                    <A className="navbar-brand" href="/signin">Login / Signup</A>
-                  </LI>
+                  {icons.map((icon, i) => {
+                    return (
+                      <LI key={i} className="nav-item">
+                          <A className="navbar-brand" href={icon.route}><img src={icon.img} style={{width:30, width:30, marginRight: 4, marginTop: -4}} alt={icon.alt} />{icon.name}</A>
+                      </LI>
+                    )
+                  })}
               </UL>
           </Div>
         </Div>

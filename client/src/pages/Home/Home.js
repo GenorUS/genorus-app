@@ -63,7 +63,7 @@ class Home extends Component {
             </Div>
             <Div  className="col-lg-6" style={{color: "#fff"}}>
               <h2>Who We Are & What We Do</h2>
-              <p>Genorus was founded in 2018 by Andrew Hojnowski, Britney Aronson, Fraser Torning, and Zach Wiest. Genorusstands 
+              <p>Genorus was founded in 2018 by Andrew Hojnowski, Britney Aronson, Fraser Torning, and Zach Wiest. Genorus stands 
                 for Giving Everyone Necessities Openly Redistributed Upon Scholars. </p>
               <p>Genorus is a scholarship management application that hosts a variety of different companies. These companies
                 are donating graciously to give scholars a chance to create a
