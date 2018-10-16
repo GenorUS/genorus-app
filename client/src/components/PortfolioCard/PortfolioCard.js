@@ -4,7 +4,7 @@ const PortfolioCard = ({ id, name, alt, image, description, survey }) => (
   <div className="row" style={{padding: "20px"}}>
     <div className="col-md-7">
       <a href="#">
-        <img className="img-fluid rounded mb-3 mb-md-0" src={ image } alt={ alt } />
+        <img className="img-fluid rounded mb-2 mb-md-0" src={ image } alt={ alt } />
       </a>
     </div>
     <div className="col-md-5">
