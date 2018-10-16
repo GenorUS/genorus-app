@@ -9,6 +9,7 @@ import {Cont} from '../../components/HomeComponents/Card';
 import Footer from '../Footer';
 import devs from '../../utils/devs.json';
 import Sponsors from '../../utils/sponsors.json';
+import icons from '../../utils/icons.json';
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 

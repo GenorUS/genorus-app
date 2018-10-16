@@ -1,0 +1,19 @@
+[
+    {
+        "img":"assets/images/icons/aboutusicon.png",
+        "alt": "aboutusicon"
+    },
+    {
+        "img":"assets/images/icons/contactusicon.png",
+        "alt": "contactusicon"
+    },
+    {
+        "img":"assets/images/icons/scholarshipicon.png",
+        "alt": "scholarshipicon"
+    },
+    {
+        "img":"assets/images/icons/loginicon.png",
+        "alt": "loginicon"
+    }
+    
+]
