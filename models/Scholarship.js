@@ -15,6 +15,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false
       }
     });
+
+    Scholarship.hasMany(models.Application, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
   };
 
   return Scholarship;
