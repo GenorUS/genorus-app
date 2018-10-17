@@ -5,11 +5,7 @@ import H1 from '../../components/HomeComponents/H1';
 import {OL, OrderedItem} from '../../components/HomeComponents/OrderedList';
 import Div from '../../components/HomeComponents/DIV';
 import {Input, FormBtn } from '../../components/SignInComponents/Form';
-import Img from '../../components/HomeComponents/Img';
-import {Cont} from '../../components/HomeComponents/Card';
 import Footer from '../Footer';
-import devs from '../../utils/devs.json';
-import API from "../../utils/API";
 import { Link } from "react-router-dom";
 
 
