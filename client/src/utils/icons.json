@@ -1,0 +1,27 @@
+[
+    {
+        "img":"/assets/images/icons/aboutusicon.png",
+        "alt": "About Genorous",
+        "name": "About Genorous",
+        "route": "/"
+
+    },
+    {
+        "img":"/assets/images/icons/contactusicon.png",
+        "alt": "Contact Us",
+        "name": "Contact Us",
+        "route": "/contact"
+    },
+    {
+        "img":"/assets/images/icons/scholarshipicon.png",
+        "alt": "Genorus Scholarships",
+        "name": "Genorus Scholarships",
+        "route": "/scholarships"
+    },
+    {
+        "img":"/assets/images/icons/loginicon.png",
+        "alt": "loginicon",
+        "name": "Login / Signup",
+        "route": "/signin"
+    }
+]

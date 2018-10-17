@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import NavBar from '../NavBar';
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
+import H1 from '../../components/HomeComponents/H1';
+import Footer from '../Footer';
 import { Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
@@ -17,12 +19,6 @@ class Portfolio extends Component {
     return (
       <div style={{background: "linear-gradient(to right, #0e0f0e 0%, #13531e 100%)", backgroundColor: "#176734"}}>
         <NavBar />
-
-        <section id="nextgroup" style={{paddingTop: "70px", paddingBottom: "70px"}}>
-        <div id="ui">
-
-          </div>
-      </section>
       
         <Container>
           {
