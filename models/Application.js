@@ -33,11 +33,11 @@ module.exports = (sequelize, DataTypes) => {
       }
     });
 
-    Application.belongTo(models.Company, {
-      foreignKey: {
-        allowNull: false
-      }
-    })
+    // Application.belongTo(models.Company, {
+    //   foreignKey: {
+    //     allowNull: false
+    //   }
+    // })
   };
 
   return Application;
