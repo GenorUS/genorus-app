@@ -1,12 +1,5 @@
 [
     {
-        "img":"/assets/images/icons/genoruslogopng.png",
-        "alt": "Genorus",
-        "name": "Genorus",
-        "route": "/"
-
-    },
-    {
         "img":"/assets/images/icons/aboutusicon.png",
         "alt": "About Genorous",
         "name": "About Genorous",
