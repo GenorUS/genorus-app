@@ -8,6 +8,9 @@ import { Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import PortfolioCard from "../../components/PortfolioCard";
+import HomeContainer from "../../components/HomeComponents/HomeContainer";
+import PageHeading from "../../components/PageHeading";
+import Footer from "../Footer";
 import sponsors from "./data.js";
 
 class Portfolio extends Component {
@@ -19,8 +22,8 @@ class Portfolio extends Component {
     return (
       <div style={{background: "linear-gradient(to right, #0e0f0e 0%, #13531e 100%)", backgroundColor: "#176734"}}>
         <NavBar />
-      
-        <Container>
+        <HomeContainer>
+        <PageHeading name={"GenorUs Scholarships"}/>
           {
             this.state.sponsors.map(sponsors => (
               <PortfolioCard
@@ -34,7 +37,8 @@ class Portfolio extends Component {
               />
             ))
           }
-        </Container>
+        </HomeContainer>
+        <Footer />
       </div>
     )
   }

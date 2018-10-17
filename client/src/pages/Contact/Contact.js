@@ -16,7 +16,7 @@ class Contact extends Component {
       <div style={{background: "linear-gradient(to right, #0e0f0e 0%, #13531e 100%)", backgroundColor: "#176734"}}>
         <NavBar />
         <Container>
-          <PageHeading />
+          <PageHeading name={"Contact Genorus"}/>
           <ContactDetails />
           <ContactForm />
         </Container>
