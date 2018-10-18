@@ -36,8 +36,8 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   User.associate = (models) => {
-    // Associating User with Budgets
-    // When an User is deleted, also delete any associated Budgets
+    // Associating User with Applications
+    // When an User is deleted, also delete any associated Applications
     User.hasMany(models.Application, {
       onDelete: "cascade"
     });
