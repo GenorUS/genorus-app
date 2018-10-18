@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import NavBar from '../NavBar';
-import Footer from '../Footer';
 import PortfolioCard from "../../components/PortfolioCard";
 import HomeContainer from "../../components/HomeComponents/HomeContainer";
 import PageHeading from "../../components/PageHeading";
