@@ -22,7 +22,7 @@ class Portfolio extends Component {
       <div style={{background: "linear-gradient(to right, #0e0f0e 0%, #13531e 100%)", backgroundColor: "#176734"}}>
         <NavBar />
         <HomeContainer>
-        <PageHeading name={"GenorUs Scholarships"}/>
+        <PageHeading name={"Genorus Scholarships"}/>
           {
             this.state.sponsors.map(sponsors => (
               <PortfolioCard
