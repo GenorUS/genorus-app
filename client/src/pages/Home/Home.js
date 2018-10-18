@@ -19,7 +19,7 @@ class Home extends Component {
   
   render() {
     return (
-      <div style={{background: "linear-gradient(to right, #0e0f0e 0%, #13531e 100%)", backgroundColor: "#176734" }}>
+      <div style={{backgroundImage: `url(/assets/images/backgrounds/genorusbackground.jpg)`, backgroundColor: "#176734" }}>
         <NavBar />
         <HomeContainer>
         <section id="nextgroup" style={{paddingTop: "70px", paddingBottom: "70px"}}>
