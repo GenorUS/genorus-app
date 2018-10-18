@@ -1,6 +1,6 @@
 // Model for Company
 module.exports = (sequelize, DataTypes) => {
-  const Companies = sequelize.define("Company", {
+  const Company = sequelize.define("Company", {
     company_name: {
       type: DataTypes.STRING,
       defaultValue: 0,

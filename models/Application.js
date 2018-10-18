@@ -1,6 +1,6 @@
 // Model for Application
 module.exports = (sequelize, DataTypes) => {
-  const Applications = sequelize.define("Application", {
+  const Application = sequelize.define("Application", {
     firstname: {
       type: DataTypes.STRING,
       allowNull: false

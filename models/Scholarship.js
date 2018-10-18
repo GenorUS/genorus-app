@@ -1,6 +1,6 @@
 // Model for Scholarship
 module.exports = (sequelize, DataTypes) => {
-  const Scholarships = sequelize.define("Scholarship", {
+  const Scholarship = sequelize.define("Scholarship", {
     test: {
       type: DataTypes.STRING,
       allowNull: true
