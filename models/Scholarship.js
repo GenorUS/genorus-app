@@ -1,4 +1,4 @@
-// Model for Application
+// Model for Scholarship
 module.exports = (sequelize, DataTypes) => {
   const Scholarships = sequelize.define("Scholarship", {
     test: {
@@ -8,17 +8,20 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Scholarship.associate = (models) => {
-    // Applicaation should belong to an User
-    // Application can't be created without a User due to the foreign key constraint
+    // Scholarship should belong to a Company
+    // Scholarship can't be created without a Company due to the foreign key constraint
     Scholarship.belongsTo(models.Company, {
       foreignKey: {
         allowNull: false
       }
     });
 
+    // Scholarship has many applications
+    // If scholarship is deleted by company, cascade to delete any associated applications
     Scholarship.hasMany(models.Application, {
       foreignKey: {
-        allowNull: false
+        allowNull: false,
+        onDelete: "cascade"
       }
     });
   };

@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Application.associate = (models) => {
-    // Applicaation should belong to an User
+    // Application should belong to a User
     // Application can't be created without a User due to the foreign key constraint
     Application.belongsTo(models.User, {
       foreignKey: {
@@ -33,11 +33,12 @@ module.exports = (sequelize, DataTypes) => {
       }
     });
 
-    // Application.belongTo(models.Company, {
-    //   foreignKey: {
-    //     allowNull: false
-    //   }
-    // })
+    // Application should belong to a scholarship
+    Application.belongsTo(models.Scholarship, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
   };
 
   return Application;

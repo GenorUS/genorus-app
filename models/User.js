@@ -2,7 +2,7 @@
 // Regular "bcrypt" can cause errors for Windows users. Use "bcrypt-nodejs".
 const bcrypt = require("bcrypt-nodejs");
 
-// Sequelize Model for User --------------------------------------------------
+// Model for User --------------------------------------------------
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define("User", {
     firstname: {
