@@ -36,6 +36,10 @@ module.exports = (sequelize, DataTypes) => {
     isAdmin: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
+    },
+    companyID: {
+      type: DataTypes.INTEGER,
+      allowNull: true
     }
   });
 
