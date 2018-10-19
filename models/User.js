@@ -27,7 +27,11 @@ module.exports = (sequelize, DataTypes) => {
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        min: 8,
+        max: 20
+      }
     },
     isAdmin: {
       type: DataTypes.BOOLEAN,
