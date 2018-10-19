@@ -25,15 +25,13 @@ const PageHeading = ({ name }) => (
           <h1 className="mb-3" style={{color: "#fff"}}>{ name }</h1>
           <h1 className="mb-3" style={{color: "#fff"}}>{ name }</h1>
           <h1 className="mb-3" style={{color: "#fff"}}>{ name }</h1>
+          <h1 className="mb-3" style={{color: "#fff"}}>{ name }</h1>
+          <h1 className="mb-3" style={{color: "#fff"}}>{ name }</h1>
+          <h1 className="mb-3" style={{color: "#fff"}}>{ name }</h1>
+          <h1 className="mb-3" style={{color: "#fff"}}>{ name }</h1>
+          <h1 className="mb-3" style={{color: "#fff"}}>{ name }</h1>
         </div>
       </section>
-
-    <ol className="breadcrumb">
-      <li className="breadcrumb-item">
-        <a href="index.html">About Genorus</a>
-      </li>
-      <li className="breadcrumb-item active">Contact Genorus</li>
-    </ol>
   </div>
 );
 

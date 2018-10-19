@@ -49,12 +49,13 @@ class Home extends Component {
           <H1 className="mb-3" style={{color:"#fff"}} about="About Genorus" />
           <H1 className="mb-3" style={{color:"#fff"}} about="About Genorus" />
           <H1 className="mb-3" style={{color:"#fff"}} about="About Genorus" />
+          <H1 className="mb-3" style={{color:"#fff"}} about="About Genorus" />
           </div>
       </section>
          
  
           <OL>
-            <OrderedItem className="breadcrumb-item">About Genorus</OrderedItem>
+            <OrderedItem className ="breadcrumb-item">Genorus</OrderedItem>
             <OrderedItem className="breadcrumb-item active">About Genorus</OrderedItem>
           </OL>
           <Div className="row">
