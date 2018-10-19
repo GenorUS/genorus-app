@@ -54,7 +54,7 @@ class NavBar extends Component {
                   {icons.map((icon, i) => {
                     return (
                       <LI key={i} className="nav-item">
-                          <A className="navbar-brand" href={icon.route}><img src={icon.img} style={{width:30, width:30, marginRight: 4, marginTop: -4}} alt={icon.alt} />{icon.name}</A>
+                          <A className="navbar-brand" href={icon.route}><img src={icon.img} style={{width:30, width:30, marginRight: 2, marginTop: -4}} alt={icon.alt} />{icon.name}</A>
                       </LI>
                     )
                   })}
