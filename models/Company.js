@@ -12,7 +12,8 @@ module.exports = (sequelize, DataTypes) => {
     // Scholarship can't be created without a Company due to the foreign key constraint
     Company.hasMany(models.Scholarship, {
       foreignKey: {
-        allowNull: false
+        allowNull: false,
+        onDelete: "cascade"
       }
     });
   };
