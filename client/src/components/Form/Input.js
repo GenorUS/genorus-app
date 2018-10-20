@@ -5,11 +5,10 @@ import React from "react";
 
 
 
-export const Input = ({name, label, placeholder, ref, value, error, onChange}) => {
+export const Input = ({name, label, placeholder, value, onChange}) => {
     let wrapperClass = 'form-group';
-    if (error && error.length > 0) {
-      wrapperClass += " " + 'has-error';
-    }
+
+
     
     return (
      <div className={wrapperClass}>
@@ -22,7 +21,6 @@ export const Input = ({name, label, placeholder, ref, value, error, onChange}) =
             ref={name}
             value={value}
             onChange={onChange} />
-          <div className="input">{error}</div>
         </div>
       </div>
     );
