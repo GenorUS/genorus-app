@@ -39,7 +39,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DOUBLE,
       allowNull: true
     },
-
     actScore: {
       type: DataTypes.DOUBLE,
       allowNull: true
