@@ -24,13 +24,6 @@ module.exports = (sequelize, DataTypes) => {
       }
     });
 
-    // Criteria has many applications
-    // If criteria is deleted by company
-    Criteria.hasMany(models.Application, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
   };
 
   return Criteria;

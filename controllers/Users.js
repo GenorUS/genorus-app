@@ -27,5 +27,25 @@ module.exports = {
     .then((dbUser) => {
       res.json(dbApplication);
     });
+  },
+  getData: (req, res) => {
+    if (!req.user) {
+      res.json({});
+    }
+    else {
+      res.json({
+        email: req.user.email,
+        id: req.user.id,
+        firstname: req.user.firstname,
+        lastname: req.user.lastname
+      });
+    }
+  },
+  login: (req, res) => {
+    res.json("/members");
+  },
+  logout: (req, res) => {
+    req.logout();
+    res.redirect("/");
   }
 };

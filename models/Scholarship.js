@@ -48,6 +48,13 @@ module.exports = (sequelize, DataTypes) => {
         onDelete: "cascade"
       }
     });
+
+    // Scholarship has many criteria
+    Scholarship.hasMany(models.Criteria, {
+      foreignKey: {
+        allowNull: false,
+      }
+    });
   };
 
   return Scholarship;
