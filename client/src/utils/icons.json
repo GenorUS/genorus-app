@@ -16,7 +16,7 @@
         "img":"/assets/images/icons/scholarshipicon.png",
         "alt": "Genorus Scholarships",
         "name": "Genorus Scholarships",
-        "route": "/scholarships"
+        "route": "/scholarship"
     },
     {
         "img":"/assets/images/icons/loginicon.png",

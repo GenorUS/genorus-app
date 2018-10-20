@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { Component } from "react";
 
 const ContactForm = ({handleInput, handleSubmit, value}) => (
   <div className="row">

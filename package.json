@@ -22,9 +22,12 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "express": "^4.16.3",
+    "bcrypt-nodejs": "^0.0.3",
+    "express": "^4.16.4",
     "if-env": "^1.0.4",
     "mongoose": "^5.0.17",
-    "react-scripts": "^1.1.5"
+    "mysql2": "^1.6.1",
+    "react-scripts": "^1.1.5",
+    "sequelize": "^4.39.1"
   }
 }

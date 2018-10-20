@@ -14,7 +14,7 @@ export class SignUp extends Component {
   
   render() {
     return (
-      <div style={{background: "linear-gradient(to right, #0e0f0e 0%, #13531e 100%)", backgroundColor: "#176734"}}>
+      <div style={{backgroundImage: `url(/assets/images/backgrounds/genorussignupbackground.jpg)`, backgroundAttachment: "fixed", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
         <NavBar />
         <HomeContainer>
         <section id="nextgroup" style={{paddingTop: "70px", paddingBottom: "70px"}}>
@@ -48,8 +48,8 @@ export class SignUp extends Component {
           </div>
       </section>
           <OL>
-            <OrderedItem className="breadcrumb-item">About Genorus</OrderedItem>
-            <OrderedItem className="breadcrumb-item active">Genorus Login / Signup</OrderedItem>
+            <OrderedItem className="breadcrumb-item">Genorus</OrderedItem>
+            <OrderedItem className="breadcrumb-item active">Sign Up</OrderedItem>
           </OL>
           
           <Div className="signUpForm" style={{marginBottom: "250px"}}>
