@@ -1,0 +1,53 @@
+const sponsors = [
+  {
+    id: 1,
+    scholarship_name: "Accessibility Scholarship",
+    company: "Amazon",
+    description: "At Amazon, we believe information should be universally accessible. We are also committed to helping the innovators of the future make the most of their talents by providing scholarships for future computer science students.",
+    image: "../../../assets/images/sponsors/bigsponsorpics/bigamazon.jpg",
+    application_period: "The application process will remain open until 6th December, 2018 at 11:59 pm GMT.",
+    how_to_apply: [
+      "Fill out general information on our form",
+      "Upload a copy of your transcripts",
+      "Request a letter of reference"
+    ],
+    eligibility: [
+      "Applicants must have at least a 3.0 GPA or higher",
+      "Applicants must be a graduating high school senior from Pennsylvania",
+      "Applicants must be university students studying computer science, computer engineering, informatics, or a closely related technical field at a university in the state of Pennsylvania",
+      "Applicants must be 18 year of age or older as of 17th September 2018.",
+      "Applicants must come from a household with a median income of $35,000 or lower."
+    ],
+    amount: "5,000US"
+  },
+  {
+    id: 2,
+    name: "AT&T Scholarship",
+    alt: "AT&T",
+    image: "../../../assets/images/sponsors/bigsponsorpics/bigat&t.jpg"
+  },
+  {
+    id: 3,
+    name: "BP Scholarship",
+    alt: "BP",
+    image: "../../../assets/images/sponsors/bigsponsorpics/bigbp.jpg"
+  },
+  {
+    id: 4,
+    name: "Comcast Scholarship",
+    alt: "Comcast",
+    image: "../../../assets/images/sponsors/bigsponsorpics/bigcomcast.jpg",
+    survey: "test",
+    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
+  },
+  {
+    id: 5,
+    name: "Google Scholarship",
+    alt: "Google",
+    image: "../../../assets/images/sponsors/bigsponsorpics/biggoogle.jpg",
+    survey: "test",
+    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
+  }
+]
+
+export default sponsors;
