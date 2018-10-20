@@ -13,6 +13,9 @@ module.exports = {
       res.json(dbApplication);
     });
   },
+  findById: () => {
+    // Do something
+  },
   create: (req, res) => {
     db.Application.create(req.body)
     .then((dbApplication) => {

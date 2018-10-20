@@ -1,7 +1,11 @@
+// Dependencies -----------------------------------------
 const router = require("express").Router();
-const apifiletonameRoutes = require("./apifiletoname");
+const application = require("./application");
+const user = require("./user");
 
-// Book routes
-router.use("/article", apifiletonameRoutes);
+// Defining Routes to use -------------------------------
+router.use("/application", application);
+router.use("/users", user);
 
+// Export ------------------------------------------------
 module.exports = router;
