@@ -1,40 +1,24 @@
 // Model for Scholarship
 module.exports = (sequelize, DataTypes) => {
   const Criteria = sequelize.define("Criteria", {
-    name: {
+    placeholder1: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    count: {
+    placeholder2: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    amount: {
+    placeholder3: {
       type: DataTypes.DOUBLE,
       allowNull: false
-    },
-    description: {
-      type: DataTypes.TEXT,
-      allowNull: false
-    },
-    bannerURL: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    essayQuestion: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    minEssayLength: {
-        type: DataTypes.INTEGER,
-        allowNull: true
     }
   });
 
   Criteria.associate = (models) => {
-    // Criteria should belong to a Company
-    // Criteria can't be created without a Company due to the foreign key constraint
-    Criteria.belongsTo(models.Company, {
+    // Criteria should belong to a Scholarship
+    // Criteria can't be created without a Scholarship due to the foreign key constraint
+    Criteria.belongsTo(models.Scholarship, {
       foreignKey: {
         allowNull: false
       }

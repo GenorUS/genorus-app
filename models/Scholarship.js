@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     description: {
       type: DataTypes.TEXT,
       allowNull: false
-    }, 
+    },
     bannerURL: {
       type: DataTypes.STRING,
       allowNull: true
@@ -29,9 +29,6 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: true
     }
-    
-    //TODO Criteria TABLE ======
-
   });
 
   Scholarship.associate = (models) => {
