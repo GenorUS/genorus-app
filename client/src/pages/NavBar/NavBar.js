@@ -44,7 +44,7 @@ class NavBar extends Component {
     return (
       <Nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top" >
         <Div className="container">
-          <A className="navbar-brand" href="/">Genorus</A>
+          <Link to="/" className="navbar-navbrand">Genorus</Link>
           <Button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                   aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -54,7 +54,7 @@ class NavBar extends Component {
                   {icons.map((icon, i) => {
                     return (
                       <LI key={i} className="nav-item">
-                          <A className="navbar-brand" href={icon.route}><img src={icon.img} style={{width:30, width:30, marginRight: 2, marginTop: -4}} alt={icon.alt} />{icon.name}</A>
+                          <Link className="navbar-brand" to={icon.route}><img src={icon.img} style={{width:30, width:30, marginRight: 2, marginTop: -4}} alt={icon.alt} />{icon.name}</Link>
                       </LI>
                     )
                   })}
