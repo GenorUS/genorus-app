@@ -63,14 +63,22 @@ class Home extends Component {
               <Img className="img-fluid rounded mb-4" src="../../../assets/images/logospins/biglogospin.gif" alt="biggenoruslogospin" />
             </Div>
             <Div  className="col-lg-6" style={{color: "#fff"}}>
-              <h2>Who We Are & What We Do</h2>
+            
+              {/* <h2>Who We Are & What We Do</h2> */}
+              <div class="box">
+  <div className="inner " style={{alignItems: "center", justifyContent: "center"}}>
+    
+    <span>What We Do</span>
+  </div>
+  <div className="inner">
+  <span>Who We Are</span>
+  </div>
+</div>
               <p>Genorus was founded in 2018 by Andrew Hojnowski, Britney Aronson, Fraser Torning, and Zach Wiest. Genorus stands 
                 for Giving Everyone Necessities Openly Redistributed Upon Scholars. </p>
               <p>Genorus is a scholarship management application that hosts a variety of different companies. These companies
                 are donating graciously to give scholars a chance to create a
-                better tomorrow then the yesterday that was left behind. It only takes one person to change the world and we
-                want to give people an equal opportunity at learning to
-                become who they truly are.
+                better tomorrow then the yesterday that was left behind. 
               </p>
               <p>Each student applying for the scholarship must meet the requirements that the sponsor has set. To apply for
                 a scholarship, navigate to the Genorus Scholarships
@@ -92,6 +100,8 @@ class Home extends Component {
         </HomeContainer>
         <Footer />
       </div>
+
+      
     );
   }
 }

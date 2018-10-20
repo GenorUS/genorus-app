@@ -23,6 +23,7 @@ class Contact extends Component {
       <OrderedItem className="breadcrumb-item">Genorus</OrderedItem>
       <OrderedItem className="breadcrumb-item active">Contact Us</OrderedItem>
     </OL>
+        
           <ContactDetails />
           <ContactForm />
         </Container>

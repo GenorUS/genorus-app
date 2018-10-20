@@ -1,6 +1,7 @@
 const sponsors = [
   {
     id: 1,
+    class: "inner2",
     name: "Amazon Scholarship",
     alt: "Amazon",
     image: "../../../assets/images/sponsors/bigsponsorpics/bigamazon.jpg",

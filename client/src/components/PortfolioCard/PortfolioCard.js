@@ -8,7 +8,7 @@ const PortfolioCard = ({ id, name, alt, image, description, survey }) => (
       </a>
     </div>
     <div className="col-md-5">
-      <h3>{ name }</h3>
+      <h3 className="sponsorwave">{ name }</h3>
       <p>{ description }</p>
       <a className="btn btn-primary" href={ survey }>Fill Out Form
         <span className="glyphicon glyphicon-chevron-right"></span>
