@@ -1,6 +1,8 @@
 // Dependencies ------------------------------------
 const express = require("express");
 const routes = require("./routes");
+const db = require("./models");
+const passport = require("./config/passport");
 
 // Express and PORT ------------------------------------
 const app = express();
