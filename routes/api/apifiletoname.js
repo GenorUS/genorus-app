@@ -1,16 +1,19 @@
+// Dependencies -----------------------------------------------
 const router = require("express").Router();
-const articlesController = require("../../controllers/Applications.js");
+const appController = require("../../controllers/Applications.js");
 
-// Matches with "/api/articles"
-router.route("/")
-  .get(articlesController.findAll)
-  .post(articlesController.create);
+// Defining Routes ---------------------------------------------
 
-// Matches with "/api/articless/:id"
+// Matches with "/api/application"
+router
+  .route("/")
+  .get(appController.findAll)
+  .post(appController.create);
+
+// Matches with "/api/application/:id"
 router
   .route("/:id")
-  .get(articlesController.findById)
-  .put(articlesController.update)
-  .delete(articlesController.remove);
+  .get(appController.findById)
+  .delete(appController.remove);
 
 module.exports = router;
