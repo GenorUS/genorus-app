@@ -23,6 +23,7 @@ export class SignIn extends Component {
         passowrd: ""
       }
     }
+    this.style= {color: 'red', fontWeight: 'bolder', fontSize: "18px"}
 
     this.userFormIsValid = this.userFormIsValid.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
@@ -129,8 +130,8 @@ export class SignIn extends Component {
                 <Input name="password" label="Password" type="password" value={this.state.password} id="inputPassword" placeholder="Password" error={this.state.errors.password} onChange={this.handleInput} />
                 <FormBtn type="submit" className="submit-btn" onClick={this.handleLogin}>Sign In</FormBtn>
               </form>
-              {this.state.errors.email ? <div className="input mt-1" style={{color: 'red'}}>{this.state.errors.email}</div> : null}
-              {this.state.errors.password ? <div className="input mt-1" style={{color: 'red'}}>{this.state.errors.password}</div> : null}
+              {this.state.errors.email ? <div className="input mt-1" style={this.style}>{this.state.errors.email}</div> : null}
+              {this.state.errors.password ? <div className="input mt-1" style={this.style}>{this.state.errors.password}</div> : null}
             </Div>
           </Div>
 

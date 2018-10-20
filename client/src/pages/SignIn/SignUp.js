@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 
 
 
+
 export class SignUp extends Component {
   constructor(props) {
     super(props)
@@ -25,6 +26,8 @@ export class SignUp extends Component {
         userName: ""
       }
     }
+
+    this.style= {color: 'red', fontWeight: 'bolder', fontSize: "18px"}
 
     this.userFormIsValid = this.userFormIsValid.bind(this);
     this.handleSignUp = this.handleSignUp.bind(this);
@@ -154,13 +157,13 @@ export class SignUp extends Component {
                   <Input name="confirmPassword" label="Confirm Password" type="text"  value={this.state.confirmPassword} id="inputPassword" placeholder="Passowrd" error={this.state.errors.confirmPassword} onChange={this.handleInput} />
                   <FormBtn type="submit" className="submit-btn" onClick={this.handleSignUp}>Sign Up</FormBtn>
                 </form>
-                {this.state.errors.firstName ? <div className="input mt-1" style={{color: 'red', fontWeight: 'bolder', fontSize: "18px"}}>{this.state.errors.firstName}</div> : null}
-                {this.state.errors.lastName ? <div className="input mt-1" style={{color: 'red', fontWeight: 'bolder', fontSize: "18px"}}>{this.state.errors.lastName}</div> : null}
-                {this.state.errors.userName ? <div className="input mt-1" style={{color: 'red', fontWeight: 'bolder', fontSize: "18px"}}>{this.state.errors.userName}</div> : null}
-                {this.state.errors.email ? <div className="input mt-1" style={{color: 'red', fontWeight: 'bolder', fontSize: "18px"}}>{this.state.errors.email}</div> : null}
-                {this.state.errors.password ? <div className="input mt-1" style={{color: 'red', fontWeight: 'bolder', fontSize: "18px"}}>{this.state.errors.password}</div> : null}
-                {this.state.errors.confirmPassword ? <div className="input mt-1" style={{color: 'red', fontWeight: 'bolder', fontSize: "18px"}}>{this.state.errors.confirmPassword}</div> : null}
-                {this.state.errors.noMatch ? <div className="input mt-1" style={{color: 'red', fontWeight: 'bolder', fontSize: "18px"}}>{this.state.errors.noMatch}</div> : null}
+                {this.state.errors.firstName ? <div className="input mt-1" style={this.style}>{this.state.errors.firstName}</div> : null}
+                {this.state.errors.lastName ? <div className="input mt-1" style={this.style}>{this.state.errors.lastName}</div> : null}
+                {this.state.errors.userName ? <div className="input mt-1" style={this.style}>{this.state.errors.userName}</div> : null}
+                {this.state.errors.email ? <div className="input mt-1" style={this.style}>{this.state.errors.email}</div> : null}
+                {this.state.errors.password ? <div className="input mt-1" style={this.style}>{this.state.errors.password}</div> : null}
+                {this.state.errors.confirmPassword ? <div className="input mt-1" style={this.style}>{this.state.errors.confirmPassword}</div> : null}
+                {this.state.errors.noMatch ? <div className="input mt-1" style={this.style}>{this.state.errors.noMatch}</div> : null}
               </Div>
             </Div>
          
