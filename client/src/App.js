@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
+import CompanyPages from "./pages/CompanyPages";
 import {SignIn, SignUp} from "./pages/SignIn";
 
 // import Detail from "./pages/Detail";
@@ -32,6 +33,7 @@ const App = () => {
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/signin" component={SignIn} />
         <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/company/:id" component={CompanyPages} />
       </div>
     </Router>
   );

@@ -25,22 +25,13 @@ class CompanyPages extends Component {
         <HomeContainer>
         <PageHeading name={"Genorus Scholarships"}/>
         <OL>
-      <OrderedItem className="breadcrumb-item">Genorus</OrderedItem>
-      <OrderedItem className="breadcrumb-item active">Genorus Scholarships</OrderedItem>
-    </OL>
-          {
-            this.state.sponsors.map(sponsors => (
-              <PortfolioCard
-                id={sponsors.id}
-                key={sponsors.id.toString()}
-                name={sponsors.name}
-                alt={sponsors.alt}
-                image={sponsors.image}
-                survey={sponsors.survey}
-                description={sponsors.description}
-              />
-            ))
-          }
+          <OrderedItem className="breadcrumb-item">Genorus</OrderedItem>
+          <OrderedItem className="breadcrumb-item active">Genorus Scholarships</OrderedItem>
+        </OL>
+        {
+          // Insert logic here to build out the page
+        }
+
         </HomeContainer>
         <Footer />
       </div>
