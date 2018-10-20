@@ -18,7 +18,7 @@ const sponsors = [
       "Applicants must be 18 year of age or older as of 17th September 2018.",
       "Applicants must come from a household with a median income of $35,000 or lower."
     ],
-    amount: "5,000US"
+    amount: "5,000 US"
   },
   {
     id: 2,
