@@ -1,7 +1,6 @@
 import icons from '../../utils/icons.json';
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { List, ListItem } from "../../components/List";
 
 const Nav = props => {
 
@@ -15,11 +14,7 @@ const Div = props => {
     <div {...props}>{props.children}</div>
   )
 }
-const A = props => {
-  return (
-    <a {...props}>{props.children}</a>
-  )
-}
+
 const Button = props => {
   return (
     <button {...props}>{props.children}</button>
@@ -54,7 +49,7 @@ class NavBar extends Component {
                   {icons.map((icon, i) => {
                     return (
                       <LI key={i} className="nav-item">
-                          <Link className="navbar-brand" to={icon.route}><img src={icon.img} style={{width:30, width:30, marginRight: 2, marginTop: -4}} alt={icon.alt} />{icon.name}</Link>
+                          <Link className="navbar-brand" to={icon.route}><img src={icon.img} style={{width:30, marginRight: 2, marginTop: -4}} alt={icon.alt} />{icon.name}</Link>
                       </LI>
                     )
                   })}

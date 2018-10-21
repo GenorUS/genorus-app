@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import NavBar from '../NavBar';
-import API from "../../utils/API";
-import { Link } from "react-router-dom";
 import Footer from '../Footer';
-import { Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import Container from "../../components/HomeComponents/HomeContainer";
 import PageHeading from "../../components/PageHeading";
 import ContactForm from "../../components/ContactForm";
 import ContactDetails from "../../components/ContactDetails";

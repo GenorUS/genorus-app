@@ -1,14 +1,12 @@
 import React, { Component } from "react";
-import Router from "react-router-dom";
 import NavBar from '../NavBar';
 import HomeContainer from '../../components/HomeComponents/HomeContainer';
 import H1 from '../../components/HomeComponents/H1';
 import { OL, OrderedItem } from '../../components/HomeComponents/OrderedList';
 import Div from '../../components/HomeComponents/DIV';
 import { Input, FormBtn } from '../../components/SignInComponents/Form';
-import Img from '../../components/HomeComponents/Img';
 import Footer from '../Footer';
-import { Link } from "react-router-dom";
+
 
 
 
@@ -20,7 +18,7 @@ export class SignIn extends Component {
       password: "",
       errors: {
         email: "",
-        passowrd: ""
+        password: ""
       }
     }
     this.style= {color: 'red', fontWeight: 'bolder', fontSize: "18px"}
@@ -40,26 +38,36 @@ export class SignIn extends Component {
   };
 
   userFormIsValid() {
-		var formIsValid = true;
-		this.state.errors = {
+    var formIsValid = true;
+    let email = "";
+    let password = "";
+	  //clear any previous errors.
+    this.setState({
+      errors: {
       email: "",
-      passowrd: ""
-    }; //clear any previous errors.
+      password: ""
+    }});
 
-    console.log(this.state.errors);
+    
     //TODO Add REGEX TO MATCH AN EMAIL
 		if (this.state.email.length < 3) {
-      console.log("In email")
-			this.state.errors.email = 'Please Enter a valid email Address';
+      
+        email = 'Please Enter a valid email Address'
+      
+			// this.state.errors.email = 'Please Enter a valid email Address';
 			formIsValid = false;
 		}
 
 		if (this.state.password.length < 8) {
-			this.state.errors.password = 'Password must be at least 8 characters.';
+      
+        password = 'Please Enter a valid email Address'
+      
+			// this.state.errors.password = 'Password must be at least 8 characters.';
 			formIsValid = false;
 		}
 
-		this.setState({errors: this.state.errors});
+		// this.setState({errors: this.state.errors});
+		this.setState({errors: {email, password}});
 		return formIsValid;
   }
   
@@ -122,7 +130,6 @@ export class SignIn extends Component {
                 <button className="submit-btn" type="button">Sign Up</button>
               </a>
             </div>
-            {/* {name, label, placeholder, ref, value, error, onChange} */}
             <Div className="rightSide">
               <h2 style={{ color: "#fff" }} >Sign In</h2>
               <form className="loginForm" method="post">
