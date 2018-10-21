@@ -6,6 +6,8 @@ import { OL, OrderedItem } from '../../components/HomeComponents/OrderedList';
 import Div from '../../components/HomeComponents/DIV';
 import { Input, FormBtn } from '../../components/SignInComponents/Form';
 import Footer from '../Footer';
+import UserSignUp from '../../utils/UserApi';
+
 
 
 
@@ -23,7 +25,10 @@ export class SignUp extends Component {
       errors: {
         email: "",
         password: "",
-        userName: ""
+        userName: "",
+        firstName: "",
+        lastName: "",
+        notUnique: ""
       }
     }
 
@@ -91,11 +96,20 @@ export class SignUp extends Component {
 
   handleSignUp(event) {
     event.preventDefault();
-    console.log("Clicked")
+    
     if (!this.userFormIsValid()) {
       return;
     }
-
+    let userData = { ...this.state }
+    
+    UserSignUp.signUp(userData, (data) => {
+      console.log("callback ", data.data);
+      if(data.data.createdAt) {
+        this.props.history.push("/signin");
+      } else {
+        return this.setState({errors: { notUnique: "There is already a user with that email. Please use another"}});
+      }
+    });
     // AuthorApi.saveAuthor(this.state.author);
     // this.setState({dirty: false});
     // this.transitionTo('/scholarship');
@@ -166,6 +180,7 @@ export class SignUp extends Component {
               {this.state.errors.password ? <div className="input mt-1" style={this.style}>{this.state.errors.password}</div> : null}
               {this.state.errors.confirmPassword ? <div className="input mt-1" style={this.style}>{this.state.errors.confirmPassword}</div> : null}
               {this.state.errors.noMatch ? <div className="input mt-1" style={this.style}>{this.state.errors.noMatch}</div> : null}
+              {this.state.errors.notUnique ? <div className="input mt-1" style={this.style}>{this.state.errors.notUnique}</div> : null}
             </Div>
           </Div>
 

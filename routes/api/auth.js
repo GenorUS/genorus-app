@@ -5,7 +5,7 @@ const router = require("express").Router();
 router.route("/")
   .post((req, res) => {
     
-    //TODO CREATE A USER
+    
     //TODO GENERATE AUTHENTICATION TOKEN
   });
   
