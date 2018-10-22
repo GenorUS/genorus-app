@@ -6,6 +6,7 @@ const db = require("./models");
 
 //Added for Passport
 const passport = require("passport");
+var session = require('express-session');
 require("./config/passport");
 
 // Express and PORT ------------------------------------
@@ -17,6 +18,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //Added for Passport
+// Express-Session
+app.use(session({
+  secret: "star wars",
+  resave: true,
+  saveUninitialized: true
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 
