@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
-import CompanyPages from "./pages/CompanyPages";
+import CompanyPage from "./pages/companyPage";
 import {SignIn, SignUp} from "./pages/SignIn";
+
+
 
 const App = () => {
   return (
