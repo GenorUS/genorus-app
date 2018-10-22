@@ -1,12 +1,12 @@
 // Ideally, this will come from an API call to the db
 export const Amazon =  {
     id: 1,
-    scholarship_name: "Accessibility Scholarship",
-    company_name: "Amazon",
+    scholarshipName: "Accessibility Scholarship",
+    companyName: "Amazon",
     description: "At Amazon, we believe information should be universally accessible. We are also committed to helping the innovators of the future make the most of their talents by providing scholarships for future computer science students.",
-    image: "../../../assets/images/sponsors/bigsponsorpics/bigamazon.jpg",
-    application_period: "The application process will remain open until 6th December, 2018 at 11:59 pm GMT.",
-    how_to_apply: [
+    image: "../../assets/images/sponsors/bigsponsorpics/bigamazon.jpg",
+    applicationPeriod: "The application process will remain open until 6th December, 2018 at 11:59 pm GMT.",
+    howToApply: [
       "Fill out general information on our form",
       "Upload a copy of your transcripts",
       "Request a letter of reference"
@@ -27,7 +27,7 @@ export const ATT = {
     scholarship_name: "Accessibility Scholarship",
     company_name: "AT&T",
     description: "At AT&T, we believe information should be universally accessible. We are also committed to helping the innovators of the future make the most of their talents by providing scholarships for future computer science students.",
-    image: "../../../assets/images/sponsors/bigsponsorpics/bigat&t.jpg",
+    image: "../../assets/images/sponsors/bigsponsorpics/bigat&t.jpg",
     application_period: "The application process will remain open until 6th December, 2018 at 11:59 pm GMT.",
     how_to_apply: [
       "Fill out general information on our form",
@@ -50,7 +50,7 @@ export const BP = {
     scholarship_name: "Accessibility Scholarship",
     company_name: "BP",
     description: "At BP, we believe information should be universally accessible. We are also committed to helping the innovators of the future make the most of their talents by providing scholarships for future computer science students.",
-    image: "../../../assets/images/sponsors/bigsponsorpics/bigbp.jpg",
+    image: "../../assets/images/sponsors/bigsponsorpics/bigbp.jpg",
     application_period: "The application process will remain open until 6th December, 2018 at 11:59 pm GMT.",
     how_to_apply: [
       "Fill out general information on our form",
@@ -73,7 +73,7 @@ export const Comcast = {
     scholarship_name: "Accessibility Scholarship",
     company_name: "Comcast",
     description: "At Comcast, we believe information should be universally accessible. We are also committed to helping the innovators of the future make the most of their talents by providing scholarships for future computer science students.",
-    image: "../../../assets/images/sponsors/bigsponsorpics/bigcomcast.jpg",
+    image: "../../assets/images/sponsors/bigsponsorpics/bigcomcast.jpg",
     application_period: "The application process will remain open until 6th December, 2018 at 11:59 pm GMT.",
     how_to_apply: [
       "Fill out general information on our form",
@@ -96,7 +96,7 @@ export const Google = {
     scholarship_name: "The console.log(Scholarship)",
     company_name: "Google",
     description: "At Google, we believe information should be universally accessible. We are also committed to helping the innovators of the future make the most of their talents by providing scholarships for future computer science students.",
-    image: "../../../assets/images/sponsors/bigsponsorpics/biggoogle.jpg",
+    image: "../../assets/images/sponsors/bigsponsorpics/biggoogle.jpg",
     application_period: "The application process will remain open until 6th December, 2018 at 11:59 pm GMT.",
     how_to_apply: [
       "Fill out general information on our form",

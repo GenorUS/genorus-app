@@ -25,22 +25,24 @@ class CompanyPages extends Component {
         </OL>
 
         {
-          this.state.scholarships.map(scholarships => (
-            <ScholarshipCard
-              id={scholarships.id}
-              key={scholarships.id.toString()}
-              scholarshipName={scholarships.scholarship_name}
-              companyName={scholarships.company_name}
-              image={scholarships.image}
-              howToApply={scholarships.how_to_apply}
-              eligibility={scholarships.eligibility}
-              amount={scholarships.amount}
-              applicationPeriod={scholarships.application_period}
-              description={scholarships.description}
-              url={scholarships.url}
-            />
-          ))
+          // this.state.scholarships.map(scholarships => (
+          //   <ScholarshipCard
+          //     id={scholarships.id}
+          //     key={scholarships.id.toString()}
+          //     scholarshipName={scholarships.scholarship_name}
+          //     companyName={scholarships.company_name}
+          //     image={scholarships.image}
+          //     howToApply={scholarships.how_to_apply}
+          //     eligibility={scholarships.eligibility}
+          //     amount={scholarships.amount}
+          //     applicationPeriod={scholarships.application_period}
+          //     description={scholarships.description}
+          //     url={scholarships.url}
+          //   />
+          // ))
         }
+
+        <ScholarshipCard />
 
         </HomeContainer>
         <Footer />

@@ -29,9 +29,11 @@ const ScholarshipCard = ({
       <p>{ eligibility }</p>
       <h4>Application Period:</h4>
       <p>{ applicationPeriod }</p>
-      <Link className="btn btn-primary" to={ url }>Apply Now
-        <span className="glyphicon glyphicon-chevron-right"></span>
-      </Link>
+      {
+        // <Link className="btn btn-primary" to={ url }>Apply Now
+        //   <span className="glyphicon glyphicon-chevron-right"></span>
+        // </Link>
+      }
     </div>
   </div>
 );
