@@ -1,18 +1,20 @@
-import React, { Component } from "react";
+import React from "react";
+import { Link } from 'react-router-dom';
 
-const PortfolioCard = ({ id, name, alt, image, description, survey }) => (
+const PortfolioCard = ({ id, name, alt, image, description, survey, url }) => (
   <div className="row" style={{padding: "20px"}}>
     <div className="col-md-7">
-      <a href="#">
+      {/* This is where links to the company page will go */}
+      <Link to={`/scholarship/${name}`}>
         <img className="img-fluid rounded mb-2 mb-md-0" src={ image } alt={ alt } />
-      </a>
+      </Link>
     </div>
     <div className="col-md-5">
       <h3 className="sponsorwave">{ name }</h3>
       <p>{ description }</p>
-      <a className="btn btn-primary" href={ survey }>Fill Out Form
+      <Link className="btn btn-primary" to={ url }>Learn More
         <span className="glyphicon glyphicon-chevron-right"></span>
-      </a>
+      </Link>
     </div>
   </div>
 );

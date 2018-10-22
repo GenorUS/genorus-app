@@ -1,16 +1,10 @@
 import React, { Component } from "react";
 import NavBar from '../NavBar';
-import API from "../../utils/API";
-import { Link } from "react-router-dom";
-import H1 from '../../components/HomeComponents/H1';
-import { Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
 import PortfolioCard from "../../components/PortfolioCard";
 import HomeContainer from "../../components/HomeComponents/HomeContainer";
 import PageHeading from "../../components/PageHeading";
 import Footer from "../Footer";
-import sponsors from "./data.js";
+import sponsors from "../../data/portfolio";
 import {OL, OrderedItem} from '../../components/HomeComponents/OrderedList';
 
 class Portfolio extends Component {
@@ -25,9 +19,9 @@ class Portfolio extends Component {
         <HomeContainer>
         <PageHeading name={"Genorus Scholarships"}/>
         <OL>
-      <OrderedItem className="breadcrumb-item">Genorus</OrderedItem>
-      <OrderedItem className="breadcrumb-item active">Genorus Scholarships</OrderedItem>
-    </OL>
+          <OrderedItem className="breadcrumb-item">Genorus</OrderedItem>
+          <OrderedItem className="breadcrumb-item active">Genorus Scholarships</OrderedItem>
+        </OL>
           {
             this.state.sponsors.map(sponsors => (
               <PortfolioCard
@@ -38,6 +32,7 @@ class Portfolio extends Component {
                 image={sponsors.image}
                 survey={sponsors.survey}
                 description={sponsors.description}
+                url={sponsors.url}
               />
             ))
           }
