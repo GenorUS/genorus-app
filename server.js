@@ -1,16 +1,31 @@
 // Dependencies ------------------------------------
 const express = require("express");
 const routes = require("./routes");
+const bodyParser = require('body-parser');
 const db = require("./models");
-const passport = require("./config/passport");
+
+//Added for Passport
+const passport = require("passport");
+var session = require('express-session');
+require("./config/passport");
 
 // Express and PORT ------------------------------------
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Define middleware here --------------------------
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+//Added for Passport
+// Express-Session
+app.use(session({
+  secret: "star wars",
+  resave: true,
+  saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Serve up static assets (usually on heroku) ------
 if (process.env.NODE_ENV === "production") {
