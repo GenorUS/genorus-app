@@ -1,19 +1,17 @@
 import axios from "axios";
 
 export default {
-  signUp: function (userData,cb) { 
-    
+  signUp: function (userData,cb) {
     return axios.post("/api/users/signup", userData)
       .then((data) => {
         cb(data);
       });
-    
   },
 
   signIn: function (user, cb) {
-
-    return axios.post("/api/users/login", user).then(() => {
-
+    return axios.post("/api/users/login", user)
+      .then((data) => {
+        cb(data);
     });
   },
   // Gets all articles
