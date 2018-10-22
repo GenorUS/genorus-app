@@ -9,6 +9,13 @@ export default {
       });
     
   },
+
+  signIn: function (user, cb) {
+
+    return axios.post("/api/users/login", user).then(() => {
+
+    });
+  },
   // Gets all articles
   getArticles: function() {
     return axios.get("/api/articles");

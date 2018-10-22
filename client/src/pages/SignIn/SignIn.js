@@ -6,6 +6,7 @@ import { OL, OrderedItem } from '../../components/HomeComponents/OrderedList';
 import Div from '../../components/HomeComponents/DIV';
 import { Input, FormBtn } from '../../components/SignInComponents/Form';
 import Footer from '../Footer';
+import UserSignIn from '../../utils/UserApi';
 
 
 
@@ -77,7 +78,10 @@ export class SignIn extends Component {
 		if (!this.userFormIsValid()) {
 			return;
 		}
-
+    let {email, password } = this.state;
+    UserSignIn.signIn({email, password }, (data) => {
+      
+    });
 		// AuthorApi.saveAuthor(this.state.author);
 		// this.setState({dirty: false});
 		// this.transitionTo('/scholarship');
