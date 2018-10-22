@@ -4,14 +4,26 @@ import ScholarshipCard from "../../components/ScholarshipCard";
 import HomeContainer from "../../components/HomeComponents/HomeContainer";
 import PageHeading from "../../components/PageHeading";
 import Footer from "../Footer";
-import scholarships from "./data.js";
-import { Amazon, ATT, BP, Comcast, Google } from "../../data/scholarships";
+import scholarships from "../../data/scholarships";
 import {OL, OrderedItem} from '../../components/HomeComponents/OrderedList';
 
 class CompanyPages extends Component {
   state = {
-    scholarships
+    currentScholarship: {}
   };
+
+  componentDidMount() {
+    console.log(this.props.match.params.company)
+    let company = this.props.match.params.company;
+    for (let i = 0; i < scholarships.length; i++) {
+      if (scholarships[i].company_name === company) {
+        console.log(scholarships[i])
+        this.setState({
+          currentScholarship: scholarships[i]
+        });
+      }
+    }
+  }
 
   render() {
     return (
@@ -24,25 +36,19 @@ class CompanyPages extends Component {
           <OrderedItem className="breadcrumb-item active">Genorus Scholarships</OrderedItem>
         </OL>
 
-        {
-          // this.state.scholarships.map(scholarships => (
-          //   <ScholarshipCard
-          //     id={scholarships.id}
-          //     key={scholarships.id.toString()}
-          //     scholarshipName={scholarships.scholarship_name}
-          //     companyName={scholarships.company_name}
-          //     image={scholarships.image}
-          //     howToApply={scholarships.how_to_apply}
-          //     eligibility={scholarships.eligibility}
-          //     amount={scholarships.amount}
-          //     applicationPeriod={scholarships.application_period}
-          //     description={scholarships.description}
-          //     url={scholarships.url}
-          //   />
-          // ))
-        }
-
-        <ScholarshipCard />
+        <ScholarshipCard
+          id={this.state.currentScholarship.id}
+          key={this.state.currentScholarship.id}
+          scholarshipName={this.state.currentScholarship.scholarship_name}
+          companyName={this.state.currentScholarship.company_name}
+          image={this.state.currentScholarship.image}
+          howToApply={this.state.currentScholarship.how_to_apply}
+          eligibility={this.state.currentScholarship.eligibility}
+          applicationPeriod={this.state.currentScholarship.application_period}
+          amount={this.state.currentScholarship.amount}
+          description={this.state.currentScholarship.description}
+          url={this.state.currentScholarship.url}
+        />
 
         </HomeContainer>
         <Footer />

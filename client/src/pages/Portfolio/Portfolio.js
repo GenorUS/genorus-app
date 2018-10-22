@@ -4,7 +4,7 @@ import PortfolioCard from "../../components/PortfolioCard";
 import HomeContainer from "../../components/HomeComponents/HomeContainer";
 import PageHeading from "../../components/PageHeading";
 import Footer from "../Footer";
-import sponsors from "./data.js";
+import sponsors from "../../data/portfolio";
 import {OL, OrderedItem} from '../../components/HomeComponents/OrderedList';
 
 class Portfolio extends Component {

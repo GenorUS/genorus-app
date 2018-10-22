@@ -1,7 +1,5 @@
 import React from "react";
-import { Link, Route } from 'react-router-dom';
-import ScholarshipCard from "../ScholarshipCard";
-import { Amazon, ATT, BP, Comcast, Google } from '../../data/scholarships';
+import { Link } from 'react-router-dom';
 
 const PortfolioCard = ({ id, name, alt, image, description, survey, url }) => (
   <div className="row" style={{padding: "20px"}}>
@@ -17,7 +15,6 @@ const PortfolioCard = ({ id, name, alt, image, description, survey, url }) => (
       <Link className="btn btn-primary" to={ url }>Learn More
         <span className="glyphicon glyphicon-chevron-right"></span>
       </Link>
-      <Route path={`/scholarship/${alt}`} render={ () => <ScholarshipCard data={Amazon} /> } />
     </div>
   </div>
 );
