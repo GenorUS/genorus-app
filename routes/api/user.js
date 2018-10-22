@@ -26,6 +26,9 @@ router
 // GET "/api/users/user_data" - for getting some data about our user to be used client side
 router
   .route("/user_data", isAuthenticated)
+  .post((req, res) => {
+    res.send(res.body);
+  })
   .get(UsersController.getData);
 
 // GET "/api/users/logout" - for logging user out
