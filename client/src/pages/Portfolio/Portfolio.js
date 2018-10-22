@@ -19,9 +19,9 @@ class Portfolio extends Component {
         <HomeContainer>
         <PageHeading name={"Genorus Scholarships"}/>
         <OL>
-      <OrderedItem className="breadcrumb-item">Genorus</OrderedItem>
-      <OrderedItem className="breadcrumb-item active">Genorus Scholarships</OrderedItem>
-    </OL>
+          <OrderedItem className="breadcrumb-item">Genorus</OrderedItem>
+          <OrderedItem className="breadcrumb-item active">Genorus Scholarships</OrderedItem>
+        </OL>
           {
             this.state.sponsors.map(sponsors => (
               <PortfolioCard

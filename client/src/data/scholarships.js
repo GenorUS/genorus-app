@@ -1,6 +1,5 @@
 // Ideally, this will come from an API call to the db
-const scholarships = [
-  {
+export const Amazon =  {
     id: 1,
     scholarship_name: "Accessibility Scholarship",
     company_name: "Amazon",
@@ -21,8 +20,9 @@ const scholarships = [
     ],
     amount: "5,000 US",
     url: "/scholarship/amazon/apply"
-  },
-  {
+  }
+
+export const ATT = {
     id: 2,
     scholarship_name: "Accessibility Scholarship",
     company_name: "AT&T",
@@ -43,8 +43,9 @@ const scholarships = [
     ],
     amount: "5,000 US",
     url: "/scholarship/att/apply"
-  },
-  {
+  }
+
+export const BP = {
     id: 3,
     scholarship_name: "Accessibility Scholarship",
     company_name: "BP",
@@ -65,8 +66,9 @@ const scholarships = [
     ],
     amount: "5,000 US",
     url: "/scholarship/bp/apply"
-  },
-  {
+  }
+
+export const Comcast = {
     id: 4,
     scholarship_name: "Accessibility Scholarship",
     company_name: "Comcast",
@@ -87,8 +89,9 @@ const scholarships = [
     ],
     amount: "5,000 US",
     url: "/scholarship/comcast/apply"
-  },
-  {
+  }
+
+export const Google = {
     id: 5,
     scholarship_name: "The console.log(Scholarship)",
     company_name: "Google",
@@ -109,6 +112,3 @@ const scholarships = [
     amount: "2,500 US",
     url: "/scholarship/google/apply"
   }
-]
-
-export default scholarships;

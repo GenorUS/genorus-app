@@ -7,7 +7,6 @@ import CompanyPage from "./pages/CompanyPages";
 import {SignIn, SignUp} from "./pages/SignIn";
 
 
-
 const App = () => {
   return (
     <Router>

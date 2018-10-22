@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const PortfolioCard = ({ id, name, alt, image, description, survey, url }) => (
   <div className="row" style={{padding: "20px"}}>
