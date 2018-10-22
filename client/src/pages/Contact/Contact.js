@@ -43,16 +43,9 @@ class Contact extends Component {
         <Container>
           <PageHeading name={"Contact Genorus"} />
           <OL>
-<<<<<<< HEAD
-      <OrderedItem className="breadcrumb-item">Genorus</OrderedItem>
-      <OrderedItem className="breadcrumb-item active">Contact Us</OrderedItem>
-    </OL>
-        
-=======
             <OrderedItem className="breadcrumb-item">Genorus</OrderedItem>
             <OrderedItem className="breadcrumb-item active">Contact Us</OrderedItem>
           </OL>
->>>>>>> master
           <ContactDetails />
           <ContactForm handleInput={this.handleInput} handleSubmit={this.handleSubmit} value={this.state} />
         </Container>

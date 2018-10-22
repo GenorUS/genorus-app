@@ -12,19 +12,7 @@ const ContactDetails = (props) => (
         <br />Beverly Hills, CA 90210
         <br />
       </p>
-<<<<<<< HEAD
       <p style={{color: "#176734" }}>
-        <abbr title  ="Phone">P</abbr>: (123) 456-7890
-      </p>
-      <p style={{color: "#176734" }}>
-        <abbr title="Email">E</abbr>:
-        <a href="mailto:name@example.com">name@example.com
-        </a>
-      </p>
-      <p style={{color: "#176734" }}>
-        <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM
-=======
-      <p>
         <abbr title="Phone">P</abbr> : (123) 456-7890
       </p>
       <p>
@@ -32,9 +20,8 @@ const ContactDetails = (props) => (
         <a href="mailto:name@example.com">name@example.com
         </a>
       </p>
-      <p>
+      <p style={{color: "#176734" }}>
         <abbr title="Hours">H</abbr> : Monday - Friday: 9:00 AM to 5:00 PM
->>>>>>> master
       </p>
     </div>
   </div>
