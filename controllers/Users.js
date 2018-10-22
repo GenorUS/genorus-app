@@ -6,6 +6,7 @@ module.exports = {
   create: (req, res) => {
     // NOTE: this is for when a user first create an account
     // redirect logs them in immediately, remove if needed
+    console.log(req.body);
     let {email, password, userName, firstName, lastName } = req.body;
     db.User.create({
       email: email,
@@ -14,7 +15,6 @@ module.exports = {
       firstname: firstName,
       lastname: lastName
     }).then((data) => {
-      
       res.json(data.dataValues);
     }).catch((err) => {
       console.log(err);

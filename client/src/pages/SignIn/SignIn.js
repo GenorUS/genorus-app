@@ -49,20 +49,20 @@ export class SignIn extends Component {
       password: ""
     }});
 
-    
+
     //TODO Add REGEX TO MATCH AN EMAIL
 		if (this.state.email.length < 3) {
-      
+
         email = 'Please Enter a valid email Address'
-      
+
 			// this.state.errors.email = 'Please Enter a valid email Address';
 			formIsValid = false;
 		}
 
 		if (this.state.password.length < 8) {
-      
+
         password = 'Please Enter a valid email Address'
-      
+
 			// this.state.errors.password = 'Password must be at least 8 characters.';
 			formIsValid = false;
 		}
@@ -71,16 +71,21 @@ export class SignIn extends Component {
 		this.setState({errors: {email, password}});
 		return formIsValid;
   }
-  
+
   handleLogin(event) {
 		event.preventDefault();
     console.log("Clicked")
-		if (!this.userFormIsValid()) {
-			return;
-		}
-    let {email, password } = this.state;
-    UserSignIn.signIn({email, password }, (data) => {
-      
+		// if (!this.userFormIsValid()) {
+		// 	return;
+		// }
+    let { email, password } = this.state;
+    let user = {
+      email: email,
+      password: password
+    }
+    console.log(user)
+    UserSignIn.signIn(user, (data) => {
+      console.log(data);
     });
 		// AuthorApi.saveAuthor(this.state.author);
 		// this.setState({dirty: false});
