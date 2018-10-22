@@ -5,7 +5,8 @@ const sponsors = [
     alt: "Amazon",
     image: "../../../assets/images/sponsors/bigsponsorpics/bigamazon.jpg",
     survey: "test",
-    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
+    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor.",
+    url: "/scholarship/amazon"
   },
   {
     id: 2,
@@ -13,7 +14,8 @@ const sponsors = [
     alt: "AT&T",
     image: "../../../assets/images/sponsors/bigsponsorpics/bigat&t.jpg",
     survey: "test",
-    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
+    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor.",
+    url: "/scholarship/att"
   },
   {
     id: 3,
@@ -21,7 +23,8 @@ const sponsors = [
     alt: "BP",
     image: "../../../assets/images/sponsors/bigsponsorpics/bigbp.jpg",
     survey: "test",
-    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
+    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor.",
+    url: "/scholarship/bp"
   },
   {
     id: 4,
@@ -29,7 +32,8 @@ const sponsors = [
     alt: "Comcast",
     image: "../../../assets/images/sponsors/bigsponsorpics/bigcomcast.jpg",
     survey: "test",
-    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
+    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor.",
+    url: "/scholarship/comcast"
   },
   {
     id: 5,
@@ -37,7 +41,8 @@ const sponsors = [
     alt: "Google",
     image: "../../../assets/images/sponsors/bigsponsorpics/biggoogle.jpg",
     survey: "test",
-    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
+    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor.",
+    url: "/scholarship/google"
   },
   {
     id: 6,
@@ -45,7 +50,8 @@ const sponsors = [
     alt: "PNC Bank",
     image: "../../../assets/images/sponsors/bigsponsorpics/bigpnc.jpg",
     survey: "test",
-    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
+    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor.",
+    url: "/scholarship/pncbank"
   },
   {
     id: 7,
@@ -53,7 +59,8 @@ const sponsors = [
     alt: "Sunoco",
     image: "../../../assets/images/sponsors/bigsponsorpics/bigsunoco.jpg",
     survey: "test",
-    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
+    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor.",
+    url: "/scholarship/sunoco"
   },
   {
     id: 8,
@@ -61,7 +68,8 @@ const sponsors = [
     alt: "Target",
     image: "../../../assets/images/sponsors/bigsponsorpics/bigtarget.jpg",
     survey: "test",
-    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
+    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor.",
+    url: "/scholarship/target"
   },
   {
     id: 9,
@@ -69,7 +77,8 @@ const sponsors = [
     alt: "TD Bank",
     image: "../../../assets/images/sponsors/bigsponsorpics/bigtdbank.jpg",
     survey: "test",
-    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
+    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor.",
+    url: "/scholarship/tdbank"
   },
   {
     id: 10,
@@ -77,7 +86,8 @@ const sponsors = [
     alt: "University of Pennsylvania",
     image: "../../../assets/images/sponsors/bigsponsorpics/bigupenn.jpg",
     survey: "test",
-    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
+    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor.",
+    url: "/scholarship/penn"
   },
   {
     id: 11,
@@ -85,7 +95,8 @@ const sponsors = [
     alt: "Verizon",
     image: "../../../assets/images/sponsors/bigsponsorpics/bigverizon.jpg",
     survey: "test",
-    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
+    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor.",
+    url: "/scholarship/verizon"
   },
   {
     id: 12,
@@ -93,7 +104,8 @@ const sponsors = [
     alt: "Walmart",
     image: "../../../assets/images/sponsors/bigsponsorpics/bigwalmart.jpg",
     survey: "test",
-    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor."
+    description: "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor.",
+    url: "/scholarship/walmart"
   }
 ]
 

@@ -32,6 +32,7 @@ class Portfolio extends Component {
                 image={sponsors.image}
                 survey={sponsors.survey}
                 description={sponsors.description}
+                url={sponsors.url}
               />
             ))
           }
