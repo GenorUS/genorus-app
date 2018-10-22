@@ -10,7 +10,7 @@ const PortfolioCard = ({ id, name, alt, image, description, survey, url }) => (
       </Link>
     </div>
     <div className="col-md-5">
-      <h3>{ name }</h3>
+      <h3 className="sponsorwave">{ name }</h3>
       <p>{ description }</p>
       <Link className="btn btn-primary" to={ url }>Learn More
         <span className="glyphicon glyphicon-chevron-right"></span>
