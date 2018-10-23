@@ -3,63 +3,182 @@ import React from "react";
 
 const ScholarshipForm = ({handleInput, handleSubmit, value, scholarshipName}) => (
   <div className="row">
-    <div className="col-lg-8 mb-4">
+    <div className="col-lg-10 mb-4">
       <h3>Apply for the { scholarshipName }</h3>
-      <form name="sentMessage" id="contactForm" noValidate>
-        <div className="control-group form-group">
-          <div className="controls">
-            <label>First Name:</label>
-            <input name="name" value={value.name} onChange={handleInput} type="text" className="form-control" id="name" required data-validation-required-message="Please enter your name." />
-            <p className="help-block"></p>
+      <form name="application" id="contactForm" noValidate>
+
+        {/*Demographic Dataset*/}
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">First Name:</label>
+            <input type="firstname" class="form-control" id="inputEmail4" placeholder="First Name" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Last Name:</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Last Name" />
           </div>
         </div>
-        <div className="control-group form-group">
-          <div className="controls">
-            <label>Last Name:</label>
-            <input name="name" value={value.name} onChange={handleInput} type="text" className="form-control" id="name" required data-validation-required-message="Please enter your name." />
-            <p className="help-block"></p>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity" />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <select id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option>Pennsylvania</option>
+              <option>Connecticut</option>
+              <option>Minnesota</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip" />
           </div>
         </div>
+
+        {/*Date of Birth Selection*/}
         <div className="control-group form-group">
-          <div className="controls">
-            <label>Date of Birth:</label>
-            <input name="phone" value={value.phone} onChange={handleInput} type="number" className="form-control" id="phone" required data-validation-required-message="Please enter your phone number." />
+          <div className="controls form-row">
+              <div class="form-group col-md-2">
+                <label for="inputState">Birth Month</label>
+                <select id="inputState" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>January</option>
+                  <option>February</option>
+                  <option>March</option>
+                  <option>April</option>
+                  <option>May</option>
+                  <option>June</option>
+                  <option>July</option>
+                  <option>August</option>
+                  <option>September</option>
+                  <option>October</option>
+                  <option>November</option>
+                  <option>December</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputState">Birth Day</label>
+                <select id="inputState" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                  <option>11</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputState">Birth Year</label>
+                <select id="inputState" class="form-control">
+                  <option selected>Choose...</option>
+                  <option></option>
+                  <option></option>
+                  <option></option>
+                </select>
+              </div>
           </div>
         </div>
-        <div className="control-group form-group">
-          <div className="controls">
-            <label>Address:</label>
-            <input name="email" value={value.email} onChange={handleInput} type="email" className="form-control" id="email" required data-validation-required-message="Please enter your email address." />
+
+
+        {/*Gender fieldset below*/}
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Gender:</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Male" />
+                <label class="form-check-label" for="gridRadios1">
+                  Male
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Female" />
+                <label class="form-check-label" for="gridRadios2">
+                  Female
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Non-Binary" />
+                <label class="form-check-label" for="gridRadios3">
+                  Non-binary
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="No Answer" />
+                <label class="form-check-label" for="gridRadios3">
+                  Prefer not to say
+                </label>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="control-group form-group">
-          <div className="controls">
-            <label>Gender:</label>
-            <input name="email" value={value.email} onChange={handleInput} type="email" className="form-control" id="email" required data-validation-required-message="Please enter your email address." />
+        </fieldset>
+
+        {/*Ethnicity Fieldset*/}
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Ethnicity:</legend>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                <label class="form-check-label" for="inlineCheckbox1">African-American</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
+                <label class="form-check-label" for="inlineCheckbox2">Caucasian</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" />
+                <label class="form-check-label" for="inlineCheckbox3">Asian-American</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" />
+                <label class="form-check-label" for="inlineCheckbox3">Hispanic</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" />
+                <label class="form-check-label" for="inlineCheckbox3">Pacific Islander</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" />
+                <label class="form-check-label" for="inlineCheckbox3">Two or More Races</label>
+              </div>
           </div>
-        </div>
-        <div className="control-group form-group">
-          <div className="controls">
-            <label>Ethnicity:</label>
-            <input name="email" value={value.email} onChange={handleInput} type="email" className="form-control" id="email" required data-validation-required-message="Please enter your email address." />
-          </div>
-        </div>
+        </fieldset>
+
+
+
         <div className="control-group form-group">
           <div className="controls">
             <label>GPA:</label>
-            <input name="email" value={value.email} onChange={handleInput} type="email" className="form-control" id="email" required data-validation-required-message="Please enter your email address." />
+            <input name="gpa" value={value.gpa} onChange={handleInput} type="number" className="form-control" id="gpa" required data-validation-required-message="Please enter your GPA." />
           </div>
         </div>
         <div className="control-group form-group">
           <div className="controls">
             <label>SAT Score:</label>
-            <input name="email" value={value.email} onChange={handleInput} type="email" className="form-control" id="email" required data-validation-required-message="Please enter your email address." />
+            <input name="sat_score" value={value.satScore} onChange={handleInput} type="number" className="form-control" id="sat_score" required data-validation-required-message="Please enter your SAT Score." />
           </div>
         </div>
         <div className="control-group form-group">
           <div className="controls">
             <label>ACT Score:</label>
-            <input name="email" value={value.email} onChange={handleInput} type="email" className="form-control" id="email" required data-validation-required-message="Please enter your email address." />
+            <input name="act_score" value={value.actScore} onChange={handleInput} type="number" className="form-control" id="act_score" required data-validation-required-message="Please enter your ACT Score." />
           </div>
         </div>
         <div className="control-group form-group">
@@ -73,6 +192,7 @@ const ScholarshipForm = ({handleInput, handleSubmit, value, scholarshipName}) =>
       </form>
     </div>
   </div>
+
 );
 
 export default ScholarshipForm;
