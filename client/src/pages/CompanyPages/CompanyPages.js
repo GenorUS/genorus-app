@@ -4,28 +4,38 @@ import ScholarshipCard from "../../components/ScholarshipCard";
 import HomeContainer from "../../components/HomeComponents/HomeContainer";
 import PageHeading from "../../components/PageHeading";
 import Footer from "../Footer";
-import scholarships from "../../data/scholarships";
 import {OL, OrderedItem} from '../../components/HomeComponents/OrderedList';
+import DBAPI from '../../utils/DBAPI';
+
 
 class CompanyPages extends Component {
+  
   state = {
-    currentScholarship: {}
+    company: {},
+    scholarship: {}
   };
 
+
   componentDidMount() {
-    console.log(this.props.match.params.company)
-    let company = this.props.match.params.company;
-    for (let i = 0; i < scholarships.length; i++) {
-      if (scholarships[i].company_name === company) {
-        console.log(scholarships[i])
-        this.setState({
-          currentScholarship: scholarships[i]
-        });
-      }
-    }
-  }
+    console.log(this.props.match.params.companyid);
+    DBAPI.getScholarships(this.props.match.params.companyid)
+     .then(data => {
+       let scholarship = data.data.Scholarships;
+       let company = data.data
+       this.setState({ company, scholarship: scholarship[0] });
+     });
+ }
+
 
   render() {
+    let { company_name } = this.state.company;
+    let {  id, name, amount, description, bannerURL } = this.state.scholarship;
+    let howToApply = "Fill out general information on our form, Upload a copy of your transcripts. Supply a letter of recommendation."
+    let eligibility= "Applicants must have at least a 3.0 GPA or higher. Applicants must be a graduating high school senior from Pennsylvania." +
+                  "Applicants must be university students studying computer science, computer engineering, informatics, or a closely related technical field at a university in the state of Pennsylvania" +
+                  "Applicants must be 18 year of age or older as of 17th September 2018." + 
+                  "Applicants must come from a household with a median income of $35,000 or lower.";
+    let applicationPeriod = "The application process will remain open until 6th December, 2018 at 11:59 pm GMT."
     return (
       <div style={{backgroundImage: `url(/assets/images/backgrounds/genorusscholarshipsbackground.jpg)`, backgroundAttachment: "fixed", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
         <NavBar />
@@ -37,19 +47,18 @@ class CompanyPages extends Component {
         </OL>
 
         <ScholarshipCard
-          id={this.state.currentScholarship.id}
-          key={this.state.currentScholarship.id}
-          scholarshipName={this.state.currentScholarship.scholarship_name}
-          companyName={this.state.currentScholarship.company_name}
-          image={this.state.currentScholarship.image}
-          howToApply={this.state.currentScholarship.how_to_apply}
-          eligibility={this.state.currentScholarship.eligibility}
-          applicationPeriod={this.state.currentScholarship.application_period}
-          amount={this.state.currentScholarship.amount}
-          description={this.state.currentScholarship.description}
-          url={this.state.currentScholarship.url}
+          scholarshipID={id}
+          companyName={company_name}
+          scholarshipName={name}
+          image={bannerURL}
+          description={description}
+         amount={amount}
+         howToApply={howToApply}
+         eligibility={eligibility}
+         applicationPeriod={applicationPeriod} 
         />
 
+     
         </HomeContainer>
         <Footer />
       </div>

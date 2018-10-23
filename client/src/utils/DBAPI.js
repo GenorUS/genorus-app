@@ -1,12 +1,13 @@
 import axios from "axios";
 
 export default {
-  signUp: function (userData,cb) {
-    return axios.post("/api/users/signup", userData)
-      .then((data) => {
-        cb(data);
-      });
+  getAllCompanies: function (userData,cb) {
+    return axios.get("/api/companies");
+      
   },
+  getScholarships: function(companyID) {
+    return axios.get("/api/companies/" + companyID);
+  }, 
 
   signIn: function (user, cb) {
     return axios.post("/api/users/login", user)
