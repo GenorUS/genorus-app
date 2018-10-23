@@ -142,7 +142,7 @@ export class SignIn extends Component {
             <Div className="rightSide">
               <h2 style={{ color: "#fff" }} >Sign In</h2>
               <form className="loginForm" method="post">
-                <Input name="email" label="Email Address" type="email"  value={this.state.email} id="inputEmail" placeholder="ex: joe@gmail.com" error={this.state.errors.email} onChange={this.handleInput} />
+                <Input name="email" label="Email Address" type="email"  value={this.state.email} id="inputEmail" placeholder ="ex: joe@gmail.com" error={this.state.errors.email} onChange={this.handleInput} />
                 <Input name="password" label="Password" type="password" value={this.state.password} id="inputPassword" placeholder="Password" error={this.state.errors.password} onChange={this.handleInput} />
                 <FormBtn type="submit" className="submit-btn" onClick={this.handleLogin}>Sign In</FormBtn>
               </form>
