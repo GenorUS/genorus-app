@@ -94,7 +94,7 @@ export class SignIn extends Component {
 
   render() {
     return (
-      <div style={{ backgroundImage: `url(/assets/images/backgrounds/genorussigninbackground.jpg)`, backgroundAttachment: "fixed", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
+      <div style={{ backgroundImage: `url(/assets/images/backgrounds/genorussigninbackground.jpg)`, backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundAttachment:"fixed", webkitBackgroundSize: "cover", mozBackgroundSize: "cover", oBackgroundSize: "cover", backgroundSize: "cover" }}>
         <NavBar />
         <HomeContainer>
           <section id="nextgroup" style={{ paddingTop: "70px", paddingBottom: "70px" }}>
