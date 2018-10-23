@@ -102,25 +102,25 @@ const ScholarshipForm = ({handleInput, handleSubmit, value, scholarshipName}) =>
           <div class="row">
             <legend class="col-form-label col-sm-2 pt-0">Gender:</legend>
             <div class="col-sm-10">
-              <div class="form-check">
+              <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Male" />
                 <label class="form-check-label" for="gridRadios1">
                   Male
                 </label>
               </div>
-              <div class="form-check">
+              <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Female" />
                 <label class="form-check-label" for="gridRadios2">
                   Female
                 </label>
               </div>
-              <div class="form-check">
+              <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Non-Binary" />
                 <label class="form-check-label" for="gridRadios3">
                   Non-binary
                 </label>
               </div>
-              <div class="form-check">
+              <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="No Answer" />
                 <label class="form-check-label" for="gridRadios3">
                   Prefer not to say
@@ -130,39 +130,52 @@ const ScholarshipForm = ({handleInput, handleSubmit, value, scholarshipName}) =>
           </div>
         </fieldset>
 
-        {/*Ethnicity Fieldset*/}
+        {/*Ethnicity fieldset below*/}
         <fieldset class="form-group">
           <div class="row">
             <legend class="col-form-label col-sm-2 pt-0">Ethnicity:</legend>
+            <div class="col-sm-10">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
-                <label class="form-check-label" for="inlineCheckbox1">African-American</label>
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="African-American" />
+                <label class="form-check-label" for="gridRadios1">
+                  African-American
+                </label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
-                <label class="form-check-label" for="inlineCheckbox2">Caucasian</label>
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Caucasion" />
+                <label class="form-check-label" for="gridRadios2">
+                  Caucasian
+                </label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" />
-                <label class="form-check-label" for="inlineCheckbox3">Asian-American</label>
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Asian American" />
+                <label class="form-check-label" for="gridRadios3">
+                  Asian-American
+                </label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" />
-                <label class="form-check-label" for="inlineCheckbox3">Hispanic</label>
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Hispanic or Latin-American" />
+                <label class="form-check-label" for="gridRadios3">
+                  Hispanic or Latin-American
+                </label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" />
-                <label class="form-check-label" for="inlineCheckbox3">Pacific Islander</label>
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Pacific-Islander" />
+                <label class="form-check-label" for="gridRadios3">
+                  Pacific-Islander
+                </label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" />
-                <label class="form-check-label" for="inlineCheckbox3">Two or More Races</label>
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Two or More Races" />
+                <label class="form-check-label" for="gridRadios3">
+                  Two or More Races
+                </label>
               </div>
+            </div>
           </div>
         </fieldset>
 
-
-
+        {/*Grade and Essay Requirements Below*/}
         <div className="control-group form-group">
           <div className="controls">
             <label>GPA:</label>
@@ -188,7 +201,7 @@ const ScholarshipForm = ({handleInput, handleSubmit, value, scholarshipName}) =>
           </div>
         </div>
         <div id="success"></div>
-        <button onClick={handleSubmit} type="submit" className="btn btn-primary" id="sendMessageButton">Send Message</button>
+        <button onClick={handleSubmit} type="submit" className="btn btn-primary" id="sendMessageButton">Submit Application</button>
       </form>
     </div>
   </div>

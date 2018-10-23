@@ -7,7 +7,7 @@ import scholarships from "../../data/scholarships";
 import ApplicationForm from "../../components/ApplicationForm/ApplicationForm";
 import {OL, OrderedItem} from '../../components/HomeComponents/OrderedList';
 
-class CompanyPages extends Component {
+class ApplicationPage extends Component {
   state = {
     currentScholarship: {}
   };
@@ -35,7 +35,6 @@ class CompanyPages extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-
     console.log(this.state)
   }
 
@@ -50,7 +49,7 @@ class CompanyPages extends Component {
           <OrderedItem className="breadcrumb-item active">Genorus Scholarships</OrderedItem>
         </OL>
 
-        <ApplicationForm handleInput={this.handleInput} handleSubmit={this.handleSubmit} value={this.state}/>
+        <ApplicationForm handleInput={this.handleInput} handleSubmit={this.handleSubmit} value={this.state} scholarshipName={this.state.currentScholarship.scholarship_name} />
 
         </HomeContainer>
         <Footer />
@@ -60,4 +59,4 @@ class CompanyPages extends Component {
 
 }
 
-export default CompanyPages;
+export default ApplicationPage;
