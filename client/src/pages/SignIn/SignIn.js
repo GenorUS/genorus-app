@@ -108,7 +108,7 @@ export class SignIn extends Component {
               <H1 className="mb-3" style={{ color: "#fff" }} about="Genorus Sign In" />
               <H1 className="mb-3" style={{ color: "#fff" }} about="Genorus Sign In" />
               <H1 className="mb-3" style={{ color: "#fff" }} about="Genorus Sign In" />
-              <H1 className="mb-3" style={{ color: "#fff" }} about="Genorus Sign In" />
+              <H1 className="mb-3" style={{ color: "#eeffef" }} about="Genorus Sign In" />
               <H1 className="mb-3" style={{ color: "#fff" }} about="Genorus Sign In" />
               <H1 className="mb-3" style={{ color: "#fff" }} about="Genorus Sign In" />
               <H1 className="mb-3" style={{ color: "#fff" }} about="Genorus Sign In" />

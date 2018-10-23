@@ -1,6 +1,11 @@
 // Dependencies ------------------------------------------------
 const db = require("../../models");
 const passport = require("../../config/passport");
+// Here I'm adding my own JWT stuff
+const settings = require("../../config/settings");
+require("../../config/passport")(passport);
+const jwt = require('jsonwebtoken');
+
 const express = require("express");
 const router = express.Router();
 const isAuthenticated = require("../../config/middleware/isAuthenticated");
@@ -15,8 +20,21 @@ const UsersController = require("../../controllers/Users.js");
 
 // POST "/api/users/login" - for logging into site and authenticating users
 router
-  .route("/login", passport.authenticate("local"))
-  .post(UsersController.login);
+  // .route("/login", passport.authenticate("local"))
+  .post("/login", (req, res) => {
+      db.User.findOne({
+          where: {
+              email: req.body.email
+          }
+      })
+          .then(user => {
+              console.log(user);
+              // if(db.User.validPassword(user.password)) {
+              //
+              // };
+          })
+          .catch()
+  });
 
 // POST "/api/users/signup" - for sign up form, hashing/salting happens in User.js sequelize model.
 router

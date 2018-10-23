@@ -16,7 +16,7 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/scholarship" component={Portfolio} />
           <Route exact path="/scholarship/:company/:companyid" component={CompanyPage}/>
-          <Route exact path="/scholarship/:company/apply" component={ApplicationPage} />
+          <Route exact path="/scholarship/:company/:scholarship/:scholarshipid/apply" component={ApplicationPage} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/signin" component={SignIn} />
           <Route exact path="/signup" component={SignUp} />
