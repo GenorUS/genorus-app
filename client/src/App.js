@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import CompanyPage from "./pages/CompanyPages";
-import {SignIn, SignUp} from "./pages/SignIn";
+import { SignIn, SignUp } from "./pages/SignIn";
 
 
 const App = () => {
@@ -21,4 +21,5 @@ const App = () => {
     </Router>
   );
 }
+
 export default App;
