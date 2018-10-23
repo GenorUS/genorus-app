@@ -30,16 +30,16 @@ const ScholarshipCard = ({
       <h4>Application Period:</h4>
       <p>{ applicationPeriod }</p>
       {/*Placeholder button to forward to future form*/}
-      {
-        <button className="btn btn-primary">Apply Now
-          <span className="glyphicon glyphicon-chevron-right"></span>
+      {/*{
+        <Button className="btn btn-primary">
+            <Link to={`/scholarship/${companyName}/${scholarshipName}/${scholarshipID}/apply`} Apply Now </Button>
         </button>
-      }
+      }*/}
       {
         // NOTE: Enabling this is breaking the styles on various pages:
-        // <Link className="btn btn-primary" to={ url }>Apply Now
-        //   <span className="glyphicon glyphicon-chevron-right"></span>
-        // </Link>
+        <Link className="btn btn-primary" to={`/scholarship/${companyName}/${scholarshipName}/${scholarshipID}/apply`}>Apply Now
+          <span className="glyphicon glyphicon-chevron-right"></span>
+        </Link>
       }
     </div>
   </div>

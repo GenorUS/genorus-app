@@ -99,7 +99,7 @@ export class SignUp extends Component {
     
     if (!this.userFormIsValid()) {
       return;
-    }
+}
     let userData = { ...this.state }
     
     UserSignUp.signUp(userData, (data) => {

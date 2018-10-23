@@ -1,10 +1,36 @@
 //Dependencies --------------------------------------------------------------
-const passport = require("passport");
+var passport = require("passport");
+var JwtStrategy = require('passport-jwt').Strategy,
+    ExtractJwt = require('passport-jwt').ExtractJwt;
+const settings = require('./settings');
 const LocalStrategy = require("passport-local").Strategy;
 const db = require("../models");
 
+
+module.exports = function (passport) {
+  let opts = {};
+
+  opts.jwtFromRequest = ExtractJwt.fromAuthHeaderWithScheme("jwt");
+  opts.secretOrKey = settings.secret;
+
+    passport.use(new JwtStrategy(opts, function(jwt_payload, done) {
+        db.User.findOne({
+            where: {
+                id: jwt_payload.id
+            }
+        })
+            .then(user => {
+                if(user){
+                    return done(null, user);
+                } else {
+                    return done(null, false);
+                }
+            });
+    }));
+}
 // Passport ------------------------------------------------------------------
 // Telling passport we want to use a Local Strategy - login via username/email and password
+/*
 passport.use(new LocalStrategy(
   // User will sign in using an email, rather than a "username"
   {
@@ -45,3 +71,4 @@ passport.deserializeUser((obj, cb) => {
 
 
 module.exports = passport;
+*/
