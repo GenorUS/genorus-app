@@ -26,7 +26,7 @@ class Portfolio extends Component {
   render() {
     const description = "Click on the fill out form button below to view the scholarship requirements. Please fill out the form for a chance at recieving a scholarship from the designated sponsor.";
     return (
-      <div style={{backgroundImage: `url(/assets/images/backgrounds/genorusscholarshipsbackground.jpg)`, backgroundAttachment: "fixed", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
+      <div style={{backgroundImage: `url(/assets/images/backgrounds/genorusscholarshipsbackground.jpg)`, backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundAttachment:"fixed", webkitBackgroundSize: "cover", mozBackgroundSize: "cover", oBackgroundSize: "cover", backgroundSize: "cover" }}>
         <NavBar />
         <HomeContainer>
         <PageHeading name={"Genorus Scholarships"}/>
