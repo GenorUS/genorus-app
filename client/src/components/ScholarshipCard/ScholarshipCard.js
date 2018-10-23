@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 const ScholarshipCard = ({
-  id,
+  scholarshipID,
   scholarshipName,
   companyName,
   image,
@@ -30,10 +30,13 @@ const ScholarshipCard = ({
       <h4>Application Period:</h4>
       <p>{ applicationPeriod }</p>
       {/*Placeholder button to forward to future form*/}
-      <button className="btn btn-primary">Apply Now
-        <span className="glyphicon glyphicon-chevron-right"></span>
-      </button>
       {
+        <button className="btn btn-primary">Apply Now
+          <span className="glyphicon glyphicon-chevron-right"></span>
+        </button>
+      }
+      {
+        // NOTE: Enabling this is breaking the styles on various pages:
         // <Link className="btn btn-primary" to={ url }>Apply Now
         //   <span className="glyphicon glyphicon-chevron-right"></span>
         // </Link>

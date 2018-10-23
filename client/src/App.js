@@ -4,21 +4,26 @@ import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import CompanyPage from "./pages/CompanyPages";
-import {SignIn, SignUp} from "./pages/SignIn";
+import ApplicationPage from "./pages/ApplicationPage";
+import { SignIn, SignUp } from "./pages/SignIn";
 
 
 const App = () => {
   return (
     <Router>
       <div>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/scholarship" component={Portfolio} />
-        <Route path="/scholarship/:company" component={CompanyPage}/>
-        <Route exact path="/contact" component={Contact} />
-        <Route exact path="/signin" component={SignIn} />
-        <Route exact path="/signup" component={SignUp} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/scholarship" component={Portfolio} />
+          <Route exact path="/scholarship/:company/:companyid" component={CompanyPage}/>
+          <Route exact path="/scholarship/:company/apply" component={ApplicationPage} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/signin" component={SignIn} />
+          <Route exact path="/signup" component={SignUp} />
+        </Switch>
       </div>
     </Router>
   );
 }
+
 export default App;
