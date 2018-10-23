@@ -1,15 +1,14 @@
 const router = require("express").Router();
+const companyController = require("../../controllers/Companies");
 
 
-// Matches with "/api/articles"
-router.route("/:id")
-  .get((req, res) => {
-
-    // TODO call the database to get the information of a company and the scholarship they hold
-
-
-  })
+// Matches with "/api/companies"
+router.route("/")
+  .get(companyController.findAll)
   .post();
+
+router.route("/:id")
+  .get(companyController.getScholarships)
 
 module.exports = router;
 
