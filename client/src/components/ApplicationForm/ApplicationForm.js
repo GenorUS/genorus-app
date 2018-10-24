@@ -11,38 +11,38 @@ const ScholarshipForm = ({ handleSubmit, handleInput, value, scholarshipName}) =
         <div className="form-row">
           <div className="form-group col-md-6">
             <label>First Name:</label>
-            <input type="firstname" className="form-control" id="firstname" value={value.firstname} onChange={handleInput} placeholder="First Name" />
+            <input name="firstname" type="text" className="form-control" value={value.firstname} onChange={handleInput} placeholder="First Name" />
           </div>
           <div className="form-group col-md-6">
             <label>Last Name:</label>
-            <input type="lastname" className="form-control" id="lastname" value={value.lastname} onChange={handleInput} placeholder="Last Name" />
+            <input name="lastname" type="text" className="form-control" value={value.lastname} onChange={handleInput} placeholder="Last Name" />
           </div>
         </div>
         <div className="form-group">
           <label>Address</label>
-          <input type="text" className="form-control" id="address" value={value.address} onChange={handleInput} placeholder="1234 Main St" />
+          <input name="address" type="text" className="form-control" value={value.address} onChange={handleInput} placeholder="1234 Main St" />
         </div>
         <div className="form-group">
           <label>Address 2</label>
-          <input type="text" className="form-control" id="address2" value={value.address2} onChange={handleInput} placeholder="Apartment, studio, or floor" />
+          <input name="address2" type="text" className="form-control" value={value.address2} onChange={handleInput} placeholder="Apartment, studio, or floor" />
         </div>
         <div className="form-row">
           <div className="form-group col-md-6">
             <label>City</label>
-            <input type="text" className="form-control" id="city" value={value.city} onChange={handleInput}/>
+            <input name="city" type="text" className="form-control" value={value.city} onChange={handleInput}/>
           </div>
           <div className="form-group col-md-4">
             <label>State</label>
-            <select id="inputState" className="form-control">
-              <option>Choose...</option>
+            <select name="state" value={value.state} onChange={handleInput} className="form-control">
+              <option value="none">Choose...</option>
               <option value="Pennsylvania">Pennsylvania</option>
               <option value="Connecticut">Connecticut</option>
               <option value="Minnesota">Minnesota</option>
             </select>
           </div>
           <div className="form-group col-md-2">
-            <label>Zip</label>
-            <input type="text" className="form-control" id="zipcode" />
+            <label>Zip Code</label>
+            <input name="zipcode" type="text" className="form-control" value={value.zipcode} onChange={handleInput} />
           </div>
         </div>
 
@@ -51,7 +51,7 @@ const ScholarshipForm = ({ handleSubmit, handleInput, value, scholarshipName}) =
           <div className="controls form-row">
               <div className="form-group col-md-2">
                 <label>Birth Month</label>
-                <select id="inputState" className="form-control">
+                <select name="dob_month" value={value.dob_month} onChange={handleInput} className="form-control">
                   <option value="none chosen">Choose...</option>
                   <option value="01">January</option>
                   <option value="02">February</option>
@@ -69,7 +69,7 @@ const ScholarshipForm = ({ handleSubmit, handleInput, value, scholarshipName}) =
               </div>
               <div className="form-group col-md-2">
                 <label>Birth Day</label>
-                <select id="inputState" className="form-control">
+                <select name="dob_day" value={value.dob_day} onChange={handleInput} className="form-control">
                   <option value="none chosen">Choose...</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -86,7 +86,7 @@ const ScholarshipForm = ({ handleSubmit, handleInput, value, scholarshipName}) =
               </div>
               <div className="form-group col-md-2">
                 <label>Birth Year</label>
-                <select id="inputState" className="form-control">
+                <select name="dob_year" value={value.dob_year} onChange={handleInput} className="form-control">
                   <option>Choose...</option>
                   <option value="1990">1990</option>
                   <option value="1991">1991</option>
@@ -103,25 +103,25 @@ const ScholarshipForm = ({ handleSubmit, handleInput, value, scholarshipName}) =
             <legend className="col-form-label col-sm-2 pt-0">Gender:</legend>
             <div className="col-sm-10">
               <div className="form-check form-check-inline">
-                <input className="form-check-input" type="radio" name="gridRadios" id="gender" value="Male" />
+                <input className="form-check-input" type="radio" name="gender" value="Male" onChange={handleInput} />
                 <label className="form-check-label">
                   Male
                 </label>
               </div>
               <div className="form-check form-check-inline">
-                <input className="form-check-input" type="radio" name="gridRadios" id="gender" value="Female" />
+                <input className="form-check-input" type="radio" name="gender" value="Female" onChange={handleInput} />
                 <label className="form-check-label">
                   Female
                 </label>
               </div>
               <div className="form-check form-check-inline">
-                <input className="form-check-input" type="radio" name="gridRadios" id="gender" value="Non-Binary" />
+                <input className="form-check-input" type="radio" name="gender" value="Non-Binary" onChange={handleInput} />
                 <label className="form-check-label">
                   Non-binary
                 </label>
               </div>
               <div className="form-check form-check-inline">
-                <input className="form-check-input" type="radio" name="gridRadios" id="gender" value="No Answer" />
+                <input className="form-check-input" type="radio" name="gender" value="No Answer" onChange={handleInput} />
                 <label className="form-check-label">
                   Prefer not to say
                 </label>
@@ -136,37 +136,37 @@ const ScholarshipForm = ({ handleSubmit, handleInput, value, scholarshipName}) =
             <legend className="col-form-label col-sm-2 pt-0">Ethnicity:</legend>
             <div className="col-sm-10">
               <div className="form-check form-check-inline">
-                <input className="form-check-input" type="radio" name="gridRadios" id="african_american" value="African-American" />
+                <input className="form-check-input" type="radio" name="ethnicity" value="African-American" onChange={handleInput} />
                 <label className="form-check-label">
                   African-American
                 </label>
               </div>
               <div className="form-check form-check-inline">
-                <input className="form-check-input" type="radio" name="gridRadios" id="caucasian" value="Caucasian" />
+                <input className="form-check-input" type="radio" name="ethnicity" value="Caucasian" onChange={handleInput} />
                 <label className="form-check-label">
                   Caucasian
                 </label>
               </div>
               <div className="form-check form-check-inline">
-                <input className="form-check-input" type="radio" name="gridRadios" id="asian_american" value="Asian American" />
+                <input className="form-check-input" type="radio" name="ethnicity" value="Asian American" onChange={handleInput} />
                 <label className="form-check-label">
                   Asian-American
                 </label>
               </div>
               <div className="form-check form-check-inline">
-                <input className="form-check-input" type="radio" name="gridRadios" id="hispanic" value="Hispanic or Latin-American" />
+                <input className="form-check-input" type="radio" name="ethnicity" value="Hispanic or Latin-American" onChange={handleInput} />
                 <label className="form-check-label">
                   Hispanic or Latin-American
                 </label>
               </div>
               <div className="form-check form-check-inline">
-                <input className="form-check-input" type="radio" name="gridRadios" id="pacific_islander" value="Pacific-Islander" />
+                <input className="form-check-input" type="radio" name="ethnicity" value="Pacific-Islander" onChange={handleInput} />
                 <label className="form-check-label">
                   Pacific-Islander
                 </label>
               </div>
               <div className="form-check form-check-inline">
-                <input className="form-check-input" type="radio" name="gridRadios" id="two_or_more_races" value="Two or More Races" />
+                <input className="form-check-input" type="radio" name="ethnicity" value="Two or More Races" onChange={handleInput} />
                 <label className="form-check-label">
                   Two or More Races
                 </label>
