@@ -19,6 +19,8 @@ class ApplicationPage extends Component {
 
       this.setState({user: JWT.getJWT()});
 
+
+
     DBAPI.getScholarships()
         .then(data => {
           console.log(data);
@@ -55,12 +57,12 @@ class ApplicationPage extends Component {
   }
 
   render() {
-      let { id } = this.state.user;
+
     return (
       <div style={{backgroundImage: `url(/assets/images/backgrounds/genorusscholarshipsbackground.jpg)`, backgroundAttachment: "fixed", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
         <NavBar />
         <HomeContainer>
-            <button className="btn btn-danger">{id}</button>
+            {this.state.user && <div > {this.state.user.id}</div>}
         <PageHeading name={"Genorus Scholarships"}/>
         <OL>
           <OrderedItem className="breadcrumb-item">Genorus</OrderedItem>
