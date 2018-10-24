@@ -9,9 +9,17 @@ import { OL, OrderedItem } from '../../components/HomeComponents/OrderedList';
 
 class ApplicationPage extends Component {
   state = {
+    form: [
+      
+    ],
     scholarship: {},
     company: {}
   };
+
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log();
+  }
 
   componentDidMount() {
     console.log(this.props.match.params.company)
@@ -25,19 +33,6 @@ class ApplicationPage extends Component {
      });
   }
 
-  handleInput(event) {
-    let { name, value } = event.currentTarget;
-    console.log(name + " " + value)
-    this.setState({
-      [name]: value
-    })
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
-    console.log(this.state)
-  }
-
   render() {
     return (
       <div style={{backgroundImage: `url(/assets/images/backgrounds/genorusscholarshipsbackground.jpg)`, backgroundAttachment: "fixed", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
@@ -49,7 +44,10 @@ class ApplicationPage extends Component {
           <OrderedItem className="breadcrumb-item active">Genorus Scholarships</OrderedItem>
         </OL>
 
-        <ApplicationForm handleInput={this.handleInput} handleSubmit={this.handleSubmit} value={this.state} scholarshipName={this.state.scholarship.name} />
+        <ApplicationForm
+          scholarshipName={this.state.scholarship.name}
+          handleSubmit={this.handleSubmit}
+        />
 
         </HomeContainer>
         <Footer />

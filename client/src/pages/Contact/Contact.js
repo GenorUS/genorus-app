@@ -47,7 +47,11 @@ class Contact extends Component {
             <OrderedItem className="breadcrumb-item active">Contact Us</OrderedItem>
           </OL>
           <ContactDetails />
-          <ContactForm handleInput={this.handleInput} handleSubmit={this.handleSubmit} value={this.state} />
+          <ContactForm
+            handleInput={this.handleInput}
+            handleSubmit={this.handleSubmit}
+            value={this.state}
+          />
         </Container>
         <Footer />
       </div>
