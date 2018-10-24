@@ -6,6 +6,7 @@ import Footer from "../Footer";
 import scholarships from "../../data/scholarships";
 import ApplicationForm from "../../components/ApplicationForm/ApplicationForm";
 import {OL, OrderedItem} from '../../components/HomeComponents/OrderedList';
+import DBAPI from '../../utils/DBAPI';
 
 class ApplicationPage extends Component {
   state = {
@@ -13,6 +14,18 @@ class ApplicationPage extends Component {
   };
 
   componentDidMount() {
+
+
+    DBAPI.getScholarships()
+        .then(data => {
+          console.log(data);
+        })
+        .catch(err => {
+          if(err.response.status){
+            console.log(err.response.status)
+          }
+        });
+
     console.log(this.props.match.params.company)
     let company = this.props.match.params.company;
     for (let i = 0; i < scholarships.length; i++) {
@@ -48,7 +61,6 @@ class ApplicationPage extends Component {
           <OrderedItem className="breadcrumb-item">Genorus</OrderedItem>
           <OrderedItem className="breadcrumb-item active">Genorus Scholarships</OrderedItem>
         </OL>
-
         <ApplicationForm handleInput={this.handleInput} handleSubmit={this.handleSubmit} value={this.state} scholarshipName={this.state.currentScholarship.scholarship_name} />
 
         </HomeContainer>
