@@ -31,40 +31,12 @@ class ApplicationPage extends Component {
 
     scholarship: {},
     company: {},
-    user: {}
-  }
+    user: JWT.getJWT() || {}
+  };
 
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   };
-
-  componentWillMount() {
-
-      this.setState({user: JWT.getJWT()});
-
-
-
-    DBAPI.getScholarships()
-        .then(data => {
-          console.log(data);
-        })
-        .catch(err => {
-          if(err.response.status){
-            console.log(err.response.status)
-          }
-        });
-
-    console.log(this.props.match.params.company)
-    let company = this.props.match.params.company;
-    for (let i = 0; i < scholarships.length; i++) {
-      if (scholarships[i].company_name === company) {
-        console.log(scholarships[i])
-        this.setState({
-          currentScholarship: scholarships[i]
-        });
-      }
-    }
-  }
 
   handleInput(e) {
     let { name, value } = e.currentTarget;
@@ -85,8 +57,8 @@ class ApplicationPage extends Component {
     })
   }
 
-  componentDidMount() {
-    console.log(this.state.form)
+  componentWillMount() {
+    console.log(this.state.user);
     DBAPI.getScholarships(this.props.match.params.scholarshipid)
      .then(data => {
        let scholarship = data.data.Scholarships;
@@ -101,13 +73,13 @@ class ApplicationPage extends Component {
       <div style={{backgroundImage: `url(/assets/images/backgrounds/genorusscholarshipsbackground.jpg)`, backgroundAttachment: "fixed", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
         <NavBar />
         <HomeContainer>
-            {this.state.user && <div > {this.state.user.id}</div>}
+
         <PageHeading name={"Genorus Scholarships"}/>
         <OL>
           <OrderedItem className="breadcrumb-item">Genorus</OrderedItem>
           <OrderedItem className="breadcrumb-item active">Genorus Scholarships</OrderedItem>
         </OL>
-
+            {this.state.user ? <div className="btn btn-danger">{this.state.user.firstname}</div> : null}
         <ApplicationForm
           scholarshipName={this.state.scholarship.name}
           handleSubmit={this.handleSubmit}
