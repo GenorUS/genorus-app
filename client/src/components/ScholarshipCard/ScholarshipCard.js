@@ -11,7 +11,8 @@ const ScholarshipCard = ({
   howToApply,
   eligibility,
   applicationPeriod,
-  amount }) => (
+  amount,
+  userId }) => (
   <div className="row" style={{padding: "20px"}}>
     <div className="col-md-7">
       {/* This is where links to the company page will go */}
@@ -29,17 +30,10 @@ const ScholarshipCard = ({
       <p>{ eligibility }</p>
       <h4>Application Period:</h4>
       <p>{ applicationPeriod }</p>
-      {/*Placeholder button to forward to future form*/}
-      {/*{
-        <Button className="btn btn-primary">
-            <Link to={`/scholarship/${companyName}/${scholarshipName}/${scholarshipID}/apply`} Apply Now </Button>
-        </button>
-      }*/}
-      {
-        // NOTE: Enabling this is breaking the styles on various pages:
-        <Link className="btn btn-primary" to={`/scholarship/${companyName}/${scholarshipName}/${scholarshipID}/apply`}>Apply Now
+        {/*// NOTE: Enabling this is breaking the styles on various pages:*/}
+        {userId ? <Link className="btn btn-primary" to={`/scholarship/${companyName}/${scholarshipName}/${scholarshipID}/apply`} >Apply Now
           <span className="glyphicon glyphicon-chevron-right"></span>
-        </Link>
+        </Link> : <div style={{color: "white", fontWeight: "bold", fontSize: "16px", padding: "20px", backgroundColor: "red", textAlign: "center"}}>Please Log In to Apply</div>
       }
     </div>
   </div>

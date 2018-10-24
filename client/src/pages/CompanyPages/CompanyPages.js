@@ -6,18 +6,18 @@ import PageHeading from "../../components/PageHeading";
 import Footer from "../Footer";
 import {OL, OrderedItem} from '../../components/HomeComponents/OrderedList';
 import DBAPI from '../../utils/DBAPI';
-
+import JWT from '../../utils/Auth';
 
 class CompanyPages extends Component {
   
   state = {
     company: {},
-    scholarship: {}
+    scholarship: {},
+    user: JWT.getJWT() || {}
   };
 
 
   componentDidMount() {
-    console.log(this.props.match.params.companyid);
     DBAPI.getScholarships(this.props.match.params.companyid)
      .then(data => {
        let scholarship = data.data.Scholarships;
@@ -25,7 +25,6 @@ class CompanyPages extends Component {
        this.setState({ company, scholarship: scholarship[0] });
      });
  }
-
 
   render() {
     let { company_name } = this.state.company;
@@ -55,7 +54,8 @@ class CompanyPages extends Component {
          amount={amount}
          howToApply={howToApply}
          eligibility={eligibility}
-         applicationPeriod={applicationPeriod} 
+         applicationPeriod={applicationPeriod}
+          userId={this.state.user.id}
         />
 
      

@@ -8,29 +8,29 @@ const Nav = props => {
   return (
     <nav {...props}>{props.children}</nav>
   )
-}
+};
 
 const Div = props => {
   return (
     <div {...props}>{props.children}</div>
   )
-}
+};
 
 const Button = props => {
   return (
     <button {...props}>{props.children}</button>
   )
-}
+};
 const UL = props => {
   return (
     <ul {...props}>{props.children}</ul>
   )
-}
+};
 const LI = props => {
   return (
     <ul {...props}>{props.children}</ul>
   )
-}
+};
 
 
 class NavBar extends Component {
@@ -38,12 +38,9 @@ class NavBar extends Component {
       super(props)
 
       this.state = {
-          user: {}
-      }
-  }
+          user: JWT.getJWT() || {}
 
-  componentWillMount() {
-      this.setState({user: JWT.getJWT()});
+      }
   }
 
   logout() {
@@ -52,7 +49,6 @@ class NavBar extends Component {
   }
  
   render() {
-        let { firstname} = this.state.user;
     return (
       <Nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top" >
         <Div className="container">
@@ -69,7 +65,7 @@ class NavBar extends Component {
                               <Link key={i} className="navbar-brand" to={icon.route}><img src={icon.img} style={{width:30, marginRight: 2, marginTop: -4}} alt={icon.alt} />{icon.name}</Link>
                         )
                       })}
-                      {this.state.user ? <Link to={"/"} className="navbar-brand" onClick={this.logout}>{firstname} , Logout</Link> :
+                      {this.state.user.firstname ? <Link to={"/"} className="navbar-brand" onClick={this.logout}>{this.state.user.firstname} , Logout</Link> :
                           <Link to={"/signin"} className="navbar-brand">
                               <img src="/assets/images/icons/loginicon.png" style={{width:30, marginRight: 2, marginTop: -4}} alt="loginicon" />
                               Sign Up / Sign In

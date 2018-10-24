@@ -15,11 +15,8 @@ class Portfolio extends Component {
   componentDidMount() {
      DBAPI.getAllCompanies()
       .then(data => {
-        console.log(data.data[0].Scholarships[0].id)
         let recieved = data.data
         this.setState({sponsors: recieved});
-        this.state.sponsors.map(sponsors => console.log(sponsors.id, sponsors.company_name,
-           sponsors.Scholarships[0].name, sponsors.Scholarships[0].id, sponsors.Scholarships[0].bannerURL));
       });
   }
 
