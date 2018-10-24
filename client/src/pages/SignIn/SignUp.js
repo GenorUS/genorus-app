@@ -116,7 +116,7 @@ export class SignUp extends Component {
   };
   render() {
     return (
-      <div style={{ backgroundImage: `url(/assets/images/backgrounds/genorussignupbackground.jpg)`, backgroundAttachment: "fixed", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
+      <div style={{ backgroundImage: `url(/assets/images/backgrounds/genorussignupbackground.jpg)`, backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundAttachment:"fixed", webkitBackgroundSize: "cover", mozBackgroundSize: "cover", oBackgroundSize: "cover", backgroundSize: "cover" }}>
         <NavBar />
         <HomeContainer>
           <section id="nextgroup" style={{ paddingTop: "70px", paddingBottom: "70px" }}>
