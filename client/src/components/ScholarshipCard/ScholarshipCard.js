@@ -15,7 +15,7 @@ const ScholarshipCard = ({
   <div className="row" style={{padding: "20px"}}>
     <div className="col-md-7">
       {/* This is where links to the company page will go */}
-      <img className="img-fluid rounded mb-2 mb-md-0" src={ image } />
+      <img className="img-fluid rounded mb-2 mb-md-0" src={ image } alt="something"/>
     </div>
     <div className="col-md-5">
       <h3>{ scholarshipName }</h3>

@@ -8,20 +8,20 @@ const ContactDetails = (props) => (
     <div className="col-lg-4 mb-4" style={{backgroundColor: "#fff", height: "400px", borderRadius: "5px", color: "#176734" }}> 
       <h3>Contact Details</h3>
       <p style={{color: "#176734" }}>
-        3481 Melrose Place
-        <br />Beverly Hills, CA 90210
+      3401 Grays Ferry Ave 
+        <br />Philadelphia, PA 19146
         <br />
       </p>
       <p style={{color: "#176734" }}>
-        <abbr title="Phone">P</abbr> : (123) 456-7890
+        <abbr title="Phone">P</abbr> : (215) 534-3712
       </p>
       <p>
         <abbr title="Email">E</abbr> :
-        <a href="mailto:name@example.com">name@example.com
+        <a href="mailto:Genorusscholarship@gmail.com" style={{fontSize: "16px"}}>Genorusscholarship@gmail.com
         </a>
       </p>
       <p style={{color: "#176734" }}>
-        <abbr title="Hours">H</abbr> : Monday - Friday: 9:00 AM to 5:00 PM
+        <abbr title="Hours">H</abbr> : Monday - Friday: 9:00 AM to 5:00 PM 
       </p>
     </div>
   </div>

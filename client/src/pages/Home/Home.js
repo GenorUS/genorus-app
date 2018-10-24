@@ -13,10 +13,10 @@ import Sponsors from '../../utils/sponsors.json';
 
 
 class Home extends Component {
-  
+
   render() {
     return (
-      <div style={{backgroundImage: `url(/assets/images/backgrounds/genorusbackground.jpg)`, backgroundColor: "#176734" }}>
+      <div style={{backgroundImage: `url(/assets/images/backgrounds/genorusbackground.jpg)`, backgroundColor: "#176734", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundAttachment:"fixed", webkitBackgroundSize: "cover", mozBackgroundSize: "cover", oBackgroundSize: "cover", backgroundSize: "cover" }}>
         <NavBar />
         <HomeContainer>
         <section id="nextgroup" style={{paddingTop: "70px", paddingBottom: "70px"}}>
@@ -62,7 +62,7 @@ class Home extends Component {
             <Div  className="col-lg-6" style={{color: "#fff"}}>
             
               {/* <h2>Who We Are & What We Do</h2> */}
-              <div class="box">
+              <div className="box">
   <div className="inner " style={{alignItems: "center", justifyContent: "center"}}>
     
     <span>What We Do</span>

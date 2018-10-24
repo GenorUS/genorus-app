@@ -6,7 +6,7 @@ const db = require("./models");
 
 //Added for Passport
 const passport = require("passport");
-var session = require('express-session');
+const session = require('express-session');
 require("./config/passport");
 
 // Express and PORT ------------------------------------

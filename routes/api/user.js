@@ -29,12 +29,23 @@ router
           }
       })
           .then(user => {
-              console.log(user);
-              // if(db.User.validPassword(user.password)) {
-              //
-              // };
+
+                let password = user.dataValues.password;
+                console.log('REQ PASSWORD ' + req.body.password);
+              if(db.User.validPassword(req.body.password,password)) {
+                  console.log("This is User " + user);
+                  // if user is found and password is right create a token
+                  var token = jwt.sign(user.toJSON(), settings.secret);
+                  // return the information including token as JSON
+                  return res.json({success: true, token: 'JWT ' + token});
+              };
+              //If not authenticated return a bad status
+              return res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
           })
-          .catch()
+          .catch(err => {
+
+              return res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
+          });
   });
 
 // POST "/api/users/signup" - for sign up form, hashing/salting happens in User.js sequelize model.
@@ -44,7 +55,7 @@ router
 
 // GET "/api/users/user_data" - for getting some data about our user to be used client side
 router
-  .route("/user_data", isAuthenticated)
+  .route("/user_data")
   .post((req, res) => {
     res.send(res.body);
   })

@@ -9,10 +9,7 @@ export default {
   },
 
   signIn: function (user, cb) {
-    return axios.post("/api/users/login", user)
-      .then((data) => {
-        cb(data);
-    });
+    return axios.post("/api/users/login", user);
   },
   // Gets all articles
   getArticles: function() {

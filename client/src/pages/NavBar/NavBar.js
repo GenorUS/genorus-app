@@ -1,7 +1,8 @@
 import icons from '../../utils/icons.json';
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
+import Logout from '../../utils/logout';
+import JWT from '../../utils/Auth'
 const Nav = props => {
 
   return (
@@ -33,9 +34,25 @@ const LI = props => {
 
 
 class NavBar extends Component {
+  constructor(props){
+      super(props)
+
+      this.state = {
+          user: {}
+      }
+  }
+
+  componentWillMount() {
+      this.setState({user: JWT.getJWT()});
+  }
+
+  logout() {
+      Logout.logout();
+      this.props.history.push("/")
+  }
  
   render() {
-    
+        let { firstname} = this.state.user;
     return (
       <Nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top" >
         <Div className="container">
@@ -46,13 +63,19 @@ class NavBar extends Component {
           </Button>
           <Div className="collapse navbar-collapse" id="navbarResponsive">
               <UL className="navbar-nav ml-auto">
-                  {icons.map((icon, i) => {
-                    return (
-                      <LI key={i} className="nav-item">
-                          <Link className="navbar-brand" to={icon.route}><img src={icon.img} style={{width:30, marginRight: 2, marginTop: -4}} alt={icon.alt} />{icon.name}</Link>
-                      </LI>
-                    )
-                  })}
+                  <LI  className="nav-item">
+                      {icons.map((icon, i) => {
+                        return (
+                              <Link key={i} className="navbar-brand" to={icon.route}><img src={icon.img} style={{width:30, marginRight: 2, marginTop: -4}} alt={icon.alt} />{icon.name}</Link>
+                        )
+                      })}
+                      {this.state.user ? <Link to={"/"} className="navbar-brand" onClick={this.logout}>{firstname} , Logout</Link> :
+                          <Link to={"/signin"} className="navbar-brand">
+                              <img src="/assets/images/icons/loginicon.png" style={{width:30, marginRight: 2, marginTop: -4}} alt="loginicon" />
+                              Sign Up / Sign In
+                          </Link>}
+                  </LI>
+
               </UL>
           </Div>
         </Div>

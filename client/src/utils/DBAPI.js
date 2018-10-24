@@ -20,5 +20,9 @@ export default {
       .then((data) => {
         cb(data);
     });
+  },
+  testRoute: function() {
+    // axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
+    axios.get("/api/companies");
   }
 };

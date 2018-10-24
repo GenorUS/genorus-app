@@ -17,10 +17,11 @@ export class SignIn extends Component {
     this.state = {
       email: "",
       password: "",
+      message: "",
       errors: {
         email: "",
         password: ""
-      }
+      },
     }
     this.style= {color: 'red', fontWeight: 'bolder', fontSize: "18px"}
 
@@ -74,27 +75,33 @@ export class SignIn extends Component {
 
   handleLogin(event) {
 		event.preventDefault();
-    console.log("Clicked")
-		// if (!this.userFormIsValid()) {
-		// 	return;
-		// }
+
+		if (!this.userFormIsValid()) {
+			return;
+		}
     let { email, password } = this.state;
     let user = {
       email: email,
       password: password
     }
-    console.log(user)
-    UserSignIn.signIn(user, (data) => {
-      console.log(data);
-    });
-		// AuthorApi.saveAuthor(this.state.author);
-		// this.setState({dirty: false});
-		// this.transitionTo('/scholarship');
+
+    UserSignIn.signIn(user)
+        .then((result) => {
+            localStorage.setItem('jwtToken', result.data.token);
+            this.setState({ message: '' });
+            this.props.history.push('/')
+        })
+        .catch((error) => {
+            console.log("ERRROOOORRRRR ", error, error.response.status);
+            if(error.response.status === 401) {
+                this.setState({ message: 'Login failed. Username or password not match' });
+            }
+        });
 	};
 
   render() {
     return (
-      <div style={{ backgroundImage: `url(/assets/images/backgrounds/genorussigninbackground.jpg)`, backgroundAttachment: "fixed", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
+      <div style={{ backgroundImage: `url(/assets/images/backgrounds/genorussigninbackground.jpg)`, backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundAttachment:"fixed", webkitBackgroundSize: "cover", mozBackgroundSize: "cover", oBackgroundSize: "cover", backgroundSize: "cover" }}>
         <NavBar />
         <HomeContainer>
           <section id="nextgroup" style={{ paddingTop: "70px", paddingBottom: "70px" }}>
@@ -148,6 +155,7 @@ export class SignIn extends Component {
               </form>
               {this.state.errors.email ? <div className="input mt-1" style={this.style}>{this.state.errors.email}</div> : null}
               {this.state.errors.password ? <div className="input mt-1" style={this.style}>{this.state.errors.password}</div> : null}
+              {this.state.message ? <div className="alert alert-warning alert-dismissible" role="alert"> {this.state.message} </div> : null }
             </Div>
           </Div>
 

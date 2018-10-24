@@ -38,7 +38,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <div style={{backgroundImage: `url(/assets/images/backgrounds/contactusbackground.jpg)`, backgroundAttachment: "fixed", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
+      <div style={{backgroundImage: `url(/assets/images/backgrounds/contactusbackground.jpg)`, backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundAttachment:"fixed", webkitBackgroundSize: "cover", mozBackgroundSize: "cover", oBackgroundSize: "cover", backgroundSize: "cover" }}>
         <NavBar />
         <Container>
           <PageHeading name={"Contact Genorus"} />

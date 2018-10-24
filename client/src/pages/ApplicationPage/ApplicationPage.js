@@ -6,6 +6,7 @@ import Footer from "../Footer";
 import DBAPI from '../../utils/DBAPI';
 import ApplicationForm from "../../components/ApplicationForm/ApplicationForm";
 import { OL, OrderedItem } from '../../components/HomeComponents/OrderedList';
+import JWT from '../../utils/Auth';
 
 class ApplicationPage extends Component {
   constructor(props) {
@@ -29,12 +30,19 @@ class ApplicationPage extends Component {
         "essay": "",
 
     scholarship: {},
-    company: {}
+    company: {},
+    user: {}
   }
 
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   };
+
+  componentWillMount() {
+    this.setState({
+      user: JWT.getJWT()
+    });
+  }
 
   handleInput(e) {
     let { name, value } = e.currentTarget;
@@ -66,10 +74,12 @@ class ApplicationPage extends Component {
   }
 
   render() {
+      let { id } = this.state.user;
     return (
       <div style={{backgroundImage: `url(/assets/images/backgrounds/genorusscholarshipsbackground.jpg)`, backgroundAttachment: "fixed", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
         <NavBar />
         <HomeContainer>
+            <button className="btn btn-danger">{id}</button>
         <PageHeading name={"Genorus Scholarships"}/>
         <OL>
           <OrderedItem className="breadcrumb-item">Genorus</OrderedItem>
