@@ -15,6 +15,13 @@ export default {
         cb(data);
     });
   },
+
+    testRoute: function() {
+        // axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
+        axios.get("/api/companies");
+
+
+    },
   // Gets all articles
   getArticles: function() {
     return axios.get("/api/articles");

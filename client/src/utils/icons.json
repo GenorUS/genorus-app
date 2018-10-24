@@ -17,11 +17,5 @@
         "alt": "Genorus Scholarships",
         "name": "Genorus Scholarships",
         "route": "/scholarship"
-    },
-    {
-        "img":"/assets/images/icons/loginicon.png",
-        "alt": "loginicon",
-        "name": "Login / Signup",
-        "route": "/signin"
     }
 ]

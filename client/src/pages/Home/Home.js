@@ -9,11 +9,15 @@ import {Cont} from '../../components/HomeComponents/Card';
 import Footer from '../Footer';
 import devs from '../../utils/devs.json';
 import Sponsors from '../../utils/sponsors.json';
+import logout from '../../utils/logout';
 
 
 
 class Home extends Component {
-  
+  constructor(props) {
+      super(props)
+  }
+
   render() {
     return (
       <div style={{backgroundImage: `url(/assets/images/backgrounds/genorusbackground.jpg)`, backgroundColor: "#176734" }}>

@@ -53,8 +53,8 @@ module.exports = (sequelize, DataTypes) => {
 
   // Using .prototype on the "User" object to add a method, checks if password matches hashed password.
   // DO NOT USE ES6 SYNTAX ON bcrypt - 'this' does not work the same in arrow functions
-  User.prototype.validPassword = function(password) {
-    return bcrypt.compareSync(password, this.password);
+  User.validPassword = function(plain, password) {
+      return bcrypt.compareSync(plain, password);
   };
 
   // .hook() is a sequelize method that runs before creation of this instance of "User" in the database

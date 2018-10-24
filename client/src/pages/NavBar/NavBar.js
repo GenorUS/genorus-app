@@ -1,6 +1,7 @@
 import icons from '../../utils/icons.json';
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Logout from '../../utils/logout';
 
 const Nav = props => {
 
@@ -33,6 +34,18 @@ const LI = props => {
 
 
 class NavBar extends Component {
+  constructor(props){
+      super(props)
+
+      this.state = {
+          jwt: localStorage.getItem('jwtToken')
+      }
+  }
+
+  logout() {
+      Logout.logout();
+      this.props.history.push("/")
+  }
  
   render() {
     
@@ -46,13 +59,19 @@ class NavBar extends Component {
           </Button>
           <Div className="collapse navbar-collapse" id="navbarResponsive">
               <UL className="navbar-nav ml-auto">
-                  {icons.map((icon, i) => {
-                    return (
-                      <LI key={i} className="nav-item">
-                          <Link className="navbar-brand" to={icon.route}><img src={icon.img} style={{width:30, marginRight: 2, marginTop: -4}} alt={icon.alt} />{icon.name}</Link>
-                      </LI>
-                    )
-                  })}
+                  <LI  className="nav-item">
+                      {icons.map((icon, i) => {
+                        return (
+                              <Link key={i} className="navbar-brand" to={icon.route}><img src={icon.img} style={{width:30, marginRight: 2, marginTop: -4}} alt={icon.alt} />{icon.name}</Link>
+                        )
+                      })}
+                      {this.state.jwt ? <Link to={"/"} className="navbar-brand" onClick={this.logout}>Logout</Link> :
+                          <Link to={"/signin"} className="navbar-brand">
+                              <img src="/assets/images/icons/loginicon.png" style={{width:30, marginRight: 2, marginTop: -4}} alt="loginicon" />
+                              Sign Up / Sign In
+                          </Link>}
+                  </LI>
+
               </UL>
           </Div>
         </Div>
