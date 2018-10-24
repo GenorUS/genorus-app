@@ -37,10 +37,7 @@ class ApplicationPage extends Component {
   };
 
   handleInput(e) {
-    // console.log(e.currentTarget);
-    console.log(this.state);
     let { name, value } = e.currentTarget;
-    // console.log(name, value);
     this.setState({
       [name]: value
     })
@@ -49,15 +46,19 @@ class ApplicationPage extends Component {
   handleSubmit(e) {
     e.preventDefault();
     console.log(this.state);
+    let application = {
+      ...this.state
+    }
+    DBAPI.submitApplication(application)
+      .then(data => {
+        console.log(data);
+    })
   }
 
   componentDidMount() {
     console.log(this.state.form)
-    // console.log(this.props.match.params.company)
-    // console.log(this.props.match.params.scholarshipid)
     DBAPI.getScholarships(this.props.match.params.scholarshipid)
      .then(data => {
-       // console.log(data);
        let scholarship = data.data.Scholarships;
        let company = data.data.company_name;
        this.setState({ company, scholarship: scholarship[0] });

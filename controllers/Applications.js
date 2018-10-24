@@ -17,6 +17,7 @@ module.exports = {
     // Do something
   },
   create: (req, res) => {
+    console.log(req.body);
     db.Application.create(req.body)
     .then((dbApplication) => {
       res.json(dbApplication);

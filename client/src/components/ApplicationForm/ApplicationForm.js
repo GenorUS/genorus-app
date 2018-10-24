@@ -179,29 +179,29 @@ const ScholarshipForm = ({ handleSubmit, handleInput, value, scholarshipName}) =
         <div className="control-group form-group">
           <div className="controls">
             <label>GPA:</label>
-            <input name="gpa" type="number" className="form-control" id="gpa" value={value.gpa} onChange={handleInput} required data-validation-required-message="Please enter your GPA." />
+            <input name="gpa" type="number" className="form-control" value={value.gpa} onChange={handleInput} required data-validation-required-message="Please enter your GPA." />
           </div>
         </div>
         <div className="control-group form-group">
           <div className="controls">
             <label>SAT Score:</label>
-            <input name="sat_score" type="number" className="form-control" id="sat_score" value={value.sat_score} onChange={handleInput} required data-validation-required-message="Please enter your SAT Score." />
+            <input name="sat_score" type="number" className="form-control" value={value.sat_score} onChange={handleInput} required data-validation-required-message="Please enter your SAT Score." />
           </div>
         </div>
         <div className="control-group form-group">
           <div className="controls">
             <label>ACT Score:</label>
-            <input name="act_score" type="number" className="form-control" id="act_score" value={value.act_score} onChange={handleInput} required data-validation-required-message="Please enter your ACT Score." />
+            <input name="act_score" type="number" className="form-control" value={value.act_score} onChange={handleInput} required data-validation-required-message="Please enter your ACT Score." />
           </div>
         </div>
         <div className="control-group form-group">
           <div className="controls">
             <label>Short Essay:</label>
-            <textarea name="essay" type="text" rows="10" cols="100" className="form-control" id="essay" value={value.essay} onChange={handleInput} required data-validation-required-message="Please enter your message" maxLength="500" style={{resize: "none"}} />
+            <textarea name="essay" type="text" rows="10" cols="100" className="form-control" value={value.essay} onChange={handleInput} required data-validation-required-message="Please enter your message" maxLength="500" style={{resize: "none"}} />
           </div>
         </div>
         <div id="success"></div>
-        <button onClick={handleSubmit} type="submit" className="btn btn-primary" id="submitApplication">Submit Application</button>
+        <button onClick={handleSubmit} type="submit" className="btn btn-primary">Submit Application</button>
       </form>
     </div>
   </div>
