@@ -7,14 +7,17 @@ import scholarships from "../../data/scholarships";
 import ApplicationForm from "../../components/ApplicationForm/ApplicationForm";
 import {OL, OrderedItem} from '../../components/HomeComponents/OrderedList';
 import DBAPI from '../../utils/DBAPI';
+import JWT from '../../utils/Auth';
 
 class ApplicationPage extends Component {
   state = {
-    currentScholarship: {}
+    currentScholarship: {},
+    user: {}
   };
 
-  componentDidMount() {
+  componentWillMount() {
 
+      this.setState({user: JWT.getJWT()});
 
     DBAPI.getScholarships()
         .then(data => {
@@ -40,7 +43,7 @@ class ApplicationPage extends Component {
 
   handleInput(event) {
     let { name, value } = event.currentTarget;
-    console.log(name + " " + value)
+    console.log(name + " " + value);
     this.setState({
       [name]: value
     })
@@ -52,10 +55,12 @@ class ApplicationPage extends Component {
   }
 
   render() {
+      let { id } = this.state.user;
     return (
       <div style={{backgroundImage: `url(/assets/images/backgrounds/genorusscholarshipsbackground.jpg)`, backgroundAttachment: "fixed", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
         <NavBar />
         <HomeContainer>
+            <button className="btn btn-danger">{id}</button>
         <PageHeading name={"Genorus Scholarships"}/>
         <OL>
           <OrderedItem className="breadcrumb-item">Genorus</OrderedItem>

@@ -2,7 +2,7 @@ import icons from '../../utils/icons.json';
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Logout from '../../utils/logout';
-
+import JWT from '../../utils/Auth'
 const Nav = props => {
 
   return (
@@ -38,23 +38,12 @@ class NavBar extends Component {
       super(props)
 
       this.state = {
-          jwt: localStorage.getItem('jwtToken'),
           user: {}
       }
   }
 
   componentWillMount() {
-      try {
-          // To access the payload split the jwt token into its header.payload.signature parts and grab just the payload
-          let enc = this.state.jwt.replace(/JWT\s+/).split(".")[1];
-          // Then parse the base64
-          let payload = JSON.parse(window.atob(enc));
-          //FOR SOME ODD REASON I CAN'T USE SET STATE AND THIS DOESN'T GIVE AN ERROR, RAGE
-          // this.state.user = payload
-          this.setState({user : payload})
-      } catch (e) {
-          return null
-      }
+      this.setState({user: JWT.getJWT()});
   }
 
   logout() {
@@ -63,7 +52,7 @@ class NavBar extends Component {
   }
  
   render() {
-        let { firstname} = this.state.user
+        let { firstname} = this.state.user;
     return (
       <Nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top" >
         <Div className="container">
@@ -80,7 +69,7 @@ class NavBar extends Component {
                               <Link key={i} className="navbar-brand" to={icon.route}><img src={icon.img} style={{width:30, marginRight: 2, marginTop: -4}} alt={icon.alt} />{icon.name}</Link>
                         )
                       })}
-                      {this.state.jwt ? <Link to={"/"} className="navbar-brand" onClick={this.logout}>{firstname} , Logout</Link> :
+                      {this.state.user ? <Link to={"/"} className="navbar-brand" onClick={this.logout}>{firstname} , Logout</Link> :
                           <Link to={"/signin"} className="navbar-brand">
                               <img src="/assets/images/icons/loginicon.png" style={{width:30, marginRight: 2, marginTop: -4}} alt="loginicon" />
                               Sign Up / Sign In
