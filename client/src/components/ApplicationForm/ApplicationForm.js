@@ -201,7 +201,7 @@ const ScholarshipForm = ({ handleSubmit, scholarshipName}) => (
           </div>
         </div>
         <div id="success"></div>
-        <button onClick={handleSubmit} type="submit" className="btn btn-primary" id="sendMessageButton">Submit Application</button>
+        <button onClick={handleSubmit} type="submit" className="btn btn-primary" id="submitApplication">Submit Application</button>
       </form>
     </div>
   </div>

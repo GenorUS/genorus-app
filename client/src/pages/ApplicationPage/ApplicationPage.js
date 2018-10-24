@@ -9,16 +9,34 @@ import { OL, OrderedItem } from '../../components/HomeComponents/OrderedList';
 
 class ApplicationPage extends Component {
   state = {
-    form: [
-      
-    ],
+    form: {
+      firstname: "",
+      lastname: "",
+      address: "",
+      address2: "",
+      city: "",
+      state: "",
+      zipcode: "",
+      dateofbirth: {
+        month: "",
+        day: "",
+        year: ""
+      },
+      gender: "",
+      ethnicity: "",
+      gpa: "",
+      sat: "",
+      act: "",
+      essay: ""
+    },
+
     scholarship: {},
     company: {}
   };
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log();
+    console.log(this.state.form);
   }
 
   componentDidMount() {
@@ -47,6 +65,7 @@ class ApplicationPage extends Component {
         <ApplicationForm
           scholarshipName={this.state.scholarship.name}
           handleSubmit={this.handleSubmit}
+          value={this.state.form}
         />
 
         </HomeContainer>
