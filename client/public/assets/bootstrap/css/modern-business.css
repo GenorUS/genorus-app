@@ -155,12 +155,12 @@ a.nav-link:hover{
   }
 
   a.navbar-brand{
-    margin-right: 10px;
+    margin-right: 30px;
     color: #ffffff !important;
   }
 
   a.navbar-brand:hover{
-    margin-right: 10px;
+    margin-right: 30px;
     color: #13aa4b !important;
   }
 

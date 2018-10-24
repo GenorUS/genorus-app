@@ -1,5 +1,4 @@
 // Model for Application
-// TODO -- APP -- CITY/STATE/ZIP OF SCHOOL - DROPDOWN TO GET SCHOOL ID's
 module.exports = (sequelize, DataTypes) => {
   const Application = sequelize.define("Application", {
     firstname: {
@@ -10,12 +9,38 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    dateOfBirth: {
+    dob_month: {
+      type: DataTypes.DECIMAL,
+      defaultValue: 0,
+      allowNull: false
+    },
+    dob_day: {
+      type: DataTypes.DECIMAL,
+      defaultValue: 0,
+      allowNull: false
+    },
+    dob_year: {
       type: DataTypes.DECIMAL,
       defaultValue: 0,
       allowNull: false
     },
     address: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    address2: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    city: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    state: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    zipcode: {
       type: DataTypes.STRING,
       allowNull: true
     },
@@ -39,17 +64,21 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DOUBLE,
       allowNull: true
     },
-    actScore: {
+    act_score: {
       type: DataTypes.DOUBLE,
       allowNull: true
     },
-    satScore: {
+    sat_score: {
       type: DataTypes.DOUBLE,
       allowNull: true
     },
-    essayText: {
+    essay: {
       type: DataTypes.TEXT,
       allowNull: true
+    },
+    company: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   });
 
