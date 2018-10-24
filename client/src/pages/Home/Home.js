@@ -9,14 +9,10 @@ import {Cont} from '../../components/HomeComponents/Card';
 import Footer from '../Footer';
 import devs from '../../utils/devs.json';
 import Sponsors from '../../utils/sponsors.json';
-import logout from '../../utils/logout';
 
 
 
 class Home extends Component {
-  constructor(props) {
-      super(props)
-  }
 
   render() {
     return (
@@ -66,7 +62,7 @@ class Home extends Component {
             <Div  className="col-lg-6" style={{color: "#fff"}}>
             
               {/* <h2>Who We Are & What We Do</h2> */}
-              <div class="box">
+              <div className="box">
   <div className="inner " style={{alignItems: "center", justifyContent: "center"}}>
     
     <span>What We Do</span>

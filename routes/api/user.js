@@ -37,8 +37,10 @@ router
                   // if user is found and password is right create a token
                   var token = jwt.sign(user.toJSON(), settings.secret);
                   // return the information including token as JSON
-                  res.json({success: true, token: 'JWT ' + token});
+                  return res.json({success: true, token: 'JWT ' + token});
               };
+              //If not authenticated return a bad status
+              return res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
           })
           .catch(err => {
 

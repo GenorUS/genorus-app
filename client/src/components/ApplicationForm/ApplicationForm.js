@@ -8,50 +8,50 @@ const ScholarshipForm = ({handleInput, handleSubmit, value, scholarshipName}) =>
       <form name="application" id="contactForm" noValidate>
 
         {/*Demographic Dataset*/}
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputEmail4">First Name:</label>
-            <input type="firstname" class="form-control" id="inputEmail4" placeholder="First Name" />
+        <div className="form-row">
+          <div className="form-group col-md-6">
+            <label forHTML="inputEmail4">First Name:</label>
+            <input type="firstname" className="form-control" id="inputEmail4" placeholder="First Name" />
           </div>
-          <div class="form-group col-md-6">
-            <label for="inputPassword4">Last Name:</label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Last Name" />
+          <div className="form-group col-md-6">
+            <label forHTML="inputPassword4">Last Name:</label>
+            <input type="password" className="form-control" id="inputPassword4" placeholder="Last Name" />
           </div>
         </div>
-        <div class="form-group">
-          <label for="inputAddress">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
+        <div className="form-group">
+          <label forHTML="inputAddress">Address</label>
+          <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" />
         </div>
-        <div class="form-group">
-          <label for="inputAddress2">Address 2</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
+        <div className="form-group">
+          <label forHTML="inputAddress2">Address 2</label>
+          <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
         </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity" />
+        <div className="form-row">
+          <div className="form-group col-md-6">
+            <label forHTML="inputCity">City</label>
+            <input type="text" className="form-control" id="inputCity" />
           </div>
-          <div class="form-group col-md-4">
-            <label for="inputState">State</label>
-            <select id="inputState" class="form-control">
+          <div className="form-group col-md-4">
+            <label forHTML="inputState">State</label>
+            <select id="inputState" className="form-control">
               <option selected>Choose...</option>
               <option>Pennsylvania</option>
               <option>Connecticut</option>
               <option>Minnesota</option>
             </select>
           </div>
-          <div class="form-group col-md-2">
-            <label for="inputZip">Zip</label>
-            <input type="text" class="form-control" id="inputZip" />
+          <div className="form-group col-md-2">
+            <label forHTML="inputZip">Zip</label>
+            <input type="text" className="form-control" id="inputZip" />
           </div>
         </div>
 
         {/*Date of Birth Selection*/}
         <div className="control-group form-group">
           <div className="controls form-row">
-              <div class="form-group col-md-2">
-                <label for="inputState">Birth Month</label>
-                <select id="inputState" class="form-control">
+              <div className="form-group col-md-2">
+                <label forHTML="inputState">Birth Month</label>
+                <select id="inputState" className="form-control">
                   <option selected>Choose...</option>
                   <option>January</option>
                   <option>February</option>
@@ -67,9 +67,9 @@ const ScholarshipForm = ({handleInput, handleSubmit, value, scholarshipName}) =>
                   <option>December</option>
                 </select>
               </div>
-              <div class="form-group col-md-2">
-                <label for="inputState">Birth Day</label>
-                <select id="inputState" class="form-control">
+              <div className="form-group col-md-2">
+                <label forHTML="inputState">Birth Day</label>
+                <select id="inputState" className="form-control">
                   <option selected>Choose...</option>
                   <option>1</option>
                   <option>2</option>
@@ -84,9 +84,9 @@ const ScholarshipForm = ({handleInput, handleSubmit, value, scholarshipName}) =>
                   <option>11</option>
                 </select>
               </div>
-              <div class="form-group col-md-2">
-                <label for="inputState">Birth Year</label>
-                <select id="inputState" class="form-control">
+              <div className="form-group col-md-2">
+                <label forHTML="inputState">Birth Year</label>
+                <select id="inputState" className="form-control">
                   <option selected>Choose...</option>
                   <option></option>
                   <option></option>
@@ -98,31 +98,31 @@ const ScholarshipForm = ({handleInput, handleSubmit, value, scholarshipName}) =>
 
 
         {/*Gender fieldset below*/}
-        <fieldset class="form-group">
-          <div class="row">
-            <legend class="col-form-label col-sm-2 pt-0">Gender:</legend>
-            <div class="col-sm-10">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Male" />
-                <label class="form-check-label" for="gridRadios1">
+        <fieldset className="form-group">
+          <div className="row">
+            <legend className="col-form-label col-sm-2 pt-0">Gender:</legend>
+            <div className="col-sm-10">
+              <div className="form-check form-check-inline">
+                <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Male" />
+                <label className="form-check-label" forHTML="gridRadios1">
                   Male
                 </label>
               </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Female" />
-                <label class="form-check-label" for="gridRadios2">
+              <div className="form-check form-check-inline">
+                <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Female" />
+                <label className="form-check-label" forHTML="gridRadios2">
                   Female
                 </label>
               </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Non-Binary" />
-                <label class="form-check-label" for="gridRadios3">
+              <div className="form-check form-check-inline">
+                <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Non-Binary" />
+                <label className="form-check-label" forHTML="gridRadios3">
                   Non-binary
                 </label>
               </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="No Answer" />
-                <label class="form-check-label" for="gridRadios3">
+              <div className="form-check form-check-inline">
+                <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="No Answer" />
+                <label className="form-check-label" forHTML="gridRadios3">
                   Prefer not to say
                 </label>
               </div>
@@ -131,43 +131,43 @@ const ScholarshipForm = ({handleInput, handleSubmit, value, scholarshipName}) =>
         </fieldset>
 
         {/*Ethnicity fieldset below*/}
-        <fieldset class="form-group">
-          <div class="row">
-            <legend class="col-form-label col-sm-2 pt-0">Ethnicity:</legend>
-            <div class="col-sm-10">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="African-American" />
-                <label class="form-check-label" for="gridRadios1">
+        <fieldset className="form-group">
+          <div className="row">
+            <legend className="col-form-label col-sm-2 pt-0">Ethnicity:</legend>
+            <div className="col-sm-10">
+              <div className="form-check form-check-inline">
+                <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="African-American" />
+                <label className="form-check-label" forHTML="gridRadios1">
                   African-American
                 </label>
               </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Caucasion" />
-                <label class="form-check-label" for="gridRadios2">
+              <div className="form-check form-check-inline">
+                <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Caucasion" />
+                <label className="form-check-label" forHTML="gridRadios2">
                   Caucasian
                 </label>
               </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Asian American" />
-                <label class="form-check-label" for="gridRadios3">
+              <div className="form-check form-check-inline">
+                <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Asian American" />
+                <label className="form-check-label" forHTML="gridRadios3">
                   Asian-American
                 </label>
               </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Hispanic or Latin-American" />
-                <label class="form-check-label" for="gridRadios3">
+              <div className="form-check form-check-inline">
+                <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Hispanic or Latin-American" />
+                <label className="form-check-label" forHTML="gridRadios3">
                   Hispanic or Latin-American
                 </label>
               </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Pacific-Islander" />
-                <label class="form-check-label" for="gridRadios3">
+              <div className="form-check form-check-inline">
+                <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Pacific-Islander" />
+                <label className="form-check-label" forHTML="gridRadios3">
                   Pacific-Islander
                 </label>
               </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Two or More Races" />
-                <label class="form-check-label" for="gridRadios3">
+              <div className="form-check form-check-inline">
+                <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Two or More Races" />
+                <label className="form-check-label" forHTML="gridRadios3">
                   Two or More Races
                 </label>
               </div>

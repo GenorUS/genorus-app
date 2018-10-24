@@ -88,11 +88,11 @@ export class SignIn extends Component {
     UserSignIn.signIn(user)
         .then((result) => {
             localStorage.setItem('jwtToken', result.data.token);
-            console.log(result);
             this.setState({ message: '' });
             this.props.history.push('/')
         })
         .catch((error) => {
+            console.log("ERRROOOORRRRR ", error, error.response.status);
             if(error.response.status === 401) {
                 this.setState({ message: 'Login failed. Username or password not match' });
             }
