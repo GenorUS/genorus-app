@@ -17,7 +17,7 @@ const ContactDetails = (props) => (
       </p>
       <p>
         <abbr title="Email">E</abbr> :
-        <a href="mailto:name@example.com" style={{fontSize: "16px"}}>Genorusscholarship@gmail.com
+        <a href="mailto:Genorusscholarship@gmail.com" style={{fontSize: "16px"}}>Genorusscholarship@gmail.com
         </a>
       </p>
       <p style={{color: "#176734" }}>
