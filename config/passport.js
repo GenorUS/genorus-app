@@ -1,7 +1,7 @@
 //Dependencies --------------------------------------------------------------
 var passport = require("passport");
 var JwtStrategy = require('passport-jwt').Strategy,
-    ExtractJwt = require('passport-jwt').ExtractJwt;
+ExtractJwt = require('passport-jwt').ExtractJwt;
 const settings = require('./settings');
 const LocalStrategy = require("passport-local").Strategy;
 const db = require("../models");

@@ -1,7 +1,8 @@
 // Dependencies ------------------------------------------------
 const db = require("../../models");
-const passport = require("../../config/passport");
+// const passport = require("../../config/passport");
 // Here I'm adding my own JWT stuff
+const passport = require("passport");
 const settings = require("../../config/settings");
 require("../../config/passport")(passport);
 const jwt = require('jsonwebtoken');

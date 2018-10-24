@@ -3,26 +3,26 @@ import NavBar from '../NavBar';
 import HomeContainer from "../../components/HomeComponents/HomeContainer";
 import PageHeading from "../../components/PageHeading";
 import Footer from "../Footer";
-import scholarships from "../../data/scholarships";
+import DBAPI from '../../utils/DBAPI';
 import ApplicationForm from "../../components/ApplicationForm/ApplicationForm";
-import {OL, OrderedItem} from '../../components/HomeComponents/OrderedList';
+import { OL, OrderedItem } from '../../components/HomeComponents/OrderedList';
 
 class ApplicationPage extends Component {
   state = {
-    currentScholarship: {}
+    scholarship: {},
+    company: {}
   };
 
   componentDidMount() {
     console.log(this.props.match.params.company)
-    let company = this.props.match.params.company;
-    for (let i = 0; i < scholarships.length; i++) {
-      if (scholarships[i].company_name === company) {
-        console.log(scholarships[i])
-        this.setState({
-          currentScholarship: scholarships[i]
-        });
-      }
-    }
+    console.log(this.props.match.params.scholarshipid)
+    DBAPI.getScholarships(this.props.match.params.scholarshipid)
+     .then(data => {
+       console.log(data);
+       let scholarship = data.data.Scholarships;
+       let company = data.data.company_name;
+       this.setState({ company, scholarship: scholarship[0] });
+     });
   }
 
   handleInput(event) {
@@ -49,7 +49,7 @@ class ApplicationPage extends Component {
           <OrderedItem className="breadcrumb-item active">Genorus Scholarships</OrderedItem>
         </OL>
 
-        <ApplicationForm handleInput={this.handleInput} handleSubmit={this.handleSubmit} value={this.state} scholarshipName={this.state.currentScholarship.scholarship_name} />
+        <ApplicationForm handleInput={this.handleInput} handleSubmit={this.handleSubmit} value={this.state} scholarshipName={this.state.scholarship.name} />
 
         </HomeContainer>
         <Footer />
