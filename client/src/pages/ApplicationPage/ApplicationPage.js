@@ -34,6 +34,10 @@ class ApplicationPage extends Component {
     company: {}
   };
 
+  handleInput(e) {
+    console.log(e.currentTarget.value);
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     console.log(this.state.form);
@@ -65,6 +69,7 @@ class ApplicationPage extends Component {
         <ApplicationForm
           scholarshipName={this.state.scholarship.name}
           handleSubmit={this.handleSubmit}
+          handleInput={this.handleInput}
           value={this.state.form}
         />
 
