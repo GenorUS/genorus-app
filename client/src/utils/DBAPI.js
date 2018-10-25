@@ -22,6 +22,21 @@ export default {
         console.log(data);
     });
   },
+  // School Data API -------------------------------------
+  getHighSchoolData: (state, city) => {
+    let st = state.toLowerCase();
+    let c = city.toLowerCase();
+    return axios.get(`https://genorus-school-data.herokuapp.com/api/schools/${st}/${c}`);
+  },
+  getCollegeData: (state, city) => {
+    let st = state.toLowerCase();
+    let c = city.toLowerCase();
+    return axios.get(`https://genorus-school-data.herokuapp.com/api/colleges/${st}/${c}`);
+  },
+  getStateData: () => {
+    return axios.get("https://genorus-school-data.herokuapp.com/api/states");
+  },
+  // ----------------------------------------------------
   testRoute: function() {
     // axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
     axios.get("/api/companies");
