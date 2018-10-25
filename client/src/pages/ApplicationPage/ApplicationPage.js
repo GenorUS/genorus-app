@@ -34,13 +34,15 @@ class ApplicationPage extends Component {
     scholarship: {},
     company: {},
     statesData: [],
-    hsData: [],
+    highSchoolData: [],
     collegeData: [],
     user: JWT.getJWT() || {}
   };
 
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.highSchoolData = this.getHighSchoolData.bind(this);
+    this.collegeData = this.getCollegeData.bind(this);
   };
 
   handleInput(e) {
@@ -102,7 +104,7 @@ class ApplicationPage extends Component {
   getHighSchoolData(s, c) {
     DBAPI.getHighSchoolData(s, c)
     .then(data => {
-      console.log(data);
+      console.log(data)
     })
   }
 
@@ -135,6 +137,8 @@ class ApplicationPage extends Component {
           statesData={this.state.statesData}
           getHighSchoolData={this.getHighSchoolData}
           getCollegeData={this.getCollegeData}
+          highSchoolData={this.state.highSchoolData}
+          collegeData={this.state.collegeData}
         />
 
         </HomeContainer>

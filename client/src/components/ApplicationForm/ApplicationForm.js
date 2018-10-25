@@ -1,6 +1,6 @@
 import React from "react";
 
-const ScholarshipForm = ({ handleSubmit, handleInput, value, scholarshipName, statesData, getHighSchoolData, getCollegeData }) => (
+const ScholarshipForm = ({ handleSubmit, handleInput, value, scholarshipName, statesData, getHighSchoolData, getCollegeData, highSchoolData, collegeData }) => (
   <div className="row">
     <div className="col-lg-10 mb-4">
       <h3>Apply for the { scholarshipName }</h3>
