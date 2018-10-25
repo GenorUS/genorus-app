@@ -2,466 +2,475 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#000000">
-  <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="./assets/bootstrap/css/modern-business.css" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="./assets/bootstrap/css/main.css" crossorigin="anonymous">
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/journal/bootstrap.min.css" />
-  <base href="/">
-  <title>React Reading List</title>
-  <style>
-
-    .btn-primary {
-      border-radius: 5px !important;
-      background: transparent!important;
-      border: solid 2px #fff!important;
-      color: #fff!important;
-      font-weight: 400!important;
-      font-family: 'Roboto', sans-serif!important;
-      letter-spacing: -1px!important;
-      background-color: transparent;
-  animation-name: buttonwave;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-    }
-
-    .btn-primary:hover {
-      border-radius: 5px!important;
-      background: #13aa4b!important;
-      border: solid 2px #fff!important;
-      color: #fff!important;
-      font-weight: 400!important;
-      font-family: 'Roboto', sans-serif!important;
-      letter-spacing: -1px!important;
-      -webkit-transition: all 200ms ease-in!important;
-      -webkit-transform: scale(1.2)!important;
-      -ms-transition: all 200ms ease-in!important;
-      -ms-transform: scale(1.2)!important; 
-      -moz-transition: all 200ms ease-in!important;
-      -moz-transform: scale(1.2)!important;
-      transition: all 200ms ease-in!important;
-      transform: scale(1.2)!important;
-      transition: all .2s ease-in-out!important;
-      transform: scale(1.2)!important;
-    }
-
-    @keyframes buttonwave {
-  0%   {color: #fff ;}
-  25%  {color: #13aa4b  ;}
-  50%  {color: #13aa4b;}
-  100% {color: #fff ;}
-}
-
-    h2 {
-      padding-bottom: 10px;
-    }
-
-    h3.already {
-      padding-top: 50px;
-    }
-
-    h3 {
-      padding-top: 42px;
-    }
-
-    nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark {
-      position: absolute !important;
-      position: fixed !important;
-    }
-
-    body {
-      background-color: #176734;
-      font-family: 'Roboto', sans-serif;
-      letter-spacing: -1px;
-    }
-
-    div {
-      color: #fff;
-    }
-
-    li.breadcrumb-item {
-      color: #13aa4b;
-    }
-
-    .text-muted {
-      color: #176734 !important;
-    }
-
-
-
-    p.card-text {
-      line-height: 0.9;
-    }
-
-    p {
-      line-height: 1.2;
-    }
-
-    h2 {
-      font-family: 'Roboto Condensed', sans-serif !important;
-    }
-
-    h6.card-subtitle.mb-2.text-muted {
-      font-family: 'Roboto Condensed', sans-serif !important;
-      font-size: 18px;
-    }
-
-    ul.nav-item {
-      font-family: 'Roboto Condensed', sans-serif !important;
-    }
-
-    a.navbar-navbrand {
-      font-family: 'Roboto Condensed', sans-serif !important;
-      color: #fff !important;
-    }
-
-    abbr{
-      color: #176734;
-    }
-
-     a.navbar-navbrand:hover {
-      font-family: 'Roboto Condensed', sans-serif !important;
-      color: #13aa4b !important;
-    }
-
-    h4.card-title {
-      font-family: 'Roboto Condensed', sans-serif !important;
-      font-size: 31px;
-    }
-
-    a {
-      font-family: 'Roboto Condensed', sans-serif !important;
-      color: #176734;
-      text-decoration: none;
-      background-color: transparent;
-      -webkit-text-decoration-skip: objects;
-      font-size: 18px;
-    }
-
-    nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark {
-      position: absolute !important;
-      position: fixed !important;
-      opacity: 50%;
-    }
-
-    a:hover {
-      font-family: 'Roboto Condensed', sans-serif !important;
-      color: #13aa4b;
-      text-decoration: none;
-      background-color: transparent;
-      -webkit-text-decoration-skip: objects;
-      -webkit-transition: all 200ms ease-in !important;
-      -webkit-transform: scale(1.2) !important;
-      -ms-transition: all 200ms ease-in !important;
-      -ms-transform: scale(1.2) !important;
-      -moz-transition: all 200ms ease-in !important;
-      -moz-transform: scale(1.2) !important;
-      transition: all 200ms ease-in !important;
-      transform: scale(1.2) !important;
-      transition: all .2s ease-in-out !important;
-      transform: scale(1.2) !important;
-    }
-
-    h1.mb-3 {
-      padding-top: 2%;
-    }
-
-    #nextgroup {
-      max-width: 400px;
-    }
-
-    .breadcrumb {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      padding: 0.75rem 1rem;
-      margin-bottom: 1rem;
-      list-style: none;
-      background: linear-gradient(#00000086, rgba(3, 117, 3, 0.712), #13aa4ab0) !important;
-      border-radius: 0.25rem;
-    }
-
-    li.breadcrumb-item.active {
-      color: #fff !important;
-    }
-
-    #wavy {
-      max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    #ui {
-      text-align: center !important;
-      transform-style: preserve-3d;
-      color: rgb(255, 255, 255);
-      font-family: 'Roboto', sans-serif;
-      line-height: 1px;
-      letter-spacing: -1px;
-    }
-
-    .mb-3 {
-      max-width: 1000px;
-      max-height: 200px;
-      margin: 0;
-      text-transform: uppercase;
-      margin-left: 50%;
-    }
-
-    #ui {
-      -webkit-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-    }
-
-    #ui .mb-3 {
-      position: absolute;
-      text-align: center !important;
-      max-width: 1000px;
-      width: 100%;
-      font-size: 30px;
-      color: #fff;
-      line-height: 3rem;
-      font-family: 'Roboto', sans-serif;
-      mix-blend-mode: screen;
-      -webkit-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-      text-align: center !important;
-      justify-content: center;
-      background-color: #021f0d;
-    }
-
-    #ui .mb-3:nth-child(1) {
-      -webkit-clip-path: polygon(-30% 0, -20% 0, 20% 100%, 0% 100%);
-      clip-path: polygon(-30% 0, -20% 0, 20% 100%, 0% 100%);
-      -webkit-animation: wave 2000ms -10000ms ease-in-out infinite alternate;
-      animation: wave 2000ms -10000ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(2) {
-      -webkit-clip-path: polygon(-25% 0, -15% 0, 25% 100%, 5% 100%);
-      clip-path: polygon(-25% 0, -15% 0, 25% 100%, 5% 100%);
-      -webkit-animation: wave 2000ms -9800ms ease-in-out infinite alternate;
-      animation: wave 2000ms -9800ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(3) {
-      -webkit-clip-path: polygon(-20% 0, -10% 0, 30% 100%, 10% 100%);
-      clip-path: polygon(-20% 0, -10% 0, 30% 100%, 10% 100%);
-      -webkit-animation: wave 2000ms -9600ms ease-in-out infinite alternate;
-      animation: wave 2000ms -9600ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(4) {
-      -webkit-clip-path: polygon(-15% 0, -5% 0, 35% 100%, 15% 100%);
-      clip-path: polygon(-15% 0, -5% 0, 35% 100%, 15% 100%);
-      -webkit-animation: wave 2000ms -9400ms ease-in-out infinite alternate;
-      animation: wave 2000ms -9400ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(5) {
-      -webkit-clip-path: polygon(-10% 0, 0% 0, 40% 100%, 20% 100%);
-      clip-path: polygon(-10% 0, 0% 0, 40% 100%, 20% 100%);
-      -webkit-animation: wave 2000ms -9200ms ease-in-out infinite alternate;
-      animation: wave 2000ms -9200ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(6) {
-      -webkit-clip-path: polygon(-5% 0, 5% 0, 45% 100%, 25% 100%);
-      clip-path: polygon(-5% 0, 5% 0, 45% 100%, 25% 100%);
-      -webkit-animation: wave 2000ms -9000ms ease-in-out infinite alternate;
-      animation: wave 2000ms -9000ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(7) {
-      -webkit-clip-path: polygon(0% 0, 10% 0, 50% 100%, 30% 100%);
-      clip-path: polygon(0% 0, 10% 0, 50% 100%, 30% 100%);
-      -webkit-animation: wave 2000ms -8800ms ease-in-out infinite alternate;
-      animation: wave 2000ms -8800ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(8) {
-      -webkit-clip-path: polygon(5% 0, 15% 0, 55% 100%, 35% 100%);
-      clip-path: polygon(5% 0, 15% 0, 55% 100%, 35% 100%);
-      -webkit-animation: wave 2000ms -8600ms ease-in-out infinite alternate;
-      animation: wave 2000ms -8600ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(9) {
-      -webkit-clip-path: polygon(10% 0, 20% 0, 60% 100%, 40% 100%);
-      clip-path: polygon(10% 0, 20% 0, 60% 100%, 40% 100%);
-      -webkit-animation: wave 2000ms -8400ms ease-in-out infinite alternate;
-      animation: wave 2000ms -8400ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(10) {
-      -webkit-clip-path: polygon(15% 0, 25% 0, 65% 100%, 45% 100%);
-      clip-path: polygon(15% 0, 25% 0, 65% 100%, 45% 100%);
-      -webkit-animation: wave 2000ms -8200ms ease-in-out infinite alternate;
-      animation: wave 2000ms -8200ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(11) {
-      -webkit-clip-path: polygon(20% 0, 30% 0, 70% 100%, 50% 100%);
-      clip-path: polygon(20% 0, 30% 0, 70% 100%, 50% 100%);
-      -webkit-animation: wave 2000ms -8000ms ease-in-out infinite alternate;
-      animation: wave 2000ms -8000ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(12) {
-      -webkit-clip-path: polygon(25% 0, 35% 0, 75% 100%, 55% 100%);
-      clip-path: polygon(25% 0, 35% 0, 75% 100%, 55% 100%);
-      -webkit-animation: wave 2000ms -7800ms ease-in-out infinite alternate;
-      animation: wave 2000ms -7800ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(13) {
-      -webkit-clip-path: polygon(30% 0, 40% 0, 80% 100%, 60% 100%);
-      clip-path: polygon(30% 0, 40% 0, 80% 100%, 60% 100%);
-      -webkit-animation: wave 2000ms -7600ms ease-in-out infinite alternate;
-      animation: wave 2000ms -7600ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(14) {
-      -webkit-clip-path: polygon(35% 0, 45% 0, 85% 100%, 65% 100%);
-      clip-path: polygon(35% 0, 45% 0, 85% 100%, 65% 100%);
-      -webkit-animation: wave 2000ms -7400ms ease-in-out infinite alternate;
-      animation: wave 2000ms -7400ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(15) {
-      -webkit-clip-path: polygon(40% 0, 50% 0, 90% 100%, 70% 100%);
-      clip-path: polygon(40% 0, 50% 0, 90% 100%, 70% 100%);
-      -webkit-animation: wave 2000ms -7200ms ease-in-out infinite alternate;
-      animation: wave 2000ms -7200ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(16) {
-      -webkit-clip-path: polygon(45% 0, 55% 0, 95% 100%, 75% 100%);
-      clip-path: polygon(45% 0, 55% 0, 95% 100%, 75% 100%);
-      -webkit-animation: wave 2000ms -7000ms ease-in-out infinite alternate;
-      animation: wave 2000ms -7000ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(17) {
-      -webkit-clip-path: polygon(50% 0, 60% 0, 100% 100%, 80% 100%);
-      clip-path: polygon(50% 0, 60% 0, 100% 100%, 80% 100%);
-      -webkit-animation: wave 2000ms -6800ms ease-in-out infinite alternate;
-      animation: wave 2000ms -6800ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(18) {
-      -webkit-clip-path: polygon(55% 0, 65% 0, 105% 100%, 85% 100%);
-      clip-path: polygon(55% 0, 65% 0, 105% 100%, 85% 100%);
-      -webkit-animation: wave 2000ms -6600ms ease-in-out infinite alternate;
-      animation: wave 2000ms -6600ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(19) {
-      -webkit-clip-path: polygon(60% 0, 70% 0, 110% 100%, 90% 100%);
-      clip-path: polygon(60% 0, 70% 0, 110% 100%, 90% 100%);
-      -webkit-animation: wave 2000ms -6400ms ease-in-out infinite alternate;
-      animation: wave 2000ms -6400ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(20) {
-      -webkit-clip-path: polygon(65% 0, 75% 0, 115% 100%, 95% 100%);
-      clip-path: polygon(65% 0, 75% 0, 115% 100%, 95% 100%);
-      -webkit-animation: wave 2000ms -6200ms ease-in-out infinite alternate;
-      animation: wave 2000ms -6200ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(21) {
-      -webkit-clip-path: polygon(70% 0, 80% 0, 120% 100%, 100% 100%);
-      clip-path: polygon(70% 0, 80% 0, 120% 100%, 100% 100%);
-      -webkit-animation: wave 2000ms -6000ms ease-in-out infinite alternate;
-      animation: wave 2000ms -6000ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(22) {
-      -webkit-clip-path: polygon(75% 0, 85% 0, 125% 100%, 105% 100%);
-      clip-path: polygon(75% 0, 85% 0, 125% 100%, 105% 100%);
-      -webkit-animation: wave 2000ms -5800ms ease-in-out infinite alternate;
-      animation: wave 2000ms -5800ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(23) {
-      -webkit-clip-path: polygon(80% 0, 90% 0, 130% 100%, 110% 100%);
-      clip-path: polygon(80% 0, 90% 0, 130% 100%, 110% 100%);
-      -webkit-animation: wave 2000ms -5600ms ease-in-out infinite alternate;
-      animation: wave 2000ms -5600ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(24) {
-      -webkit-clip-path: polygon(85% 0, 95% 0, 135% 100%, 115% 100%);
-      clip-path: polygon(85% 0, 95% 0, 135% 100%, 115% 100%);
-      -webkit-animation: wave 2000ms -5400ms ease-in-out infinite alternate;
-      animation: wave 2000ms -5400ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(25) {
-      -webkit-clip-path: polygon(90% 0, 100% 0, 140% 100%, 120% 100%);
-      clip-path: polygon(90% 0, 100% 0, 140% 100%, 120% 100%);
-      -webkit-animation: wave 2000ms -5200ms ease-in-out infinite alternate;
-      animation: wave 2000ms -5200ms ease-in-out infinite alternate;
-    }
-
-    #ui .mb-3:nth-child(26) {
-      -webkit-clip-path: polygon(95% 0, 105% 0, 145% 100%, 125% 100%);
-      clip-path: polygon(95% 0, 105% 0, 145% 100%, 125% 100%);
-      -webkit-animation: wave 2000ms -5000ms ease-in-out infinite alternate;
-      animation: wave 2000ms -5000ms ease-in-out infinite alternate;
-    }
-
-    @-webkit-keyframes wave {
-      0% {
-        -webkit-transform: translate(-50%, -50%) scale(0.9) rotateX(20deg) rotateY(20deg);
-        transform: translate(-50%, -50%) scale(0.9) rotateX(20deg) rotateY(20deg);
-        color: #13aa4b;
-      }
-
-      100% {
-        -webkit-transform: translate(-50%, -50%) scale(1.1) rotateX(0deg) rotateY(0deg);
-        transform: translate(-50%, -50%) scale(1.1) rotateX(0deg) rotateY(0deg);
-        color: #176734;
-      }
-    }
-
-    @keyframes wave {
-      0% {
-        -webkit-transform: translate(-50%, -50%) scale(0.9) rotateX(20deg) rotateY(20deg);
-        transform: translate(-50%, -50%) scale(0.9) rotateX(20deg) rotateY(20deg);
-        color: #13aa4b;
-      }
-
-      100% {
-        -webkit-transform: translate(-50%, -50%) scale(1.1) rotateX(0deg) rotateY(0deg);
-        transform: translate(-50%, -50%) scale(1.1) rotateX(0deg) rotateY(0deg);
-        color: #176734;
-      }
-    }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/bootstrap/css/modern-business.css" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/bootstrap/css/main.css" crossorigin="anonymous">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/journal/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" crossorigin="anonymous">
+    <base href="/">
+    <title>React Reading List</title>
+    <style>
+
+        .btn-primary {
+            border-radius: 5px !important;
+            background: transparent !important;
+            border: solid 2px #fff !important;
+            color: #fff !important;
+            font-weight: 400 !important;
+            font-family: 'Roboto', sans-serif !important;
+            letter-spacing: -1px !important;
+            background-color: transparent;
+            animation-name: buttonwave;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        .btn-primary:hover {
+            border-radius: 5px !important;
+            background: #13aa4b !important;
+            border: solid 2px #fff !important;
+            color: #fff !important;
+            font-weight: 400 !important;
+            font-family: 'Roboto', sans-serif !important;
+            letter-spacing: -1px !important;
+            -webkit-transition: all 200ms ease-in !important;
+            -webkit-transform: scale(1.2) !important;
+            -ms-transition: all 200ms ease-in !important;
+            -ms-transform: scale(1.2) !important;
+            -moz-transition: all 200ms ease-in !important;
+            -moz-transform: scale(1.2) !important;
+            transition: all 200ms ease-in !important;
+            transform: scale(1.2) !important;
+            transition: all .2s ease-in-out !important;
+            transform: scale(1.2) !important;
+        }
+
+        @keyframes buttonwave {
+            0% {
+                color: #fff;
+            }
+            25% {
+                color: #13aa4b;
+            }
+            50% {
+                color: #13aa4b;
+            }
+            100% {
+                color: #fff;
+            }
+        }
+
+        h2 {
+            padding-bottom: 10px;
+        }
+
+        h3.already {
+            padding-top: 50px;
+        }
+
+        h3 {
+            padding-top: 42px;
+        }
+
+        nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark {
+            position: absolute !important;
+            position: fixed !important;
+        }
+
+        body {
+            background-color: #176734;
+            font-family: 'Roboto', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        div {
+            color: #fff;
+        }
+
+        li.breadcrumb-item {
+            color: #13aa4b;
+        }
+
+        .text-muted {
+            color: #176734 !important;
+        }
+
+        p.card-text {
+            line-height: 0.9;
+        }
+
+        p {
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-family: 'Roboto Condensed', sans-serif !important;
+        }
+
+        h6.card-subtitle.mb-2.text-muted {
+            font-family: 'Roboto Condensed', sans-serif !important;
+            font-size: 18px;
+        }
+
+        ul.nav-item {
+            font-family: 'Roboto Condensed', sans-serif !important;
+        }
+
+        a.navbar-navbrand {
+            font-family: 'Roboto Condensed', sans-serif !important;
+            color: #fff !important;
+        }
+
+        abbr {
+            color: #176734;
+        }
+
+        a.navbar-navbrand:hover {
+            font-family: 'Roboto Condensed', sans-serif !important;
+            color: #13aa4b !important;
+        }
+
+        h4.card-title {
+            font-family: 'Roboto Condensed', sans-serif !important;
+            font-size: 31px;
+        }
+
+        a {
+            font-family: 'Roboto Condensed', sans-serif !important;
+            color: #176734;
+            text-decoration: none;
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects;
+            font-size: 18px;
+        }
+
+        nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark {
+            position: absolute !important;
+            position: fixed !important;
+            opacity: 50%;
+        }
+
+        a:hover {
+            font-family: 'Roboto Condensed', sans-serif !important;
+            color: #13aa4b;
+            text-decoration: none;
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects;
+            -webkit-transition: all 200ms ease-in !important;
+            -webkit-transform: scale(1.2) !important;
+            -ms-transition: all 200ms ease-in !important;
+            -ms-transform: scale(1.2) !important;
+            -moz-transition: all 200ms ease-in !important;
+            -moz-transform: scale(1.2) !important;
+            transition: all 200ms ease-in !important;
+            transform: scale(1.2) !important;
+            transition: all .2s ease-in-out !important;
+            transform: scale(1.2) !important;
+        }
+
+        h1.mb-3 {
+            padding-top: 2%;
+        }
+
+        #nextgroup {
+            max-width: 400px;
+        }
+
+        .breadcrumb {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
+            list-style: none;
+            background: linear-gradient(#00000086, rgba(3, 117, 3, 0.712), #13aa4ab0) !important;
+            border-radius: 0.25rem;
+        }
+
+        li.breadcrumb-item.active {
+            color: #fff !important;
+        }
+
+        #wavy {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #ui {
+            text-align: center !important;
+            transform-style: preserve-3d;
+            color: rgb(255, 255, 255);
+            font-family: 'Roboto', sans-serif;
+            line-height: 1px;
+            letter-spacing: -1px;
+        }
+
+        .mb-3 {
+            max-width: 1000px;
+            max-height: 200px;
+            margin: 0;
+            text-transform: uppercase;
+            margin-left: 50%;
+        }
+
+        #ui {
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        #ui .mb-3 {
+            position: absolute;
+            text-align: center !important;
+            max-width: 1000px;
+            width: 100%;
+            font-size: 30px;
+            color: #fff;
+            line-height: 3rem;
+            font-family: 'Roboto', sans-serif;
+            mix-blend-mode: screen;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            text-align: center !important;
+            justify-content: center;
+            background-color: #021f0d;
+        }
+
+        #ui .mb-3:nth-child(1) {
+            -webkit-clip-path: polygon(-30% 0, -20% 0, 20% 100%, 0% 100%);
+            clip-path: polygon(-30% 0, -20% 0, 20% 100%, 0% 100%);
+            -webkit-animation: wave 2000ms -10000ms ease-in-out infinite alternate;
+            animation: wave 2000ms -10000ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(2) {
+            -webkit-clip-path: polygon(-25% 0, -15% 0, 25% 100%, 5% 100%);
+            clip-path: polygon(-25% 0, -15% 0, 25% 100%, 5% 100%);
+            -webkit-animation: wave 2000ms -9800ms ease-in-out infinite alternate;
+            animation: wave 2000ms -9800ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(3) {
+            -webkit-clip-path: polygon(-20% 0, -10% 0, 30% 100%, 10% 100%);
+            clip-path: polygon(-20% 0, -10% 0, 30% 100%, 10% 100%);
+            -webkit-animation: wave 2000ms -9600ms ease-in-out infinite alternate;
+            animation: wave 2000ms -9600ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(4) {
+            -webkit-clip-path: polygon(-15% 0, -5% 0, 35% 100%, 15% 100%);
+            clip-path: polygon(-15% 0, -5% 0, 35% 100%, 15% 100%);
+            -webkit-animation: wave 2000ms -9400ms ease-in-out infinite alternate;
+            animation: wave 2000ms -9400ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(5) {
+            -webkit-clip-path: polygon(-10% 0, 0% 0, 40% 100%, 20% 100%);
+            clip-path: polygon(-10% 0, 0% 0, 40% 100%, 20% 100%);
+            -webkit-animation: wave 2000ms -9200ms ease-in-out infinite alternate;
+            animation: wave 2000ms -9200ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(6) {
+            -webkit-clip-path: polygon(-5% 0, 5% 0, 45% 100%, 25% 100%);
+            clip-path: polygon(-5% 0, 5% 0, 45% 100%, 25% 100%);
+            -webkit-animation: wave 2000ms -9000ms ease-in-out infinite alternate;
+            animation: wave 2000ms -9000ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(7) {
+            -webkit-clip-path: polygon(0% 0, 10% 0, 50% 100%, 30% 100%);
+            clip-path: polygon(0% 0, 10% 0, 50% 100%, 30% 100%);
+            -webkit-animation: wave 2000ms -8800ms ease-in-out infinite alternate;
+            animation: wave 2000ms -8800ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(8) {
+            -webkit-clip-path: polygon(5% 0, 15% 0, 55% 100%, 35% 100%);
+            clip-path: polygon(5% 0, 15% 0, 55% 100%, 35% 100%);
+            -webkit-animation: wave 2000ms -8600ms ease-in-out infinite alternate;
+            animation: wave 2000ms -8600ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(9) {
+            -webkit-clip-path: polygon(10% 0, 20% 0, 60% 100%, 40% 100%);
+            clip-path: polygon(10% 0, 20% 0, 60% 100%, 40% 100%);
+            -webkit-animation: wave 2000ms -8400ms ease-in-out infinite alternate;
+            animation: wave 2000ms -8400ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(10) {
+            -webkit-clip-path: polygon(15% 0, 25% 0, 65% 100%, 45% 100%);
+            clip-path: polygon(15% 0, 25% 0, 65% 100%, 45% 100%);
+            -webkit-animation: wave 2000ms -8200ms ease-in-out infinite alternate;
+            animation: wave 2000ms -8200ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(11) {
+            -webkit-clip-path: polygon(20% 0, 30% 0, 70% 100%, 50% 100%);
+            clip-path: polygon(20% 0, 30% 0, 70% 100%, 50% 100%);
+            -webkit-animation: wave 2000ms -8000ms ease-in-out infinite alternate;
+            animation: wave 2000ms -8000ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(12) {
+            -webkit-clip-path: polygon(25% 0, 35% 0, 75% 100%, 55% 100%);
+            clip-path: polygon(25% 0, 35% 0, 75% 100%, 55% 100%);
+            -webkit-animation: wave 2000ms -7800ms ease-in-out infinite alternate;
+            animation: wave 2000ms -7800ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(13) {
+            -webkit-clip-path: polygon(30% 0, 40% 0, 80% 100%, 60% 100%);
+            clip-path: polygon(30% 0, 40% 0, 80% 100%, 60% 100%);
+            -webkit-animation: wave 2000ms -7600ms ease-in-out infinite alternate;
+            animation: wave 2000ms -7600ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(14) {
+            -webkit-clip-path: polygon(35% 0, 45% 0, 85% 100%, 65% 100%);
+            clip-path: polygon(35% 0, 45% 0, 85% 100%, 65% 100%);
+            -webkit-animation: wave 2000ms -7400ms ease-in-out infinite alternate;
+            animation: wave 2000ms -7400ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(15) {
+            -webkit-clip-path: polygon(40% 0, 50% 0, 90% 100%, 70% 100%);
+            clip-path: polygon(40% 0, 50% 0, 90% 100%, 70% 100%);
+            -webkit-animation: wave 2000ms -7200ms ease-in-out infinite alternate;
+            animation: wave 2000ms -7200ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(16) {
+            -webkit-clip-path: polygon(45% 0, 55% 0, 95% 100%, 75% 100%);
+            clip-path: polygon(45% 0, 55% 0, 95% 100%, 75% 100%);
+            -webkit-animation: wave 2000ms -7000ms ease-in-out infinite alternate;
+            animation: wave 2000ms -7000ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(17) {
+            -webkit-clip-path: polygon(50% 0, 60% 0, 100% 100%, 80% 100%);
+            clip-path: polygon(50% 0, 60% 0, 100% 100%, 80% 100%);
+            -webkit-animation: wave 2000ms -6800ms ease-in-out infinite alternate;
+            animation: wave 2000ms -6800ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(18) {
+            -webkit-clip-path: polygon(55% 0, 65% 0, 105% 100%, 85% 100%);
+            clip-path: polygon(55% 0, 65% 0, 105% 100%, 85% 100%);
+            -webkit-animation: wave 2000ms -6600ms ease-in-out infinite alternate;
+            animation: wave 2000ms -6600ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(19) {
+            -webkit-clip-path: polygon(60% 0, 70% 0, 110% 100%, 90% 100%);
+            clip-path: polygon(60% 0, 70% 0, 110% 100%, 90% 100%);
+            -webkit-animation: wave 2000ms -6400ms ease-in-out infinite alternate;
+            animation: wave 2000ms -6400ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(20) {
+            -webkit-clip-path: polygon(65% 0, 75% 0, 115% 100%, 95% 100%);
+            clip-path: polygon(65% 0, 75% 0, 115% 100%, 95% 100%);
+            -webkit-animation: wave 2000ms -6200ms ease-in-out infinite alternate;
+            animation: wave 2000ms -6200ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(21) {
+            -webkit-clip-path: polygon(70% 0, 80% 0, 120% 100%, 100% 100%);
+            clip-path: polygon(70% 0, 80% 0, 120% 100%, 100% 100%);
+            -webkit-animation: wave 2000ms -6000ms ease-in-out infinite alternate;
+            animation: wave 2000ms -6000ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(22) {
+            -webkit-clip-path: polygon(75% 0, 85% 0, 125% 100%, 105% 100%);
+            clip-path: polygon(75% 0, 85% 0, 125% 100%, 105% 100%);
+            -webkit-animation: wave 2000ms -5800ms ease-in-out infinite alternate;
+            animation: wave 2000ms -5800ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(23) {
+            -webkit-clip-path: polygon(80% 0, 90% 0, 130% 100%, 110% 100%);
+            clip-path: polygon(80% 0, 90% 0, 130% 100%, 110% 100%);
+            -webkit-animation: wave 2000ms -5600ms ease-in-out infinite alternate;
+            animation: wave 2000ms -5600ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(24) {
+            -webkit-clip-path: polygon(85% 0, 95% 0, 135% 100%, 115% 100%);
+            clip-path: polygon(85% 0, 95% 0, 135% 100%, 115% 100%);
+            -webkit-animation: wave 2000ms -5400ms ease-in-out infinite alternate;
+            animation: wave 2000ms -5400ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(25) {
+            -webkit-clip-path: polygon(90% 0, 100% 0, 140% 100%, 120% 100%);
+            clip-path: polygon(90% 0, 100% 0, 140% 100%, 120% 100%);
+            -webkit-animation: wave 2000ms -5200ms ease-in-out infinite alternate;
+            animation: wave 2000ms -5200ms ease-in-out infinite alternate;
+        }
+
+        #ui .mb-3:nth-child(26) {
+            -webkit-clip-path: polygon(95% 0, 105% 0, 145% 100%, 125% 100%);
+            clip-path: polygon(95% 0, 105% 0, 145% 100%, 125% 100%);
+            -webkit-animation: wave 2000ms -5000ms ease-in-out infinite alternate;
+            animation: wave 2000ms -5000ms ease-in-out infinite alternate;
+        }
+
+        @-webkit-keyframes wave {
+            0% {
+                -webkit-transform: translate(-50%, -50%) scale(0.9) rotateX(20deg) rotateY(20deg);
+                transform: translate(-50%, -50%) scale(0.9) rotateX(20deg) rotateY(20deg);
+                color: #13aa4b;
+            }
+
+            100% {
+                -webkit-transform: translate(-50%, -50%) scale(1.1) rotateX(0deg) rotateY(0deg);
+                transform: translate(-50%, -50%) scale(1.1) rotateX(0deg) rotateY(0deg);
+                color: #176734;
+            }
+        }
+
+        @keyframes wave {
+            0% {
+                -webkit-transform: translate(-50%, -50%) scale(0.9) rotateX(20deg) rotateY(20deg);
+                transform: translate(-50%, -50%) scale(0.9) rotateX(20deg) rotateY(20deg);
+                color: #13aa4b;
+            }
+
+            100% {
+                -webkit-transform: translate(-50%, -50%) scale(1.1) rotateX(0deg) rotateY(0deg);
+                transform: translate(-50%, -50%) scale(1.1) rotateX(0deg) rotateY(0deg);
+                color: #176734;
+            }
+        }
+    </style>
 </head>
 
 
 <body>
-  <noscript>
+<noscript>
     You need to enable JavaScript to run this app.
-  </noscript>
-  <div id="root"></div>
+</noscript>
+<div id="root"></div>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

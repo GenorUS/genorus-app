@@ -13,6 +13,10 @@ router
 // Matches with "/api/application/:id"
 router
   .route("/:id")
+  .get(appController.findAllUserApps)
+  .delete(appController.remove);
+router
+  .route("/:appid/view")
   .get(appController.findById)
   .delete(appController.remove);
 

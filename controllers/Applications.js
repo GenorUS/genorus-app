@@ -13,8 +13,33 @@ module.exports = {
       res.json(dbApplication);
     });
   },
-  findById: () => {
+    findAllUserApps: (req, res) => {
+    db.Application.findAll({
+      where: {
+        UserId: req.params.id
+      }, include: {
+          model: db.Scholarship,
+          include: {
+              model: db.Company
+          }
+        }
+    }).then((dbApplication) => {
+      res.json(dbApplication);
+    });
+  },
+
+  findById: (req, res) => {
     // Do something
+      db.Application.findOne({
+          where: {
+              id: req.params.appid
+          },
+          include: {
+              model: db.Scholarship
+          }
+      })
+          .then(data => res.json(data))
+          .catch(err => res.send(err))
   },
   create: (req, res) => {
     console.log(req.body);

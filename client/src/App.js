@@ -5,6 +5,8 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import CompanyPage from "./pages/CompanyPages";
 import ApplicationPage from "./pages/ApplicationPage";
+import UserDash from "./pages/UserDash";
+import ApplicationView from "./pages/UserDash/dashComponents/ApplicationView";
 import { SignIn, SignUp } from "./pages/SignIn";
 
 
@@ -17,6 +19,8 @@ const App = () => {
           <Route exact path="/scholarship" component={Portfolio} />
           <Route exact path="/scholarship/:company/:companyid" component={CompanyPage}/>
           <Route exact path="/scholarship/:company/:scholarship/:scholarshipid/apply" component={ApplicationPage} />
+          <Route exact path="/scholarship/:companyName/:ScholarshipName/:ScholarshipId/:appID/view" component={ApplicationView} />
+          <Route exact path="/profile/:userId" component={UserDash} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/signin" component={SignIn} />
           <Route exact path="/signup" component={SignUp} />
