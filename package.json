@@ -1,7 +1,7 @@
 {
-  "name": "mern",
+  "name": "gernorus-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "server.js",
   "proxy": "http://localhost:3000/",
   "scripts": {
@@ -40,5 +40,13 @@
     "passport-local": "^1.0.0",
     "react-scripts": "^1.1.5",
     "sequelize": "^4.39.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GenorUS/genorus-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GenorUS/genorus-app/issues"
+  },
+  "homepage": "https://github.com/GenorUS/genorus-app#readme"
 }
