@@ -9,6 +9,7 @@ export default {
         return axios.get("/api/companies/" + companyID);
     },
 
+
     signIn: function (user, cb) {
         return axios.post("/api/users/login", user)
             .then((data) => {
@@ -35,5 +36,27 @@ export default {
     },
     deleteApplication: function(appID) {
         return axios.delete("/api/application/" + appID);
-    }
+    },
+      
+  submitApplication: (application) => {
+    return axios.post("/api/application", application)
+      .then((data) => {
+        console.log('Application submitted!');
+        console.log(data);
+    });
+  },
+  // School Data API -------------------------------------
+  getHighSchoolData: (state, city) => {
+    let st = state.toLowerCase();
+    let c = city.toLowerCase();
+    return axios.get(`https://genorus-school-data.herokuapp.com/api/schools/${st}/${c}`);
+  },
+  getCollegeData: (state, city) => {
+    let st = state.toLowerCase();
+    let c = city.toLowerCase();
+    return axios.get(`https://genorus-school-data.herokuapp.com/api/colleges/${st}/${c}`);
+  },
+  getStateData: () => {
+    return axios.get("https://genorus-school-data.herokuapp.com/api/states");
+  }
 };
