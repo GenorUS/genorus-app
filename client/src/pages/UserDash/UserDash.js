@@ -32,15 +32,20 @@ export default class UserDash extends Component {
         console.log(e.currentTarget.value);
         DBAPI.deleteApplication(e.currentTarget.value)
             .then(data => {
-                console.log(data)
+                if(data){
+                   window.location.reload();
+                }
+
             })
             .catch(err => {
                 console.log(err)
             })
     }
+
     logout() {
         Logout.logout();
     }
+
     render() {
         return (
             <div>
