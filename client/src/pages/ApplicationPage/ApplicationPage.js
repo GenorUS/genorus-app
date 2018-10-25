@@ -28,9 +28,14 @@ class ApplicationPage extends Component {
         "sat_score": "",
         "act_score": "",
         "essay": "",
+        "highSchoolID": "",
+        "collegeID": "",
 
     scholarship: {},
     company: {},
+    statesData: [],
+    highSchoolData: [],
+    collegeData: [],
     user: JWT.getJWT() || {}
   };
 
@@ -67,13 +72,16 @@ class ApplicationPage extends Component {
       essay: data.essay,
       UserId: data.user.id,
       ScholarshipId: data.scholarship.id,
-      company: data.company
+      company: data.company,
+      highSchoolID: data.highSchoolID,
+      collegeID: data.collegeID
     }
     console.log(application);
     DBAPI.submitApplication(application)
       .then(data => {
         console.log(data);
     })
+    window.location.reload();
   }
 
   componentWillMount() {
@@ -84,6 +92,25 @@ class ApplicationPage extends Component {
        let company = data.data.company_name;
        this.setState({ company, scholarship: scholarship[0] });
      });
+    DBAPI.getStateData()
+      .then(data => {
+      this.setState({ statesData: data.data.states });
+    });
+  }
+
+  componentDidUpdate() {
+    DBAPI.getHighSchoolData(this.state.state, this.state.city)
+      .then(data => {
+        this.setState({
+          highSchoolData: data.data
+        })
+    })
+    DBAPI.getCollegeData(this.state.state, this.state.city)
+      .then(data => {
+        this.setState({
+          collegeData: data.data
+        })
+      })
   }
 
   render() {
@@ -104,6 +131,9 @@ class ApplicationPage extends Component {
           handleSubmit={this.handleSubmit}
           handleInput={this.handleInput}
           value={this.state}
+          statesData={this.state.statesData}
+          highSchoolData={this.state.highSchoolData}
+          collegeData={this.state.collegeData}
         />
 
         </HomeContainer>
