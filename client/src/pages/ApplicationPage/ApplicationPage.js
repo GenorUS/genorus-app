@@ -41,8 +41,6 @@ class ApplicationPage extends Component {
 
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.highSchoolData = this.getHighSchoolData.bind(this);
-    this.collegeData = this.getCollegeData.bind(this);
   };
 
   handleInput(e) {
@@ -96,24 +94,22 @@ class ApplicationPage extends Component {
     DBAPI.getStateData()
       .then(data => {
       this.setState({ statesData: data.data.states });
-      console.log(this.state);
     });
   }
 
-  // Takes state and city args applicant
-  getHighSchoolData(s, c) {
-    DBAPI.getHighSchoolData(s, c)
-    .then(data => {
-      console.log(data)
+  componentDidUpdate() {
+    DBAPI.getHighSchoolData(this.state.state, this.state.city)
+      .then(data => {
+        this.setState({
+          highSchoolData: data.data
+        })
     })
-  }
-
-  // Takes state and city args from applicant
-  getCollegeData(s, c) {
-    DBAPI.getCollegeData(s, c)
-    .then(data => {
-      console.log(data);
-    })
+    DBAPI.getCollegeData(this.state.state, this.state.city)
+      .then(data => {
+        this.setState({
+          collegeData: data.data
+        })
+      })
   }
 
   render() {
@@ -135,8 +131,6 @@ class ApplicationPage extends Component {
           handleInput={this.handleInput}
           value={this.state}
           statesData={this.state.statesData}
-          getHighSchoolData={this.getHighSchoolData}
-          getCollegeData={this.getCollegeData}
           highSchoolData={this.state.highSchoolData}
           collegeData={this.state.collegeData}
         />

@@ -1,6 +1,6 @@
 import React from "react";
 
-const ScholarshipForm = ({ handleSubmit, handleInput, value, scholarshipName, statesData, getHighSchoolData, getCollegeData, highSchoolData, collegeData }) => (
+const ScholarshipForm = ({ handleSubmit, handleInput, value, scholarshipName, statesData, highSchoolData, collegeData }) => (
   <div className="row">
     <div className="col-lg-10 mb-4">
       <h3>Apply for the { scholarshipName }</h3>
@@ -220,9 +220,11 @@ const ScholarshipForm = ({ handleSubmit, handleInput, value, scholarshipName, st
                 <label>High School ID:</label>
                 <select name="highSchoolID" value={value.highSchoolID} onChange={handleInput} className="form-control">
                   <option value="none chosen">Choose...</option>
-                  {
-                    getHighSchoolData(value.state, value.city)
-                  }
+                    {
+                      highSchoolData.map(data => {
+                       return <option value={data.school_id}>{data.school_id} - {data.school_nm}</option>
+                     })
+                    }
                   <option value="3858302">Philadelphia High School - 1029472</option>
                 </select>
               </div>
@@ -230,9 +232,11 @@ const ScholarshipForm = ({ handleSubmit, handleInput, value, scholarshipName, st
                 <label>College ID:</label>
                 <select name="collegeID" value={value.collegeID} onChange={handleInput} className="form-control">
                   <option value="none chosen">Choose...</option>
-                  {
-                    getCollegeData(value.state, value.city)
-                  }
+                    {
+                      collegeData.map(data => {
+                       return <option value={data.inst_id}>{data.inst_id} - {data.inst_nm}</option>
+                     })
+                    }
                   <option value="4736294">Philadelphia University</option>
                 </select>
               </div>
