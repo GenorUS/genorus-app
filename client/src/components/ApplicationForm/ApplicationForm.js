@@ -225,7 +225,6 @@ const ScholarshipForm = ({ handleSubmit, handleInput, value, scholarshipName, st
                        return <option value={data.school_id}>{data.school_id} - {data.school_nm}</option>
                      })
                     }
-                  <option value="3858302">Philadelphia High School - 1029472</option>
                 </select>
               </div>
               <div className="form-group col-md-6">
@@ -237,7 +236,6 @@ const ScholarshipForm = ({ handleSubmit, handleInput, value, scholarshipName, st
                        return <option value={data.inst_id}>{data.inst_id} - {data.inst_nm}</option>
                      })
                     }
-                  <option value="4736294">Philadelphia University</option>
                 </select>
               </div>
           </div>
