@@ -81,6 +81,7 @@ class ApplicationPage extends Component {
       .then(data => {
         console.log(data);
     })
+    window.location.reload();
   }
 
   componentWillMount() {
