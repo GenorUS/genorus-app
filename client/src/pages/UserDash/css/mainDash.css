@@ -1,0 +1,116 @@
+.section {
+    padding: 20px 0;
+}
+
+.section-b .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.8rem;
+}
+
+#sideMenu {
+    background: #225470;
+    width: 280px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+#sideMenu h1 {
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+}
+
+#sideMenu h1 span {
+    color: orange;
+}
+
+#sideMenu nav {
+    padding-top: 10px;
+}
+
+#sideMenu nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-weight: 300;
+    transition: all 0.3s ease-in-out;
+}
+
+#sideMenu nav a:hover {
+    color: #225470;
+    background: orange;
+    border-left: solid #225470 5px;
+    padding: 15px 30px 15px 25px;
+}
+
+#sideMenu nav a:hover .far,
+#sideMenu nav a:hover .fas {
+    color: #225470;
+}
+
+#sideMenu nav a .far,
+#sideMenu nav a .fas {
+    color: #e4e4e4;
+    font-size: 1.4rem;
+    margin-right: .8rem;
+    display: inline-block;
+    width: 30px;
+    position: relative;
+    top: 2px;
+}
+
+#sideMenu nav a.active {
+    background: orange;
+    border-left: solid #225470 5px;
+    padding: 15px 30px 15px 25px;
+    color: #225470;
+}
+
+#sideMenu nav a.active .far,
+#sideMenu nav a.active .fas {
+    color: #225470;
+}
+
+#content-area {
+    margin-left: 280px;
+    padding: 15px;
+}
+
+#content-area .heading h1 {
+    color: white;
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+#content-area .heading p {
+    color: orange;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#messages {
+    height: 300px;
+    width: 50%;
+}
+
+#status {
+    color: orange;
+}
+
+#textarea,
+#username {
+    width: 100%;
+    border: solid orange 1px;
+    font-family: "Montserrat";
+}
+
+@media (max-width: 960px) {
+    .container {
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+}
