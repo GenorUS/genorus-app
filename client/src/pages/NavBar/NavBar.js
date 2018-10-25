@@ -65,11 +65,7 @@ class NavBar extends Component {
                               <Link key={i} className="navbar-brand" to={icon.route}><img src={icon.img} style={{width:30, marginRight: 2, marginTop: -4}} alt={icon.alt} />{icon.name}</Link>
                         )
                       })}
-                      {this.state.user.firstname ? <Link to={`/profile/${this.state.user.id}/`} className="navbar-brand" onClick={this.logout}>{this.state.user.firstname} , Logout</Link> :
-                          <Link to={"/signin"} className="navbar-brand">
-                              <img src="/assets/images/icons/loginicon.png" style={{width:30, marginRight: 2, marginTop: -4}} alt="loginicon" />
-                              Sign Up / Sign In
-                          </Link>}
+                      {this.state.user.firstname ? <Link to={`/profile/${this.state.user.id}/`} className="navbar-brand">Profile</Link> : null}
                           {this.state.user.firstname ? <Link to={"/"} className="navbar-brand" onClick={this.logout}>{this.state.user.firstname} , Logout</Link> :
                           <Link to={"/signin"} className="navbar-brand">
                               <img src="/assets/images/icons/loginicon.png" style={{width:30, marginRight: 2, marginTop: -4}} alt="loginicon" />
