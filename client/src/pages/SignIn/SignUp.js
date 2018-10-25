@@ -169,8 +169,8 @@ export class SignUp extends Component {
                 <Input name="lastName" label="Last Name" type="text" value={this.state.lastName} id="inputLastName" placeholder="Schmoe" error={this.state.errors.lastName} onChange={this.handleInput} />
                 <Input name="userName" label="User Name" type="text" value={this.state.userName} id="inputFirstName" placeholder="Schmoe123" error={this.state.errors.userName} onChange={this.handleInput} />
                 <Input name="email" label="Email Address" type="email" value={this.state.email} id="inputEmail" placeholder="ex: joe@email.com" error={this.state.errors.email} onChange={this.handleInput} />
-                <Input name="password" label="Password" type="text" value={this.state.password} id="inputPassword" placeholder="Passowrd" error={this.state.errors.password} onChange={this.handleInput} />
-                <Input name="confirmPassword" label="Confirm Password" type="text" value={this.state.confirmPassword} id="inputPassword" placeholder="Passowrd" error={this.state.errors.confirmPassword} onChange={this.handleInput} />
+                <Input name="password" label="Password" type="text" value={this.state.password} id="inputPassword" placeholder="Password" error={this.state.errors.password} onChange={this.handleInput} />
+                <Input name="confirmPassword" label="Confirm Password" type="text" value={this.state.confirmPassword} id="inputPassword" placeholder="Password" error={this.state.errors.confirmPassword} onChange={this.handleInput} />
                 <FormBtn type="submit" className="submit-btn" onClick={this.handleSignUp}>Sign Up</FormBtn>
               </form>
               {this.state.errors.firstName ? <div className="input mt-1" style={this.style}>{this.state.errors.firstName}</div> : null}

@@ -71,15 +71,17 @@ class Home extends Component {
   <span>Who We Are</span>
   </div>
 </div>
-              <p>Genorus was founded in 2018 by Andrew Hojnowski, Britney Aronson, Fraser Torning, and Zach Wiest. Genorus stands 
-                for Giving Everyone Necessities Openly Redistributed Upon Scholars. </p>
-              <p>Genorus is a scholarship management application that hosts a variety of different companies. These companies
-                are donating graciously to give scholars a chance to create a
-                better tomorrow then the yesterday that was left behind. 
+              <p>Genorus was founded in 2018 by Andrew Hojnowski, Britney Aronson, 
+                Fraser Torning, and Zach Wiest. Genorus is a scholarship 
+                management solution for companies <br></br>and individuals.</p>
+              <p>By providing a web portal for applicants, a client dashboard to 
+                select recipients and track activity, and school data resources 
+                to aid in criteria, validation and summary statistics, Genorus provides 
+                a single solution to the challenges inherent to creating<br></br> and 
+                managing scholarship offerings.
               </p>
-              <p>Each student applying for the scholarship must meet the requirements that the sponsor has set. To apply for
-                a scholarship, navigate to the Genorus Scholarships
-                tab and see which forms match your criteria.
+              <p>Our mission is to remove administrative and technical barriers so 
+                our clients can focus on what matters: helping people realize their dreams.
               </p>
             </Div>
           </Div>
