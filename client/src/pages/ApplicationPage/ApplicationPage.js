@@ -47,10 +47,29 @@ class ApplicationPage extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
+    let data = this.state;
     let application = {
-      ...this.state
+      firstname: data.firstname,
+      lastname: data.lastname,
+      address: data.address,
+      address2: data.address2,
+      city: data.city,
+      state: data.state,
+      zipcode: data.zipcode,
+      dob_month: data.dob_month,
+      dob_day: data.dob_day,
+      dob_year: data.dob_year,
+      gender: data.gender,
+      ethnicity: data.ethnicity,
+      gpa: data.gpa,
+      sat_score: data.sat_score,
+      act_score: data.act_score,
+      essay: data.essay,
+      UserId: data.user.id,
+      ScholarshipId: data.scholarship.id,
+      company: data.company
     }
+    console.log(application);
     DBAPI.submitApplication(application)
       .then(data => {
         console.log(data);

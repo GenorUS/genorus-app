@@ -15,10 +15,11 @@ export default {
         cb(data);
     });
   },
-  submitApplication: (application, cb) => {
+  submitApplication: (application) => {
     return axios.post("/api/application", application)
       .then((data) => {
-        cb(data);
+        console.log('Application submitted!');
+        console.log(data);
     });
   },
   testRoute: function() {
