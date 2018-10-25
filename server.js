@@ -27,6 +27,8 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+var syncOptions = { force: false };
+
 // Serve up static assets (usually on heroku) ------
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -36,7 +38,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Start the API server and DB ----------------------
-db.sequelize.sync().then(() => {
+db.sequelize.sync(syncOptions).then(() => {
   app.listen(PORT, (err) => {
     if (err) throw err;
     console.log(`Connected on localhost:${PORT}`);
