@@ -113,6 +113,10 @@ class ApplicationPage extends Component {
       })
   }
 
+  componentWillUnmount() {
+    console.log(this.state);
+  }
+
   render() {
 
     return (
